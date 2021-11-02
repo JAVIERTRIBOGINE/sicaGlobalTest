@@ -7,6 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "generate:service": "ng g service --",
+    "generate:module": "ng g m --",
+    "generate:component": "ng g c --",
     "e2e": "ng e2e"
   },
   "private": true,
