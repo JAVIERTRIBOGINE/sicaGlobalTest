@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// Este archivo contiene todas las variables. Uso preferente de css custom properties
+// -----------------------------------------------------------------------------
+
+
+// Color system
+:root {
+--bg-main             : #fafafa;
+--bg-paginator        : #f3f2f2;
+--white               : #FFFFFF;
+--black               : #000000;
+--secondary-black     : #272727;
+--primary-blue        : #1E91C4;
+--primary-dark-blue   : #147DAB;
+--primary-light-blue  : #B8D8E6;
+--secondary-light-blue: #B9E7FC;
+--border-primary      : #dddbda;
+--border-dark         : #3E3E3C;
+--yellow              : #F8DD86;
+--light-yellow        : #FBF5E0;
+--red                 : #D40000;
+--light-red           : #F2B2B2;
+--dark-grey           : #636363;
+--medium-grey         : #A8A8A8;
+--light-grey          : #F4F4F4;
+--green               : #30AD5E;
+}
+
+
+// fonts
+$SegoeUI            : 'SegoeUI', Arial, sans-serif !default;
+$SegoeUI-BoldItalic : 'SegoeUI-BoldItalic', Arial, sans-serif !default;
+$SegoeUI-SemiBold   : 'SegoeUI-SemiBold', Arial, sans-serif !default;
+$SegoeUI-Light      : 'SegoeUI-Light', Arial, sans-serif !default;
+$SegoeUI-Bold       : 'SegoeUI-Bold', Arial, sans-serif !default;
+$SegoeUI-Italic     : 'SegoeUI-Italic', Arial, sans-serif !default;
+
+
+// z-index
+$z-back   : -10;
+$z-normal : 1;
+$z-tooltip: 10;
+$z-fixed  : 100;
+$z-modal  : 1000;
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small' : 320px,
+  'medium': 768px,
+  'large' : 1024px
+) !default;
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+$base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+

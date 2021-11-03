@@ -66,6 +66,7 @@ export const environment = {
     punctuation: api.global + "/puntuacion",
     fechahora: api.global + "/fechahora"
   }
+
 };
 
 /*

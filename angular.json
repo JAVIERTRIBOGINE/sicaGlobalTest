@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "sica",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -48,6 +48,33 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "dev": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -137,7 +164,7 @@
       },
       "root": "projects/admin",
       "sourceRoot": "projects/admin/src",
-      "prefix": "app",
+      "prefix": "sica",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -257,7 +284,7 @@
       },
       "root": "projects/lecturas",
       "sourceRoot": "projects/lecturas/src",
-      "prefix": "app",
+      "prefix": "sica",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

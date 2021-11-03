@@ -1,0 +1,61 @@
+// Declaraciones de fuentes y estilos básicos para párrafos, títulos, etc
+@font-face {
+  font-family: 'SegoeUI-BoldItalic';
+  src: local('Segoe UI Bold Italic'), local('SegoeUI-BoldItalic'),
+      url('/src/assets/fonts/SegoeUI-BoldItalic.woff2') format('woff2'),
+      url('/src/assets/fonts/SegoeUI-BoldItalic.woff') format('woff'),
+      url('/src/assets/fonts/SegoeUI-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SegoeUI';
+  src: local('Segoe UI'), local('SegoeUI'),
+      url('/src/assets/fonts/SegoeUI.woff2') format('woff2'),
+      url('/src/assets/fonts/SegoeUI.woff') format('woff'),
+      url('/src/assets/fonts/SegoeUI.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SegoeUI-SemiBold';
+  src: local('Segoe UI Semibold'), local('SegoeUI-SemiBold'),
+      url('/src/assets/fonts/SegoeUI-SemiBold.woff2') format('woff2'),
+      url('/src/assets/fonts/SegoeUI-SemiBold.woff') format('woff'),
+      url('/src/assets/fonts/SegoeUI-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SegoeUI-Light';
+  src: local('Segoe UI Light'), local('SegoeUI-Light'),
+      url('/src/assets/fonts/SegoeUI-Light.woff2') format('woff2'),
+      url('/src/assets/fonts/SegoeUI-Light.woff') format('woff'),
+      url('/src/assets/fonts/SegoeUI-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SegoeUI-Bold';
+  src: local('Segoe UI Bold'), local('SegoeUI-Bold'),
+      url('/src/assets/fonts/SegoeUI-Bold.woff2') format('woff2'),
+      url('/src/assets/fonts/SegoeUI-Bold.woff') format('woff'),
+      url('/src/assets/fonts/SegoeUI-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SegoeUI-Italic';
+  src: local('Segoe UI Italic'), local('SegoeUI-Italic'),
+      url('/src/assets/fonts/SegoeUI-Italic.woff2') format('woff2'),
+      url('/src/assets/fonts/SegoeUI-Italic.woff') format('woff'),
+      url('/src/assets/fonts/SegoeUI-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+

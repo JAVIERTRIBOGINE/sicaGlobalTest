@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LecturasAppComponent } from 'projects/lecturas/src/app/lecturas-app.component';
 
 const routes: Routes = [
-  { path: 'lecturas/home', component: LecturasAppComponent },
+  { path: 'lecturas/sub-home', component: LecturasAppComponent },
   // { path: 'app2', redirectTo: '' },
 ];
 

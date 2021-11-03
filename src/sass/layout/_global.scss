@@ -1,0 +1,19 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'SegoeUI', Arial, sans-serif !important;
+}
+
+
+// main
+.main {
+  padding: 0 16px;
+  background-color: var(--bg-main);
+
+  @include mq('large') {
+    padding: 0 24px 24px;
+  }
+}

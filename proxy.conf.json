@@ -1,0 +1,8 @@
+{
+  "/api/v1": {
+    "target": "https://sica-api-gateway.azurewebsites.net",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
