@@ -1,0 +1,28 @@
+
+
+<ng-container *ngIf="unauthorizedData; else loading">
+
+  <div class="p-card unauthorized-card" >
+    <h3>ACCESO NO AUTORIZADO</h3>
+    {{concessionDatos?(concessionDatos | json): ''}} - {{entityData? (entityData |json): '' }} - {{actionData?(actionData | json) : ''}}
+    <ng-container *ngIf="concessionDatos.value !== null">
+      <p><strong>Usuario: </strong>{{userName | uppercase }}</p>
+      <p><strong>Concesion: </strong>{{concessionDatos?.value}} - <i class="pi pi-{{concessionDatos?.check?'check':'times'}}"></i></p>       
+    </ng-container>
+    <ng-container *ngIf="entityData.value !== null">
+      <p><strong>Entidad: </strong>{{entityData?.value}} - <i class="pi pi-{{entityData.check?'check':'times'}}"></i></p>
+    </ng-container>
+    <ng-container *ngIf="actionData.value !== null">
+      <p><strong>Acción: </strong>{{actionData?.value}} - <i class="pi pi-{{actionData.check?'check':'times'}}"></i></p>
+    </ng-container>
+    <button pButton (click)="login()">Volver a entrar</button>
+</div>
+</ng-container>
+<ng-template #loading>
+  <div id="home-picture">
+    {{unauthorizedData}} + 
+    {{concessionDatos?.value}} - {{entityData?.value}} - {{actionData?.value}}
+  </div>
+   
+</ng-template>
+  

@@ -1,0 +1,40 @@
+ <sica-breadcrumb></sica-breadcrumb>
+ 
+ <p-fieldset legend="{{'GENERAL.TITLES.USER.PERSONAL_DATA' | translate}}" [toggleable]="true">
+    <div>
+        <h3>{{"GENERAL.TITLES.USER.NAME" | translate}}: </h3>
+        <span> {{accountService.userData.nombreUsuario | translate}}</span>
+        <h3>{{"GENERAL.TITLES.USER.EMAIL" | translate}}: </h3>
+        <span> {{accountService.userData.email | translate}}</span>
+    </div>
+</p-fieldset>
+<br>
+<p-fieldset legend="{{'GENERAL.TITLES.USER.PERMISSIONS_DATA' | translate}}" [toggleable]="true">
+    <div class="p-d-flex">
+        <div class="p-card p-mr-1 p-col-{{12/(accountService.permissions.length) | number:'1.0-0'}}" *ngFor="let concession of accountService.permissions">
+               <h3>{{concession.concessionName }}</h3>
+               <p class="p-my-3 block" *ngFor="let entity of concession['allowedEntities']">
+                   <strong>{{entity}}: </strong> 
+                   <span class="action-badges {{actions}} p-mx-1" *ngFor="let actions of concession[entity]; index as i">
+                    {{actions}} 
+                   </span>
+                   <br/>
+                </p>
+        </div>
+    </div>
+</p-fieldset>
+<br>
+<p-fieldset legend="{{'GENERAL.TITLES.USER.FORMAT_SETTINGS' | translate}}" [toggleable]="true">
+    <ng-container *ngIf="jsonData">
+        <sica-formsNg 
+        (onCustomSubmit)="customSubmit($event)"
+        [jsonDataForm]="jsonData" 
+        [editData]="editData"
+        ></sica-formsNg>
+    </ng-container>
+    <!-- [entityEndpoint]="routerService.getPossibleEndpoints()" -->
+    <!-- [submitAndHome]="true" -->
+    <!-- [action]="action"  -->
+    
+    
+</p-fieldset>

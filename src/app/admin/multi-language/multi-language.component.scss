@@ -1,0 +1,61 @@
+:host {
+    .multilanguage-grid{
+        text-align: right;
+        .upload-span-container {
+            margin-top: 20px;
+            display: block;
+        }
+        
+        .checkbox-label {
+            margin-left: 7px;
+        }
+        
+        .logo-add-alert {
+            display: block;
+            text-align: center;
+            font-weight: 700;
+          }
+    }
+    .drag-column {
+        overflow: auto;
+        height: 300px;
+    }
+
+    .dragDrop-collection-icon, .green-colored {
+        color:green;
+    }
+
+    .dragDrop-payment-icon, .red-colored {
+        color:red;
+    }
+
+    .blue-colored {
+        color: blue;
+    }
+
+
+ 
+    .drop-payment-column {
+        height: 30%;
+        overflow: auto;
+        margin-top: 5px;
+    }
+    .drop-collection-column {
+        height: 50%;
+        overflow: auto;
+    }
+
+    .onDrag {
+        border: 4px dotted grey;
+        background-color: lightgray;
+    }
+    .drop-message-column {
+        height: 20%;
+    }
+
+    div.disabled {
+        background-color: lightgray;
+        color: grey;
+        border-color: darkgrey;
+    }
+}

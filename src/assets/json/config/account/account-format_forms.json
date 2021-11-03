@@ -1,0 +1,98 @@
+{
+  "title": "GENERAL.ENTITIES.USERS",
+  "section": "Secciónn productos",
+  "class": "p-grid",
+  "area": [
+    {
+      "class": "p-grid p-form-grid p-p-5 p-col-12",
+      "subArea": [
+        {
+          "id": "idiomaPreferido",
+          "class": "p-col-3",
+          "label": "USERS.FORMS.LANGUAGE.LABEL",
+          "placeholder": "USERS.FORMS.LANGUAGE.PLACEHOLDER",
+          "tag": "select",
+          "customTraduction": true,
+          "changeLan": true,
+          "data": [
+            {
+              "valor": "es",
+              "nombre": "GENERAL.LANGUAGE_SELECTOR.SPANISH"
+            },
+            {
+              "valor": "ca",
+              "nombre": "GENERAL.LANGUAGE_SELECTOR.CATALAN"
+            }
+          ],
+          "validations": {
+            "required": true
+          }
+        },
+        {
+          "id": "formatoNumerico",
+          "class": "p-col-3",
+          "label": "USERS.FORMS.NUMBER_FORMAT.LABEL",
+          "placeholder": "USERS.FORMS.NUMBER_FORMAT.PLACEHOLDER",
+          "tag": "select",
+          "customTraduction": true,
+          "data": [
+            {
+              "valor": "es-Es",
+              "nombre": "USERS.FORMS.NUMBER_FORMAT.OPTION_SPAIN"
+            },
+            {
+              "valor": "es-Mx",
+              "nombre": "USERS.FORMS.NUMBER_FORMAT.OPTION_MEXICO"
+            },
+            {
+              "valor": "ca-Es",
+              "nombre": "USERS.FORMS.NUMBER_FORMAT.OPTION_CATALAN"
+            },
+            {
+              "valor": "en-US",
+              "nombre": "USERS.FORMS.NUMBER_FORMAT.OPTION_AMERICAN"
+            }
+          ],
+          "validations": {
+            "required": true
+          }
+        },
+        {
+          "id": "formatoFechaHora",
+          "class": "p-col-3",
+          "label": "USERS.FORMS.DATE_FORMAT.LABEL",
+          "placeholder": "USERS.FORMS.DATE_FORMAT.PLACEHOLDER",
+          "tag": "select",
+          "data": [
+            {
+              "valor": "short",
+              "nombre": "M/d/yy, h:mm a"
+            },
+            {
+              "valor": "medium",
+              "nombre": "MMM d, y, h:mm:ss a"
+            },
+            {
+              "valor": "long",
+              "nombre": "MMMM d, y, h:mm:ss a z"
+            },
+            {
+              "valor": "dd-MM-YYYY HH:mm:ss",
+              "nombre": "dd-MM-YYYY HH:mm:ss"
+            },
+            {
+              "valor": "dd-MM-YYYY",
+              "nombre": "dd-MM-YYYY"
+            }
+          ],
+          "validations": {
+            "required": true
+          }
+        }
+      ]
+    }
+  ],
+  "buttons": {
+    "submitButton": true
+  }
+}

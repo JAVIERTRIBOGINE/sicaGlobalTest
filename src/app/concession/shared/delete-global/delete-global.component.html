@@ -1,0 +1,13 @@
+<p-toast  position="top-center" (onClose)="customMessageService.clearToastMessage()"></p-toast>
+<sica-breadcrumb></sica-breadcrumb>
+
+<!-- COMPONENTE DE ALERTAS -->
+<ng-container >     
+    <sica-formsNg *ngIf="editWithDatOrCreateForm"
+    [jsonDataForm]="jsonData" 
+    [action]="action" 
+    [editData]="deleteData"
+    [entityEndpoint]="routerService.getPossibleEndpoints()"
+    ></sica-formsNg>
+</ng-container>
+

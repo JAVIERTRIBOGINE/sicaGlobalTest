@@ -1,0 +1,28 @@
+#container-image {
+    background-color: lightgrey;
+    #home-picture {
+        background-image: url("../../../../assets/images/bions_white_logo.png");
+        background-size: contain;
+        height: 880px;
+        background-repeat: no-repeat;
+        background-position-x: center;
+    }
+}
+#second-container {
+    height: 300px;
+}
+
+::ng-deep p-accordion{
+    .p-accordion-header {
+        display: none;
+    }
+    .p-accordion-content {
+        padding: unset !important;
+    }
+}
+
+.table-container {
+    position: relative;
+}
+
+

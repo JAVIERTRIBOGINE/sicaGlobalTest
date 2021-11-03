@@ -1,0 +1,80 @@
+{
+    "title": "GENERAL.ENTITIES.USERS",
+    "section": "Secciónn productos",
+    "class": "p-grid",
+    "area": [
+      {
+        "id": "id",
+        "class": "p-col-3",
+        "label": "USERS.FORMS.ID.LABEL",
+        "tag": "input",
+        "type": "text",
+        "disabled": true
+      },
+        {
+          "id": "nombre",
+          "class": "p-col-3",
+          "label": "USERS.FORMS.TITLE.LABEL",
+          "tag": "input",
+          "type": "text",
+          "disabled": true,
+          "validations": {
+            "required": true
+          }
+        },
+        {
+          "id": "email",
+          "class": "p-col-3",
+          "label": "USERS.FORMS.VALUE.LABEL",
+          "tag": "input",
+          "type": "email",
+          "validations": {
+            "required": true
+          }
+        },
+        {
+          "id": "idioma",
+          "class": "p-col-3",
+          "label": "USERS.FORMS.DESCRIPTION.LABEL",
+          "tag": "select",
+          "validations": {
+            "required": true,
+            "maxLength": 10,
+            "minLength": 5
+            
+          }
+        },
+        {
+          "id": "estadoLecturaId",
+          "class": "p-col-3",
+          "label": "USERS.FORMS.STATE.LABEL",
+          "placeholder": "USERS.FORMS.STATE.PLACEHOLDER",
+          "tag": "select",
+          "catalog": "estadolecturas",
+          "data": [],
+          "validations":{
+            "required":true
+          }
+        },
+        {
+          "id": "tipoLecturaId",
+          "class": "p-col-3",
+          "label": "USERS.FORMS.STATE.LABEL",
+          "placeholder": "USERS.FORMS.STATE.PLACEHOLDER",
+          "tag": "select",
+          "catalog": "tipoLectura",
+          "data": [],
+          "validations":{
+            "required":true
+          }
+        }
+    ],
+    "buttons": {
+      "cancelButton": true,
+      "addButton": true,
+      "editButton": true,
+      "hisoricButton": true,
+      "deleteButton": true
+    }
+}
+  

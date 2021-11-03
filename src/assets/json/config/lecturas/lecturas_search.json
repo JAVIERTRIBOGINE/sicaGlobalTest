@@ -1,0 +1,121 @@
+{
+    "title": "GENERAL.ENTITIES.READINGS",
+    "area": [
+        {
+            "id": "id",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "READINGS.FORMS.ID.LABEL",
+            "placeholder": "READINGS.FORMS.ID.PLACEHOLDER",
+            "tag": "input",
+            "type": "text"
+        },
+        {
+            "id": "titulo",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "READINGS.FORMS.TITLE.LABEL",
+            "placeholder": "READINGS.FORMS.TITLE.PLACEHOLDER",
+            "tag": "input",
+            "type": "text"
+        },
+        {
+            "id": "valor",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "READINGS.FORMS.VALUE.LABEL",
+            "placeholder": "READINGS.FORMS.VALUE.PLACEHOLDER",
+            "tag": "input",
+            "type": "text"
+        },
+        {
+            "id": "estadoLecturaId",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "READINGS.FORMS.VALUE.LABEL",
+            "placeholder": "READINGS.FORMS.VALUE.PLACEHOLDER",
+            "tag": "select",
+            "catalog": "estadolecturas",
+            "data": []
+        }
+    ],
+    "filterButtons": {
+        "submitButton": true,
+        "cleanButton": true
+    },
+    "table": {
+        "ownTableFilter": false,
+        "ownTableSort": true,
+        "pageSize": [10,25,50],
+        "pageNumber": 1,
+        "dataFields": [
+            {
+                "DTO": "id",
+                "LABEL": "READINGS.TABLE.FIELDS.ID"
+            },
+            {
+                "DTO": "titulo",
+                "LABEL": "READINGS.TABLE.FIELDS.TITLE"
+            },
+            {
+                "DTO": "valor",
+                "LABEL": "READINGS.TABLE.FIELDS.VALUE",
+                "render": "formatNumber"
+            },
+            {
+                "DTO": "descripcion",
+                "LABEL": "READINGS.TABLE.FIELDS.DESCRIPTION"
+            },
+            {
+                "DTO": "valor1",
+                "LABEL": "READINGS.TABLE.FIELDS.VALOR_ONE"
+            },
+            {
+                "DTO": "valor2",
+                "LABEL": "READINGS.TABLE.FIELDS.VALOR_TWO"
+            },
+            {
+                "DTO": "precio",
+                "LABEL": "READINGS.TABLE.FIELDS.PRICE"
+            },
+            {
+                "DTO": "estadoLecturaId",
+                "LABEL": "READINGS.TABLE.FIELDS.STATE",
+                "catalog": "estadolecturas"
+            },
+            {
+                "DTO": "tipoLecturaId",
+                "LABEL": "READINGS.TABLE.FIELDS.TYPE"
+            },
+            {
+                "DTO": "nullboolean",
+                "LABEL": "READINGS.TABLE.FIELDS.NULLBOOLEAN",
+                "render": "checkbox"
+            },
+            {
+                "DTO": "boolean",
+                "LABEL": "READINGS.TABLE.FIELDS.BOOLEAN",
+                "render": "checkbox"
+            },
+            {
+                "DTO": "date",
+                "LABEL": "READINGS.TABLE.FIELDS.DATE",
+                "render": "date"
+            },
+            {
+                "DTO": "timeStamp",
+                "LABEL": "READINGS.TABLE.FIELDS.TIMESTAMP"
+            },
+            {
+                "DTO": "fechaCreacion",
+                "LABEL": "READINGS.TABLE.FIELDS.INSERT_DATA",
+                "render": "date"
+
+            }
+        ],
+        "rowButtons": {
+            "searchButton": true,
+            "cleanButton": false
+        },
+        "tableButtons": {
+            "deleteButton": true,
+            "createButton": true
+        }
+    }
+}

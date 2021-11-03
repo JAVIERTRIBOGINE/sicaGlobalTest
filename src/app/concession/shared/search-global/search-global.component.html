@@ -1,0 +1,51 @@
+<p-toast position="top-center" (onClose)="customMessageService.clearToastMessage()"></p-toast>
+<sica-breadcrumb></sica-breadcrumb>
+<ng-container>
+    <ng-container *ngIf="searchAreas">
+        <section class="filter-tabs">
+            <div class="filter-tabs__header p-col-12">
+                <h3 class="filter-tabs__text">{{ generalTitle | translate}} <span *ngIf="routerService.isMasterModule">| {{ masterEntity | translate}}</span></h3>
+                <p-button [icon]="activeState[0] ? 'pi pi-chevron-up' : 'pi pi-chevron-down'" (click)="toggle(0)"
+                    styleClass="p-button-text filter-tabs__icon"></p-button>
+            </div>
+            <div class="filter-tabs__content">
+                <ng-container *ngIf="dataChip.length !== 0">
+                    <p-chips [styleClass]="'filter-tabs__chips'" [(ngModel)]="dataChip"
+                        (onRemove)="removeChipFilter($event)"></p-chips>
+                </ng-container>
+            </div>
+        </section>
+        <p-accordion [styleClass]="'filter-tabs__accordion'">
+            <p-accordionTab [(selected)]="activeState[0]">
+                <sica-search-formsNg #searchModule [jsonDataForm]="jsonData"></sica-search-formsNg>
+            </p-accordionTab>
+        </p-accordion>
+
+    </ng-container>
+    <div class="table-container">
+        <ngx-ui-loader [loaderId]="'loaderSearch'"></ngx-ui-loader>
+        <sica-table #tableCpt *ngIf="thereIsjsonData" [tableStyleClass]="'demoTwo'" [searchAreas]="searchAreas"
+            [dataFields]="dataFields" [tableButtons]="tableButtons" [totalRecords]="totalRecords" [rows]="rows"
+            [pageNumber]="pageNumber" [pageSize]="pageSize" [dto_multipleRecords]="dto_multipleRecords" [data]="data"
+            [originalData]="data" [columns]="columns" [_selectedColumns]="columns" [title]="'MockDatos'"
+            [codeConcession]="routerService.getCodeConcession()"
+            [entity]="entity" [isModal]="isModal"
+            [endpoints]="routerService.getPossibleEndpoints()"
+            [allowedActions]="routerService.getAllowedActions()" (lazyData)="updateLazyData($event)"
+            (onAsociate)="asociateCall($event)" (onDisasociate)="disAsociateCall($event)"
+            (onActivate)="activateCall($event)" (onDisactivate)="disactivateCall($event)"
+            (onMultipleDelete)="deleteMultipleCall($event)" (onCloseModal)="closeModal($event)"
+            (export)="outputExportData($event)"></sica-table>
+        </div>
+    </ng-container>
+    
+ 
+    <!-- BOTÓN DE NUEVO REGISTRO -->
+<button pButton *ngIf="viewTableButton('createButton')" label="{{'GENERAL.ALERTS.BUTTON_CREATE' | translate}}" class="p-button-outlined"
+    icon="pi pi-plus-circle" (click)="newRow()"></button>
+<!-- bloquedado temporalmente por tema permisos -->
+<!-- <button pButton label="{{'GENERAL.ALERTS.BUTTON_CREATE' | translate}}" class="p-button-outlined"
+    *ngIf="accountService.getGrantAction(routerService.getAllowedActions(), 'read')" icon="pi pi-plus-circle" (click)="newRow()"></button> -->
+<!-- bloquedado temporalmente por tema permisos -->
+
+<!-- COMPONENTE DE ALERTAS -->

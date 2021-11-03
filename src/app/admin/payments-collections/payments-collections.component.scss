@@ -1,0 +1,17 @@
+.unauthorized-card {
+    margin: 1rem;
+    padding: 1rem
+}
+.loading-card{
+    font-size: 4rem;
+    color: green
+}
+
+#home-picture {
+    // background-image: url("../../../../assets/images/bions_white_logo.png");
+    background-image: url("../../../assets/images/bions_white_logo.png");
+    background-size: contain;
+    height: 880px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}

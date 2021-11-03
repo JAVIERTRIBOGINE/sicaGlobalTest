@@ -1,0 +1,10 @@
+<p-toast position="top-center" (onCustom)="customMessageService.clearToastMessage()"></p-toast>
+<sica-breadcrumb></sica-breadcrumb>
+
+<ng-container >
+    <sica-formsNg *ngIf="editWithDatOrCreateForm"
+    (onCustomSubmit)="customSubmit($event)"
+    [jsonDataForm]="jsonData" 
+    [editData]="editData"
+    ></sica-formsNg>
+</ng-container>

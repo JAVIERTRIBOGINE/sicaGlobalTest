@@ -1,0 +1,9 @@
+.login_form {
+  display: flex;
+  flex-direction: column;
+
+  .input_formfield {
+    margin: 1em 0;
+    width: 20%;
+  }
+}

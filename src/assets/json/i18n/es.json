@@ -1,0 +1,656 @@
+{
+    "GENERAL": {
+        "MENU": {
+            "BILLING": {
+                "BILLS": "FACTURAS",
+                "PRODUCTS": "PRODUCTOS",
+                "READINGS": "Gestor Lecturas",
+                "ADMIN": "Administración"
+            },
+            "GENERAL_SELECTOR": {
+                "CONCESSION": "Concesión",
+                "LANGUAGE": "Idioma"
+            }
+        },
+        "BOOLEAN_SELECTOR": {
+            "ACTIVE": "Asociadas",
+            "INACTIVE": "Desasociadas",
+            "ALL": "Todas"
+        },
+        "LANGUAGE_SELECTOR": {
+            "SPANISH": "ESPAÑOL",
+            "CATALAN": "CATALÁN"
+        },
+        "ERRORS": {
+            "REQUIRED": "Campo requerido",
+            "MIN_LENGTH": "Número mínimo de caracteres es {{minNumber}}",
+            "MAX_LENGTH": "Número máximo de caracteres es {{maxNumber}}",
+            "MIN": "Valor mínimo: {{minNumber}}",
+            "MAX": "Valor máximo: {{maxNumber}}",
+            "REQUEST": "ERROR EN LA LLAMADA"
+        },
+        "MESSAGES": {
+            "TITLE": {
+                "EDIT_SUCCESS": "Editado con éxito",
+                "EDIT_FAIL": "Error en la edición",
+                "INSERT_SUCCESS": "Creado con Éxito",
+                "INSERT_FAIL": "Error en la creación",
+                "DELETE_SUCCESS": "Eliminado con Éxito",
+                "DELETE_FAIL": "Error en la eliminación",
+                "GENERAL": "Error en la llamada"
+            },
+            "BODY": {
+                "EDIT_SUCCESS": "El registro se ha editado con éxito",
+                "EDIT_FAIL": "Error en la edición de registro:",
+                "INSERT_SUCCESS": "El registro se ha creado con éxito",
+                "INSERT_FAIL": "Error en la creación de registro: ",
+                "DELETE_SUCCESS": "El registro se ha eliminado con éxito",
+                "DELETE_FAIL": "Se ha producido un error en la eliminación del registro",
+                "GENERAL": "Se ha producido un error en la llamada: :message"
+            }
+        },
+        "ALERTS": {
+            "NO_DATA": "No hay datos registrados",
+            "DEFAULT_PLACEHOLDER": "Seleccione valor",
+            "SELECT_LANGUAGE": "Seleccione lenguage",
+            "SELECT_CONCESSION": "Seleccione Concesión",
+            "BUTTON_HISTORIC": "Ir a histórico",
+            "BUTTON_EDIT": "Ir a edición",
+            "LOGOUT": "Salir de la sesión",
+            "ACTIONS": "Acciones",
+            "BUTTON_CREATE": "Nuevo registro",
+            "BUTTON_ADD": "Añadir",
+            "BUTTON_SAVE": "Guardar",
+            "BUTTON_SAVE_POST": "Crear",
+            "BUTTON_SAVE_EDIT": "Editar",
+            "BUTTON_VALIDATE": "Validar",
+            "BUTTON_BACK": "Volver",
+            "BUTTON_VIEW": "Ir a detalle",
+            "BUTTON_DELETE": "Borrar",
+            "BUTTON_ACTIVATE": "Activar",
+            "BUTTON_DISACTIVATE": "Desactivar",
+            "BUTTON_ASOCIATE": "Asociar",
+            "BUTTON_DISASOCIATE": "Desasociar",
+            "CHECK_DELETE": "Desea borrar estre registro?",
+            "BUTTON_FILTER": "Filtrar",
+            "BUTTON_CLEAN": "Limpiar formulario",
+            "BUTTON_UPLOAD": "Carga archivo",
+            "BUTTON_CHOOSE": "Selecciona archivo",
+            "BUTTON_CANCEL": "Cancelar",
+            "USER_SETTINGS": "Ajustes",
+            "CONFIGURATION": "Configuración",
+            "REGISTERS_PAGE": "registros por página"
+        },
+        "TITLES": {
+            "RESULTS": "Resultados",
+            "LISTPICKER": {
+                "SELECTABLE": "Seleccionable",
+                "SELECTED": "Seleccionado"
+            },
+            "FILTER": "Filtrado de registros",
+            "CREATE": "Creación de registros",
+            "EDIT": "Edición de registro",
+            "DELETE": "Eliminación de registro",
+            "USER": {
+                "PERSONAL_DATA": "Datos personales",
+                "FORMAT_SETTINGS": "Ajustes de formato",
+                "PERMISSIONS_DATA": "Permisos",
+                "NAME": "Nombre",
+                "EMAIL": "Correo Electrónico"
+            }
+        },
+        "ENTITIES": {
+            "BILLING": "Facturación",
+            "BILLS": "Facturas",
+            "PRODUCTS": "Productos",
+            "READINGS": "Lecturas",
+            "ZONES": "Zonas",
+            "ROLES": "Roles",
+            "NOTIFICACIONES": "Notificaciones",
+            "USERS": "Usuarios",
+            "CONCESSIONS": "Concesiones",
+            "MASTERS": {
+                "GENERAL": "Maestros",
+                "ESTADO_LECTURAS": "Estado de Lecturas",
+                "DIVISAS": "Divisas"
+            }
+        },
+        "BREADCRUMB": {
+            "dashboard": "dashboard",
+            "products": "Productos",
+            "bills": "Facturas"
+        },
+        "TABLES": {
+            "DETAIL": "DETALLE",
+            "EDIT": "EDITAR",
+            "HISTORIC": "HISTÓRICO",
+            "VIEW": "VISUALIZAR"
+        }
+    },
+    "PRODUCTS": {
+        "ENTITY": "Productos",
+        "TABLE": {
+            "TITLE": "LISTADO DE PRODUCTOS",
+            "FILTER": {},
+            "FIELDS": {
+                "ID": "Id",
+                "NAME": "Nombre",
+                "CURRENCY": "Moneda",
+                "VALUE": "Valor",
+                "DETAIL": "Detalle"
+            },
+            "BUTTONS": {
+                "VIEW_EDIT": "Ver/Editar Producto",
+                "INSERT": "Nuevo producto"
+            }
+        },
+        "FORMS": {
+            "NAME": {
+                "LABEL": "NOMBRE"
+            },
+            "CURRENCY": {
+                "LABEL": "MONEDA"
+            },
+            "VALUE": {
+                "LABEL": "VALOR"
+            },
+            "DETAIL": {
+                "LABEL": "DETALLE"
+            }
+        }
+    },
+    "BILLS": {
+        "ENTITY": "Facturas",
+        "TABLE": {
+            "TITLE": "LISTADO DE FACTURAS",
+            "FILTER": {},
+            "FIELDS": {
+                "ID": "Id",
+                "VALUE": "Valor",
+                "DETAILS": {
+                    "LABEL": "Detalles",
+                    "NAME": {
+                        "LABEL": "Nombre"
+                    },
+                    "QUANTITY": {
+                        "LABEL": "Cantidad"
+                    }
+                }
+            },
+            "BUTTONS": {
+                "VIEW_EDIT": "Ver/Editar Factura",
+                "INSERT": "Insertar Factura"
+            }
+        },
+        "FORMS": {
+            "QUANTITY": {
+                "LABEL": "Cantidad"
+            },
+            "NAME": {
+                "LABEL": "Nombre del producto"
+            }
+        }
+    },
+    "READINGS": {
+        "ENTITY": "Lecturas",
+        "TABLE": {
+            "TITLE": "LISTADO DE LECTURAS",
+            "FILTER": {},
+            "FIELDS": {
+                "ID": "Id",
+                "TITLE": "Título",
+                "VALUE": "Valor",
+                "STATE": "Estado",
+                "DESCRIPTION": "Descripción",
+                "VALOR_ONE": "Valor_1",
+                "VALOR_TWO": "Valor_2",
+                "PRICE": "Precio",
+                "TYPE": "Tipo Lectua",
+                "NULLBOOLEAN": "Nullboolean",
+                "BOOLEAN": "Boolean",
+                "DATE": "Fecha de creación",
+                "TIMESTAMP": "Timestamp",
+                "INSERT_DATA": "Fecha de creación"
+            },
+            "BUTTONS": {
+                "VIEW_EDIT": "Ver/Editar Lectura",
+                "INSERT": "Insertar Lectura"
+            }
+        },
+        "FORMS": {
+            "ID": {
+                "LABEL": "{{req}} Id",
+                "PLACEHOLDER": "Añade Id"
+            },
+            "TITLE": {
+                "LABEL": "{{req}} Título",
+                "PLACEHOLDER": "Añade Título"
+            },
+            "VALUE": {
+                "LABEL": "{{req}} Valor",
+                "PLACEHOLDER": "Añade Valor"
+            },
+            "VALUE_ONE": {
+                "LABEL": "{{req}} Valor",
+                "PLACEHOLDER": "Añade Valor1"
+            },
+            "VALUE_TWO": {
+                "LABEL": "{{req}} Valor",
+                "PLACEHOLDER": "Añade Valor2"
+            },
+            "DESCRIPTION": {
+                "LABEL": "{{req}} Descripcion",
+                "PLACEHOLDER": "Añade Descripción"
+            },
+            "STATE": {
+                "LABEL": "{{req}} Estado",
+                "PLACEHOLDER": "Seleccione Estado"
+            },
+            "TYPE": {
+                "LABEL": "{{req}} Tipo",
+                "PLACEHOLDER": "Seleccione tipo"
+            },
+            "DATE": {
+                "LABEL": "{{req}} Fecha test",
+                "PLACEHOLDER": "Añade fecha"
+            },
+            "TIMESTAMP": {
+                "LABEL": "{{req}} Timestamp",
+                "PLACEHOLDER": "Añade Timestamp"
+            }
+        },
+        "HISTORIC": {
+            "TITLES": {
+                "ACTUAL": "Actual",
+                "HISTORIC": "Histórico"
+            },
+            "FIELDS": {
+                "TITLE": "Título",
+                "DESCRIPTION": "Descripción",
+                "VALUE": "Valor",
+                "UPDATE_DATA": "Fecha Modificación",
+                "CREATE_DATA": "Fecha Creación",
+                "REMOVE_DATA": "Fecha Baja",
+                "UPDATE_USER": "Usuario Modificación",
+                "CREATE_USER": "Usuario Creación"
+            }
+        }
+    },
+    "ZONES": {
+        "ENTITY": "Zonas",
+        "TABLE": {
+            "TITLE": "LISTADO DE ZONAS",
+            "FILTER": {},
+            "FIELDS": {
+                "ID": "Id",
+                "NAME": "Nombre",
+                "FECHACREACION": "Fecha creación",
+                "USUARIOCREADOR": "Usuario creador",
+                "FECHAMODIFICACION": "Fecha modificación",
+                "USUARIOMODIFICADOR": "Usuario modificador",
+                "ASOCIADA": "Asociada",
+                "ACTIVO": "Activo"
+            },
+            "BUTTONS": {
+                "VIEW_EDIT": "Ver/Editar Zona",
+                "INSERT": "Insertar Zona"
+            }
+        },
+        "FORMS": {
+            "ID": {
+                "LABEL": "{{req}} Id"
+            },
+            "NAME": {
+                "LABEL": "{{req}} Nombre"
+            },
+            "ASOCIADA": {
+                "LABEL": "{{req}} Asociada"
+            }
+        }
+    },
+    "ROLS": {
+        "ENTITY": "Roles",
+        "TABLE": {
+            "TITLE": "LISTADO DE ROLES",
+            "FILTER": {},
+            "FIELDS": {
+                "ID": "Id",
+                "NAME": "Nombre"
+            },
+            "BUTTONS": {
+                "VIEW_EDIT": "Ver/Editar Rol",
+                "INSERT": "Insertar Rol"
+            }
+        },
+        "FORMS": {
+            "ID": {
+                "LABEL": "{{req}} Id"
+            },
+            "NAME": {
+                "LABEL": "{{req}} Nombre"
+            }
+        }
+    },
+    "HISTORIC": {
+        "TITLE": "Título",
+        "DESCRIPTION": "Descripción",
+        "FECHA": {
+            "MODIFICAION": "Fecha de modificación",
+            "ALTA": "Fecha de alta",
+            "BAJA": "Fecha de baja"
+        },
+        "VALUE": "Valor",
+        "USER": {
+            "MODIFICADOR": "Usuario modificador",
+            "CREADOR": "Usuario creador"
+        },
+        "ACTION": "Acción"
+    },
+    "USERS": {
+        "ENTITY": "Usuarios",
+        "TABLE": {
+            "TITLE": "LISTADO DE USUARIOS",
+            "FILTER": {},
+            "FIELDS": {
+                "ID": "Id",
+                "NAME": "Nombre",
+                "FIRSTSURNAME": "Primer apellido",
+                "SECONDSURNAME": "Segundo apellido",
+                "PHONE": "Teléfono",
+                "EMAIL": "mail"
+            },
+            "BUTTONS": {
+                "VIEW_EDIT": "Ver/Editar Rol",
+                "INSERT": "Insertar Rol"
+            }
+        },
+        "FORMS": {
+            "LANGUAGE": {
+                "LABEL": "{{req}} Idioma",
+                "PLACEHOLDER": "Seleccione Idioma"
+            },
+            "NUMBER_FORMAT": {
+                "LABEL": "{{req}} Formato de Número",
+                "PLACEHOLDER": "Seleccione formato número",
+                "OPTION_SPAIN": "Español España",
+                "OPTION_MEXICO": "Español Méjico",
+                "OPTION_CATALAN": "Catalán",
+                "OPTION_AMERICAN": "Americano"
+            },
+            "ID": {
+                "LABEL": "{{req}} Id",
+                "PLACEHOLDER": "Seleccione formato fecha"
+            },
+            "NAME": {
+                "LABEL": "{{req}} Nombre",
+                "PLACEHOLDER": "Añada nombre"
+            },
+            "FIRSTSURNAME": {
+                "LABEL": "{{req}} Primer apellido",
+                "PLACEHOLDER": "Seleccione primer apellido"
+            },
+            "SECONDSURNAME": {
+                "LABEL": "{{req}} Segundo apellido",
+                "PLACEHOLDER": "Seleccione segundo apellido"
+            },
+            "PHONE": {
+                "LABEL": "{{req}} Teléfono",
+                "PLACEHOLDER": "Añada teléfono"
+            },
+            "EMAIL": {
+                "LABEL": "{{req}} Mail",
+                "PLACEHOLDER": "Añada email"
+            },
+            "DATE_FORMAT": {
+                "LABEL": "{{req}} Formato de Fecha",
+                "PLACEHOLDER": "Seleccione formato fecha"
+            }
+        }
+    },
+    "CONCESSIONS": {
+        "ENTITY": "Concesiones",
+        "FORMS": {
+            "ID": {
+                "LABEL": "ID"
+            },
+            "NAME": {
+                "LABEL": "{{req}} Nombre",
+                "PLACEHOLDER": "Introduzca nombre"
+            },
+            "CODE": {
+                "LABEL": "{{req}} Código",
+                "PLACEHOLDER": "Introduzca Código"
+            },
+            "COIN": {
+                "LABEL": "{{req}} Divisa",
+                "PLACEHOLDER": "Seleccione Divisa"
+            },
+            "LANGUAGE": {
+                "LABEL": "{{req}} Idioma",
+                "PLACEHOLDER": "Seleccione Idioma"
+            },
+            "TAX_TYPE": {
+                "LABEL": "{{req}} Tipo de Impuesto",
+                "PLACEHOLDER": "Seleccione Tipo de Impuesto",
+                "OPTION_IVA": "IVA",
+                "OPTION_OTHER": "Otro"
+            },
+            "COUNTRY": {
+                "LABEL": "{{req}} País",
+                "PLACEHOLDER": "Seleccione país",
+                "OPTION_SPAIN": "España",
+                "OPTION_FRANCE": "Francia",
+                "OPTION_EEUU": "Estados Unidos",
+                "OPTION_MEXICO": "Méjico"
+            },
+            "TAX_PERCENTAGE": {
+                "LABEL": "{{req}} Valor Impuesto",
+                "PLACEHOLDER": "Seleccione Valor Impuesto"
+            },
+            "DAYS_BEFORE_END_PAYMENT": {
+                "LABEL": "{{req}} Nº días antes vencimiento",
+                "PLACEHOLDER": "Introduzca valor"
+            },
+            "RETURNS_QUANTITY": {
+                "LABEL": "{{req}} Nº de devoluciones permitidas",
+                "PLACEHOLDER": "Introduzca valor"
+            },
+            "LOGO": {
+                "LABEL": "{{req}} logo",
+                "PLACEHOLDER": "Añada logo"
+            },
+            "ALLOWED_DOWNLOAD": {
+                "LABEL": "{{req}} Descargas permitidas"
+            },
+            "GIS_USING": {
+                "LABEL": "{{req}} Usa Gis"
+            },
+            "GOTA_USING": {
+                "LABEL": "{{req}} Usa Gota"
+            },
+            "FRACTION_PAYMENT_QUANTITY": {
+                "LABEL": "{{req}} Nº fraccionamientos de pago",
+                "PLACEHOLDER": "Introduzca valor"
+            },
+            "ALLOW_FRACTION_PAYMENTS": {
+                "LABEL": "{{req}} Permite fraccionar"
+            },
+            "DOWNLOAD_TAX_APPLY": {
+                "LABEL": "{{req}} Aplica impuesto descarga"
+            },
+            "ALLOW_DOWNLOAD_FRACTION": {
+                "LABEL": "{{req}} Permite dividir descargables"
+            },
+            "END_REPORT_CREATION_DAY": {
+                "LABEL": "{{req}} Día creación reporte suspensión",
+                "PLACEHOLDER": "Seleccione Idioma"
+            },
+            "END_REPORT_CREATION_PERIOD": {
+                "LABEL": "{{req}} Periodo de creación de Reporte",
+                "PLACEHOLDER": "Introduzca valor"
+            },
+            "DURESS_REPORT_CREATION_DAY": {
+                "LABEL": "{{req}} Día de generación de informe de apremio",
+                "PLACEHOLDER": "Introduzca valor"
+            },
+            "DURESS_REPORT_CREATION_PERIOD": {
+                "LABEL": "{{req}} Periodo Creación Informe Apremio",
+                "PLACEHOLDER": "Introduzca valor"
+            }
+        }
+    },
+    "MULTILANGUAGE": {
+        "ENTITY": "Multi Idioma",
+        "FORMS": {
+            "MODULES": {
+                "LABEL": "{{req}} Módulos",
+                "PLACEHOLDER": "Seleccione módulo"
+            },
+            "LANGUAGE": {
+                "LABEL": "{{req}} Idioma",
+                "PLACEHOLDER": "Seleccione idioma"
+            },
+            "UPLOAD": {
+                "LABEL": "Archivo",
+                "PLACEHOLDER": "Seleccione / arrastre archivo"
+            }
+        },
+        "RESULTS": {
+            "TITLE": "Informe de resultados:",
+            "CREATED_RECORDS": "Registros dados de alta correctamente:",
+            "UPDATED_RECORDS": "Registros modificados correctamente:",
+            "FAILED_RECORDS": "Registros con errores:",
+            "ID_ERROR": "Id de registro de error:"
+        }
+    },
+    "MASTERS": {
+        "ESTADO_LECTURAS": {
+            "ENTITY": "Estado de lecturas",
+            "TABLE": {
+                "TITLE": "LISTADO DE LECTURAS",
+                "FILTER": {},
+                "FIELDS": {
+                    "ID": "Id",
+                    "ETIQUETA": "Etiqueta",
+                    "ACTIVO": "Activo"
+                },
+                "BUTTONS": {
+                    "VIEW_EDIT": "Ver/Editar Lectura",
+                    "INSERT": "Insertar Lectura"
+                }
+            },
+            "FORMS": {
+                "ID": {
+                    "LABEL": "id",
+                    "PLACEHOLDER": "Seleccione id"
+                },
+                "MAESTRO_ID": {
+                    "LABEL": "Maestro id",
+                    "PLACEHOLDER": "Seleccione id maestro"
+                },
+                "ETIQUETA": {
+                    "LABEL": "Etiqueta",
+                    "PLACEHOLDER": "Seleccione etiqueta"
+                },
+                "ACTIVO": {
+                    "LABEL": "Activo",
+                    "PLACEHOLDER": "Seleccione activo"
+                },
+                "ORDEN": {
+                    "LABEL": "Orden",
+                    "PLACEHOLDER": "Seleccione orden"
+                }
+            }
+        }
+    },
+    "PROCESSES": {
+        "EXECUTION": {
+            "TABLE": {
+                "TITLE": "Procesos Ejecución",
+                "FILTER": {},
+                "FIELDS": {
+                    "ID": "Id",
+                    "NAME": "Nombre",
+                    "INIT_DATE": "Fecha Inicio",
+                    "END_DATE": "Fecha Fin",
+                    "RESULT": "Resultado",
+                    "COMMENTS": "Comentarios"
+                },
+                "BUTTONS": {
+                    "VIEW_EDIT": "Ver/Editar Producto",
+                    "INSERT": "Nuevo producto"
+                }
+            },
+            "FORMS": {
+                "ID": {
+                    "LABEL": "Id"
+                },
+                "NAME": {
+                    "LABEL": "Nombre"
+                },
+                "INIT_DATE": {
+                    "LABEL": "Fecha Inicio"
+                },
+                "END_DATE": {
+                    "LABEL": "Fecha Fin"
+                },
+                "RESULT": {
+                    "LABEL": "Resultado"
+                },
+                "COMMENTS": {
+                    "LABEL": "Observaciones"
+                }
+            }
+        }
+    },
+    "NO-CERTIFICADAS": {
+        "ENTITY": "No certificadas",
+        "FORMS": {
+            "CODIGO_REMESA": {
+                "LABEL": "{{req}} Codigo Remesa",
+                "PLACEHOLDER": "Seleccione Codigo Remesa"
+            },
+            "TIPO_REMESA": {
+                "LABEL": "{{req}} Tipo Remesa",
+                "PLACEHOLDER": "Seleccione Tipo Remesa"
+            },
+            "TIPO_NOTIFICACION": {
+                "LABEL": "{{req}} Tipo Notificacion",
+                "PLACEHOLDER": "Seleccione Tipo Notificación"
+            },
+            "ESTADO_ENVIO": {
+                "LABEL": "{{req}} Estado de envío",
+                "PLACEHOLDER": "Añada estado de envío"
+            },
+            "FECHA_DESDE": {
+                "LABEL": "{{req}} Fecha Desde",
+                "PLACEHOLDER": "Seleccione Fecha"
+            },
+            "FECHA_HASTA": {
+                "LABEL": "{{req}} Fecha Hasta",
+                "PLACEHOLDER": "Seleccione Fecha"
+            },
+            "FECHA_ENVIO": {
+                "LABEL": "{{req}} Fecha Envío",
+                "PLACEHOLDER": "Seleccione Fecha"
+            }
+        },
+        "TABLE": {
+            "TITLE": "LISTADO DE NOTIFICACIONES",
+            "FILTER": {},
+            "FIELDS": {
+                "ID": "Id",
+                "REMESA": "Código Remesa",
+                "TIPO_REMESA": "Tipo Remesa",
+                "TIPO_NOTIFICACION": "Tipo Notificacion",
+                "FECHA_ENVIO": "Fecha Envio",
+                "FECHA_ESTADO": "Fecha Estado",
+                "ESTADO": "Estado",
+                "NUMERO_ENVIOS": "Número envíos",
+                "NUMERO_TRAMITADOS": "Número tramitados",
+                "NUMERO_PENDIENTES": "Número pendientes"
+            },
+            "BUTTONS": {}
+        }
+    }
+}

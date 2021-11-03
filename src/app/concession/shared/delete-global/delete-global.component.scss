@@ -1,0 +1,83 @@
+.viewCard {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem
+}
+
+.buttonsViewCard {
+    margin: 0.5rem
+}
+.overflow {
+    overflow-wrap: break-word;
+    padding: unset;
+}
+
+h2, h3 {
+    display: inline-block;
+}
+
+.selected {
+    font-size: 24px;
+}
+
+.dropdown {
+    float: right;
+    margin-top: 1.0em;
+}
+
+.p-divider-vertical {
+    margin: 0 0 !important;
+}
+
+.new {
+    color: #3fc73f;
+}
+
+.update {
+    color: #ffa500;
+}
+
+.remove {
+    color: #ff0000;
+}
+
+.p-divider.p-divider-vertical {
+    margin: 0 0 !important;
+}
+
+.center {
+    text-align: center;
+}
+
+.custom ::ng-deep .p-inputtext {
+    padding: 0, 0;
+}
+
+.backButton {
+    margin: 1rem;
+}
+
+.key {
+    font-size: 1.5rem;
+}
+
+.value {
+    font-size: 1.5rem;
+    margin: 0 0.5rem 0 0
+}
+
+
+.check-delete {
+    font-size: 1.5rem;
+}
+
+.deleteRow {
+    background-color: lightgrey;
+    border: 1px solid grey;
+    border-radius: 5px;
+
+}
+
+.back-delete
+    {
+        margin-left: unset;
+    }

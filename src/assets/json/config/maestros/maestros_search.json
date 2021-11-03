@@ -1,0 +1,53 @@
+{
+    "title": "GENERAL.ENTITIES.MASTERS.GENERAL",
+    "area": [
+        {
+            "id": "activo",
+            "class": "p-col-12 p-sm-12 p-md-1 p-d-flex p-jc-start  filter-tabs__accordion-item",
+            "label": "MASTERS.ESTADO_LECTURAS.FORMS.ACTIVO.LABEL",
+            "placeholder": "READINGS.FORMS.ACTIVO.PLACEHOLDER",
+            "tag": "nullable-checkbox"
+        }
+    ],
+    "filterButtons": {
+        "submitButton": true,
+        "cleanButton": true
+    },
+    "table": {
+        "ownTableFilter": false,
+        "ownTableSort": true,
+        "pageSize": [
+            10,
+            25,
+            50
+        ],
+        "pageNumber": 1,
+        "dataFields": [
+            {
+                "DTO": "id",
+                "LABEL": "MASTERS.ESTADO_LECTURAS.TABLE.FIELDS.ID",
+                "TAG": "text"
+            },
+            {
+                "DTO": "etiqueta",
+                "LABEL": "MASTERS.ESTADO_LECTURAS.TABLE.FIELDS.ETIQUETA",
+                "TAG": "text"
+            },
+            {
+                "DTO": "activo",
+                "LABEL": "MASTERS.ESTADO_LECTURAS.TABLE.FIELDS.ACTIVO",
+                "TAG": "checkbox",
+                "render": "checkbox"
+            }
+        ],
+        "rowButtons": {
+            "searchButton": true,
+            "cleanButton": false
+        },
+        "tableButtons": {
+            "activateButton": true,
+            "desactivateButton": true,
+            "createButton": true
+        }
+    }
+}

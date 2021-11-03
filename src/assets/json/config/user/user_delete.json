@@ -1,0 +1,158 @@
+{
+    "title": "GENERAL.ENTITIES.ZONES",
+    "section": "Secciónn productos",
+    "class": "p-grid",
+    "area": [
+        {
+            "title": "Datos usuario",
+            "class": "",
+            "editButton": true,
+            "subArea": [
+                {
+                    "id": "id",
+                    "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+                    "label": "USER.FORMS.ID.LABEL",
+                    "tag": "input",
+                    "type": "text",
+                    "disabled": true,
+                    "validations": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "nombre",
+                    "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+                    "label": "USER.FORMS.NAME.LABEL",
+                    "tag": "input",
+                    "type": "text",
+                    "disabled": true,
+                    "validations": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "primerApellido",
+                    "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+                    "label": "USER.FORMS.FIRSTSURNAME.LABEL",
+                    "tag": "input",
+                    "type": "text",
+                    "disabled": true,
+                    "validations": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "segundoApellido",
+                    "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+                    "label": "USER.FORMS.SECONDSURNAME.LABEL",
+                    "tag": "input",
+                    "type": "text",
+                    "disabled": true,
+                    "validations": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "nombreUsuario",
+                    "class": "view-entity__fields p-col-12 p-md-6 p-lg-4",
+                    "label": "USER.FORMS.USERNAME.LABEL",
+                    "tag": "input",
+                    "type": "text",
+                    "disabled": true,
+                    "validations": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "numeroTelefono",
+                    "class": "view-entity__fields p-col-12 p-md-6 p-lg-4",
+                    "label": "USER.FORMS.PHONE.LABEL",
+                    "tag": "input",
+                    "type": "text",
+                    "disabled": true,
+                    "validations": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "email",
+                    "class": "view-entity__fields p-col-12 p-md-6 p-lg-4",
+                    "label": "USER.FORMS.EMAIL.LABEL",
+                    "tag": "input",
+                    "type": "text",
+                    "disabled": true,
+                    "validations": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "formatoFechaHoraId",
+                    "class": "view-entity__fields p-col-12 p-md-6 p-lg-4",
+                    "label": "USER.FORMS.DATE.LABEL",
+                    "placeholder": "USER.FORMS.DATE.PLACEHOLDER",
+                    "tag": "select",
+                    "catalog": "fechahora",
+                    "data": [],
+                    "disabled": true,
+                    "validations": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "formatoNumericoId",
+                    "class": "view-entity__fields p-col-12 p-md-6 p-lg-4",
+                    "label": "USER.FORMS.PUNCFORMAT.LABEL",
+                    "placeholder": "USER.FORMS.PUNCFORMAT.PLACEHOLDER",
+                    "tag": "select",
+                    "catalog": "punctuation",
+                    "data": [],
+                    "disabled": true,
+                    "validations": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "idiomaPreferidoId",
+                    "class": "view-entity__fields p-col-12 p-md-6 p-lg-4",
+                    "label": "USER.FORMS.LANGUAGE.LABEL",
+                    "placeholder": "USER.FORMS.LANGUAGE.PLACEHOLDER",
+                    "tag": "select",
+                    "catalog": "idiomas",
+                    "data": [],
+                    "disabled": true,
+                    "validations": {
+                        "required": true
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Gestión de roles de usuario",
+            "class": "p-grid p-form-grid p-p-5 p-col-12",
+            "subArea": [
+                
+                {
+                    "id": "roles",
+                    "class": "p-col-12",
+                    "label": "ZONES.FORMS.NAME.LABEL",
+                    "tag": "pickList",
+                    "listEndPoint": "GET_ROLES",
+                    "targetData": "roles",
+                    "disabled": true,
+                    "validations": {
+                        "required": true
+                    }
+                }
+            ]
+        }
+    ],
+    "buttons": {
+        "cancelButton": true,
+        "addButton": false,
+        "editButton": false,
+        "hisoricButton": false,
+        "deleteButton": false,
+        "submitButton": true
+    },
+    "submitButtonText": "GENERAL.ALERTS.BUTTON_DELETE"
+}

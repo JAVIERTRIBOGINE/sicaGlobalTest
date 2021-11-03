@@ -1,0 +1,104 @@
+{
+    "area": [
+        {          
+            "id": "remesa",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "NO-CERTIFICADAS.FORMS.CODIGO_REMESA.LABEL",
+            "placeholder": "NO-CERTIFICADAS.FORMS.CODIGO_REMESA.PLACEHOLDER",
+            "tag": "input",
+            "type": "text"
+        },
+        {
+            "id": "tipoRemesa",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "NO-CERTIFICADAS.FORMS.TIPO_REMESA.LABEL",
+            "placeholder": "NO-CERTIFICADAS.FORMS.TIPO_REMESA.PLACEHOLDER",
+            "tag": "select",
+            "catalog": "tiporemesa"
+        },
+        {
+            "id": "tipNotificacion",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "NO-CERTIFICADAS.FORMS.TIPO_NOTIFICACION.LABEL",
+            "placeholder": "NO-CERTIFICADAS.FORMS.TIPO_NOTIFICACION.PLACEHOLDER",
+            "tag": "select",
+            "catalog": "tiponotificacion"
+        },
+        {
+            "id": "fechaDesde",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "NO-CERTIFICADAS.FORMS.FECHA_DESDE.LABEL",
+            "placeholder": "NO-CERTIFICADAS.FORMS.FECHA_DESDE.PLACEHOLDER",
+            "tag": "calendar"
+        },
+        {
+            "id": "fechaHasta",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "NO-CERTIFICADAS.FORMS.FECHA_HASTA.LABEL",
+            "placeholder": "NO-CERTIFICADAS.FORMS.FECHA_HASTA.PLACEHOLDER",
+            "tag": "calendar"
+        }
+
+    ],
+    "filterButtons": {
+        "submitButton": true,
+        "cleanButton": true
+    },
+    "table": {
+        "ownTableFilter": false,
+        "ownTableSort": true,
+        "pageSize": [10,25,50],
+        "pageNumber": 1,
+        "dataFields": [
+            {
+                "DTO": "id",
+                "LABEL": "NO-CERTIFICADAS.TABLE.FIELDS.ID",
+                "TAG": "text"
+            },
+            {
+                "DTO": "remesa",
+                "LABEL": "NO-CERTIFICADAS.TABLE.FIELDS.REMESA"
+            },
+            {
+                "DTO": "fechaEnvio",
+                "LABEL": "NO-CERTIFICADAS.TABLE.FIELDS.FECHA_ENVIO",
+                "TAG": "text",
+                "render": "date"
+            },
+            {
+                "DTO": "tipoRemesa",
+                "LABEL": "NO-CERTIFICADAS.TABLE.FIELDS.TIPO_REMESA"
+            },
+            {
+                "DTO": "fechaModificacion",
+                "LABEL": "NO-CERTIFICADAS.TABLE.FIELDS.FECHA_ESTADO",
+                "TAG": "text",
+                "render": "date"
+            },
+            {
+                "DTO": "estado",
+                "LABEL": "NO-CERTIFICADAS.TABLE.FIELDS.ESTADO"
+            },
+            {
+                "DTO": "numeroEnvios",
+                "LABEL": "NO-CERTIFICADAS.TABLE.FIELDS.NUMERO_ENVIOS"
+            },
+            {
+                "DTO": "numeroTramitados",
+                "LABEL": "NO-CERTIFICADAS.TABLE.FIELDS.NUMERO_TRAMITADOS"
+            },
+            {
+                "DTO": "numeroPendietes",
+                "LABEL": "NO-CERTIFICADAS.TABLE.FIELDS.NUMERO_PENDIENTES"
+            },
+            {
+                "DTO": "tipoNotificacion",
+                "LABEL": "NO-CERTIFICADAS.TABLE.FIELDS.TIPO_NOTIFICACION"
+            }
+        ],
+        "rowButtons": {
+            "searchButton": true,
+            "cleanButton": false
+        }
+    }
+}
