@@ -1,0 +1,91 @@
+{
+    "title": "GENERAL.ENTITIES.USERS",
+    "area": [
+        {
+            "id": "id",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "USERS.FORMS.ID.LABEL",
+            "tag": "input",
+            "type": "text"
+        },
+        {
+            "id": "nombre",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "USERS.FORMS.NAME.LABEL",
+            "tag": "input",
+            "type": "text"
+        },
+        {
+            "id": "primerApellido",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "USERS.FORMS.FIRSTSURNAME.LABEL",
+            "tag": "input",
+            "type": "text"
+        },
+        {
+            "id": "segundoApellido",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "USERS.FORMS.SECONDSURNAME.LABEL",
+            "tag": "input",
+            "type": "text"
+        },
+        {
+            "id": "numeroTelefono",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "USERS.FORMS.PHONE.LABEL",
+            "tag": "input",
+            "type": "text"
+        },
+        {
+            "id": "email",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "USERS.FORMS.EMAIL.LABEL",
+            "tag": "input",
+            "type": "text"
+        }
+    ],
+    "filterButtons": {
+        "submitButton": false,
+        "cleanButton": true
+    },
+    "table": {
+        "ownTableFilter": false,
+        "ownTableSort": true,
+        "pageSize": [
+            10,
+            25,
+            50
+        ],
+        "pageNumber": 1,
+        "dataFields": [
+            {
+                "DTO": "id",
+                "LABEL": "USERS.TABLE.FIELDS.ID"
+            },
+            {
+                "DTO": "nombre",
+                "LABEL": "USERS.TABLE.FIELDS.NAME"
+            },
+            {
+                "DTO": "primerApellido",
+                "LABEL": "USERS.TABLE.FIELDS.FIRSTSURNAME"
+            },
+            {
+                "DTO": "segundoApellido",
+                "LABEL": "USERS.TABLE.FIELDS.SECONDSURNAME"
+            },
+            {
+                "DTO": "numeroTelefono",
+                "LABEL": "USERS.TABLE.FIELDS.PHONE"
+            },
+            {
+                "DTO": "email",
+                "LABEL": "USERS.TABLE.FIELDS.EMAIL"
+            }
+        ],
+        "rowButtons": {
+            "searchButton": true,
+            "cleanButton": false
+        }
+    }
+}

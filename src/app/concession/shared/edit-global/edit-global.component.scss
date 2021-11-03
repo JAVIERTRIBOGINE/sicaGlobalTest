@@ -1,0 +1,21 @@
+#container-image {
+    background-color: lightgrey;
+    #home-picture {
+        background-image: url("../../../../assets/images/bions_white_logo.png");
+        background-size: contain;
+        height: 880px;
+        background-repeat: no-repeat;
+        background-position-x: center;
+    }
+}
+#second-container {
+    height: 300px;
+}
+
+.buttonsEditCard {
+    margin: 0.5rem
+}
+
+.backButton {
+    margin: 1rem;
+}

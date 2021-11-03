@@ -1,0 +1,82 @@
+{
+    "title": "GENERAL.ENTITIES.READINGS",
+    "area": [
+        {
+            "id": "nif",
+            "criteria": "equal",
+            "class": "view-entity__fields p-col-12 p-md-6 p-lg-6",
+            "label": "NIF Cliente",
+            "placeholder": "Seleccione num cliente",
+            "tag": "select",
+            "data": [
+                {
+                    "valor": "43734794H",
+                    "nombre": "43734794H"
+                },
+                {
+                    "valor": "43747680R",
+                    "nombre": "43747680R"
+                }
+            ],
+            "validations": {
+                "required": true
+            }
+        },
+        {
+            "id": "docNumber",
+            "criteria": "equal",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-6 filter-tabs__accordion-item",
+            "label": "Número documento",
+            "placeholder": "Introduzca número",
+            "tag": "input",
+            "type": "number"
+        },
+        {
+            "id": "paymentCode",
+            "criteria": "equal",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-6 filter-tabs__accordion-item",
+            "label": "Codigo de pago",
+            "placeholder": "READINGS.FORMS.VALUE.PLACEHOLDER",
+            "tag": "select",
+            "data": [
+                {
+                    "valor": "1",
+                    "nombre": "PA-1"
+                },
+                {
+                    "valor": "2",
+                    "nombre": "PA-2"
+                },
+                {
+                    "valor": "3",
+                    "nombre": "PA-3"
+                }
+            ]
+        },
+        {
+            "id": "state",
+            "criteria": "equal",
+            "class": "view-entity__fields p-col-12 p-md-6 p-lg-6",
+            "label": "Estado",
+            "placeholder": "Seleccione Estado",
+            "tag": "select",
+            "data": [
+                {
+                    "valor": "1",
+                    "nombre": "Pagado"
+                },
+                {
+                    "valor": "2",
+                    "nombre": "No pagado"
+                }
+            ],
+            "validations": {
+                "required": true
+            }
+        }
+    ],
+    "filterButtons": { 
+        "cleanButton": true,
+        "submitButton": true
+    }
+}

@@ -1,0 +1,137 @@
+{
+  "title": "Notificaciones no certificadas",
+  "section": "Secciónn productos",
+  "class": "p-grid",
+  "area": [
+    {
+      "title": "detalle notificaciones certificadas",
+      "class": "",
+      "subArea": [
+        {
+          "id": "codigoRemesa",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "NO-CERTIFICADAS.FORMS.CODIGO_REMESA.LABEL",
+          "placeholder": "NO-CERTIFICADAS.FORMS.CODIGO_REMESA.PLACEHOLDER",
+          "tag": "input",
+          "type": "text",
+          "disabled": true
+        },
+        {
+          "id": "fechaGeneracion",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "NO-CERTIFICADAS.FORMS.FECHA_ENVIO.LABEL",
+          "placeholder": "NO-CERTIFICADAS.FORMS.FECHA_ENVIO.PLACEHOLDER",
+          "tag": "calendar",
+          "disabled": true
+        },
+        {
+          "id": "fechaVencimiento",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "NO-CERTIFICADAS.FORMS.FECHA_ENVIO.LABEL",
+          "placeholder": "NO-CERTIFICADAS.FORMS.FECHA_ENVIO.PLACEHOLDER",
+          "tag": "calendar",
+          "disabled": true
+        },
+        {
+          "id": "tipoRemesa",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "NO-CERTIFICADAS.FORMS.TIPO_REMESA.LABEL",
+          "placeholder": "NO-CERTIFICADAS.FORMS.TIPO_REMESA.PLACEHOLDER",
+          "tag": "input",
+          "type": "text",
+          "disabled": true
+        },
+        {
+          "id": "estado",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "NO-CERTIFICADAS.FORMS.ESTADO_ENVIO.LABEL",
+          "placeholder": "NO-CERTIFICADAS.FORMS.ESTADO_ENVIO.PLACEHOLDER",
+          "tag": "input",
+          "type": "text",
+          "disabled": true
+        },
+        {
+          "id": "numeroEnviados",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "NO-CERTIFICADAS.FORMS.TIPO_NOTIFICACION.LABEL",
+          "placeholder": "NO-CERTIFICADAS.FORMS.TIPO_NOTIFICACION.PLACEHOLDER",
+          "tag": "input",
+          "type": "text",
+          "disabled": true
+        },
+        {
+          "id": "numeroTramitados",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "NO-CERTIFICADAS.FORMS.TIPO_NOTIFICACION.LABEL",
+          "placeholder": "NO-CERTIFICADAS.FORMS.TIPO_NOTIFICACION.PLACEHOLDER",
+          "tag": "input",
+          "type": "text",
+          "disabled": true
+        },
+        {
+          "id": "numeroPendientes",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "NO-CERTIFICADAS.FORMS.TIPO_NOTIFICACION.LABEL",
+          "placeholder": "NO-CERTIFICADAS.FORMS.TIPO_NOTIFICACION.PLACEHOLDER",
+          "tag": "input",
+          "type": "text",
+          "disabled": true
+        }
+      ]
+    }
+  ],
+  "table": {
+    "ownTableFilter": false,
+    "ownTableSort": true,
+    "pageSize": [
+      10,
+      25,
+      50
+    ],
+    "pageNumber": 1,
+    "dataFields": [
+      {
+        "DTO": "cuenta",
+        "LABEL": "Cuenta"
+      },
+      {
+        "DTO": "codigoCuenta",
+        "LABEL": "Código de cuenta"
+      },
+      {
+        "DTO": "suministro",
+        "LABEL": "Suministro / Contrato"
+      },
+      {
+        "DTO": "documento",
+        "LABEL": "Documento",
+        "render": "link"
+      },
+      {
+        "DTO": "estado",
+        "LABEL": "Estado"
+      },
+      {
+        "DTO": "fechaEstado",
+        "LABEL": "Fecha Estado",
+        "render": "date"
+      }
+    ],
+    "rowButtons": {
+      "searchButton": true,
+      "cleanButton": false
+    },
+    "tableButtons": {
+      "deleteButton": true,
+      "createButton": true
+    },
+    "isModal": true
+  },
+  "buttons": {
+    "cancelButton": true,
+    "addButton": false,
+    "editButton": true,
+    "historicButton": true,
+    "deleteButton": true
+  }
+}

@@ -1,0 +1,32 @@
+.login_form {
+  display: flex;
+  flex-direction: column;
+
+  .input_formfield {
+    margin: 1em 0;
+    width: 20%;
+  }
+}
+
+.action-badges{
+  border-radius: 7px;
+  padding: 2.5px 11px;
+  font-weight: 600;
+}
+
+.write {
+  background-color: rgb(89, 142, 241);
+  color: white;
+}
+.edit {
+  background-color: rgb(250, 246, 11);
+  color: black;
+}
+.read {
+  background-color: rgb(132, 241, 89);
+  color: black;
+}
+.delete {
+  background-color: rgb(243, 22, 88);
+  color: white;
+}

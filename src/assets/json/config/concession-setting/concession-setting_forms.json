@@ -1,0 +1,174 @@
+{
+  "title": "GENERAL.ENTITIES.CONCESSIONS",
+  "section": "Secciónn productos",
+  "class": "p-grid",
+  "area": [
+    {
+      "title": "bloque 1",
+      "class": "p-form-grid p-col-3",
+      "subArea": [
+        {
+          "id": "logo",
+          "class": "p-col-12",
+          "label": "upload test",
+          "tag": "upload",
+          "type": "text",
+          "disabled": true,
+          "hidden": "true"
+        }
+      ]
+    },
+    {
+      "title": "bloque 2",
+      "class": "p-form-grid p-col-9",
+      "subArea": [
+        {
+          "id": "id",
+          "class": "p-col-4",
+          "label": "CONCESSIONS.FORMS.ID.LABEL",
+          "placeholder": "CONCESSIONS.FORMS.ID.PLACEHOLDER",
+          "tag": "input",
+          "type": "text",
+          "disabled": true,
+          "hidden": "true"
+        },
+        {
+          "id": "nombre",
+          "class": "p-col-4",
+          "label": "CONCESSIONS.FORMS.NAME.LABEL",
+          "placeholder": "CONCESSIONS.FORMS.NAME.PLACEHOLDER",
+          "tag": "input",
+          "type": "text",
+          "validations": {
+            "required": true
+          }
+        },
+        {
+          "id": "paisId",
+          "class": "p-col-4",
+          "label": "CONCESSIONS.FORMS.COUNTRY.LABEL",
+          "placeholder": "CONCESSIONS.FORMS.COUNTRY.PLACEHOLDER",
+          "customTraduction": true,
+          "tag": "select",
+          "data": [
+            {
+              "valor": 1,
+              "nombre": "CONCESSIONS.FORMS.COUNTRY.OPTION_SPAIN"
+            },
+            {
+              "valor": 2,
+              "nombre": "CONCESSIONS.FORMS.COUNTRY.OPTION_FRANCE"
+            },
+            {
+              "valor": 3,
+              "nombre": "CONCESSIONS.FORMS.COUNTRY.OPTION_MEXICO"
+            }
+          ],
+          "validations": {
+            "required": true
+          }
+        }
+      ]
+    },
+    {
+      "title": "bloque 3",
+      "class": "p-form-grid p-col-12",
+      "subArea": [
+        {
+          "id": "languageId",
+          "class": "p-col-3",
+          "changeLan": true,
+          "label": "CONCESSIONS.FORMS.LANGUAGE.LABEL",
+          "placeholder": "CONCESSIONS.FORMS.LANGUAGE.PLACEHOLDER",
+          "tag": "select",
+          "data": [
+            {
+              "valor": 1,
+              "nombre": "ESP"
+            },
+            {
+              "valor": 2,
+              "nombre": "CA"
+            }
+          ],
+          "validations": {
+            "required": true
+          }
+        },
+        {
+          "id": "divisaId",
+          "class": "p-col-3",
+          "label": "CONCESSIONS.FORMS.COIN.LABEL",
+          "placeholder": "CONCESSIONS.FORMS.COIN.PLACEHOLDER",
+          "tag": "select",
+          "data": [
+            {
+              "valor": 1,
+              "nombre": "EUR (€)"
+            },
+            {
+              "valor": 2,
+              "nombre": "DOLLAR ($)"
+            }
+          ],
+          "validations": {
+            "required": true
+          }
+        },
+        {
+          "id": "tipoImpuestoId",
+          "class": "p-col-3",
+          "label": "CONCESSIONS.FORMS.TAX_TYPE.LABEL",
+          "customTraduction": true,
+          "placeholder": "CONCESSIONS.FORMS.TAX_TYPE.PLACEHOLDER",
+          "tag": "select",
+          "data": [
+            {
+              "valor": 1,
+              "nombre": "CONCESSIONS.FORMS.TAX_TYPE.OPTION_IVA"
+            },
+            {
+              "valor": 2,
+              "nombre": "CONCESSIONS.FORMS.TAX_TYPE.OPTION_OTHER"
+            }
+          ],
+          "validations": {
+            "required": true
+          }
+        },
+        {
+          "id": "no-form-control",
+          "class": "p-col-3",
+          "label": "custom-control",
+          "tag": "custom-component",
+          "flag": "routings-concession-toZone-toRol"
+        }
+
+      ]
+    },
+    {
+      "title": "bloque 4",
+      "class": "p-form-grid p-col-12",
+      "subArea": [
+        {
+          "id": "usaGis",
+          "class": "p-col-3",
+          "label": "CONCESSIONS.FORMS.GIS_USING.LABEL",
+          "placeholder": "CONCESSIONS.FORMS.GIS_USING.PLACEHOLDER",
+          "tag": "switch"
+        },
+        {
+          "id": "usaGota",
+          "class": "p-col-3",
+          "label": "CONCESSIONS.FORMS.GOTA_USING.LABEL",
+          "placeholder": "CONCESSIONS.FORMS.GOTA_USING.PLACEHOLDER",
+          "tag": "switch"
+        }
+      ]
+    }
+  ],
+  "buttons": {
+    "submitButton": true,
+    "cancelButton": true
+  }
+}

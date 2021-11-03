@@ -1,0 +1,51 @@
+{
+    "title": "GENERAL.ENTITIES.READINGS",
+    "area": [
+   
+        {
+            "id": "concept",
+            "criteria": "include",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-6 filter-tabs__accordion-item",
+            "label": "Concepto",
+            "placeholder": "Introduzca concepto",
+            "tag": "input",
+            "type": "text"
+        },
+        {
+            "id": "collectionCode",
+            "criteria": "equal",
+            "class": "view-entity__fields p-col-12 p-md-6 p-lg-6",
+            "label": "Código de Cobro",
+            "placeholder": "Seleccione código",
+            "tag": "select",
+            "data": [
+                {
+                    "valor": "1",
+                    "nombre": "CO-1"
+                },
+                {
+                    "valor": "2",
+                    "nombre": "CO-2"
+                },
+                {
+                    "valor": "3",
+                    "nombre": "CO-3"
+                }
+            ],
+            "validations": {
+                "required": true
+            }
+        },
+        {
+            "id": "amount",
+            "criteria": "range",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-6 filter-tabs__accordion-item",
+            "label": "Montante",
+            "tag": "slider"
+        }
+    ],
+    "filterButtons": { 
+        "cleanButton": true,
+        "submitButton": true
+    }
+}

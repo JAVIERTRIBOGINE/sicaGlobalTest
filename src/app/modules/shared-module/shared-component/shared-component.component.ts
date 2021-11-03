@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TestTwoService } from 'src/app/services/test-two.service';
+import { TestTwoService } from 'src/app/test-services/test-two.service';
 
 @Component({
   selector: 'app-shared-component',

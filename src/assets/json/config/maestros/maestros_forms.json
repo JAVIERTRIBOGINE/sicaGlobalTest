@@ -1,0 +1,115 @@
+{
+  "id": 4,
+  "nombreEntidad": "estadolecturas",
+  "titulo": "Estados Lectura",
+  "clase": "UI - Clase",
+  "maestro": [
+    {
+      "id": "Id",
+      "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+      "label": "READINGS.FORMS.ID.LABEL",
+      "placeHolder": "READINGS.FORMS.ID.PLACEHOLDER",
+      "tag": "input",
+      "type": "int",
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "id": "Etiqueta",
+      "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+      "label": "READINGS.FORMS.ID.LABEL",
+      "placeHolder": "READINGS.FORMS.ID.PLACEHOLDER",
+      "tag": "input",
+      "type": "text",
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "id": "activo",
+      "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+      "label": "READINGS.FORMS.ID.LABEL",
+      "placeHolder": "READINGS.FORMS.ID.PLACEHOLDER",
+      "tag": "checkbox",
+      "type": "boolean"
+    }
+  ],
+  "traducciones": [
+    {
+      "id": "Id",
+      "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+      "label": "READINGS.FORMS.ID.LABEL",
+      "placeHolder": "READINGS.FORMS.ID.PLACEHOLDER",
+      "tag": "input",
+      "type": "int",
+      "catalog": "",
+      "data": null,
+      "validations": {
+        "required": true,
+        "max": null,
+        "min": null
+      }
+    },
+    {
+      "id": "EntidadBaseId",
+      "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+      "label": "READINGS.FORMS.ID.LABEL",
+      "placeHolder": "READINGS.FORMS.ID.PLACEHOLDER",
+      "tag": "input",
+      "type": "int",
+      "catalog": "",
+      "data": null,
+      "validations": {
+        "required": true,
+        "max": 100,
+        "min": 10
+      }
+    },
+    {
+      "id": "Etiqueta",
+      "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+      "label": "READINGS.FORMS.ID.LABEL",
+      "placeHolder": "READINGS.FORMS.ID.PLACEHOLDER",
+      "tag": "input",
+      "type": "int",
+      "catalog": "",
+      "data": null,
+      "validations": {
+        "required": true,
+        "max": 100,
+        "min": 10
+      }
+    },
+    {
+      "id": "IdiomaId",
+      "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+      "label": "READINGS.FORMS.ID.LABEL",
+      "placeHolder": "READINGS.FORMS.ID.PLACEHOLDER",
+      "tag": "select",
+      "type": "int",
+      "catalog": "",
+      "data": null,
+      "validations": {
+        "required": true,
+        "max": 100,
+        "min": 10
+      }
+    },
+    {
+      "id": "descipcion",
+      "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+      "label": "READINGS.FORMS.ID.LABEL",
+      "placeHolder": "READINGS.FORMS.ID.PLACEHOLDER",
+      "tag": "text",
+      "type": "text",
+      "catalog": "",
+      "data": null,
+      "validations": {
+        "required": true,
+        "max": null,
+        "min": null
+      }
+    }
+  ]
+}

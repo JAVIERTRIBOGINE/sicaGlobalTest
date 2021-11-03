@@ -1,0 +1,47 @@
+{
+    "title": "GENERAL.ENTITIES.ROLES",
+    "area": [
+        {
+            "id": "id",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "ZONES.FORMS.ID.LABEL",
+            "tag": "input",
+            "type": "text"
+        },
+        {
+            "id": "nombre",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "ZONES.FORMS.NAME.LABEL",
+            "tag": "input",
+            "type": "text"
+        }
+    ],
+    "filterButtons": {
+        "submitButton": false,
+        "cleanButton": true
+    },
+    "table": {
+        "ownTableFilter": false,
+        "ownTableSort": true,
+        "pageSize": [
+            3,
+            5,
+            7
+        ],
+        "pageNumber": 1,
+        "dataFields": [
+            {
+                "DTO": "id",
+                "LABEL": "ZONES.TABLE.FIELDS.ID"
+            },
+            {
+                "DTO": "nombre",
+                "LABEL": "ZONES.TABLE.FIELDS.NAME"
+            }
+        ],
+        "rowButtons": {
+            "searchButton": true,
+            "cleanButton": false
+        }
+    }
+}

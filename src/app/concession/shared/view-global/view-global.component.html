@@ -1,0 +1,24 @@
+<p-toast position="top-center" (onClose)="customMessageService.clearToastMessage()"></p-toast>
+
+<!-- BREADCRUMB -->
+<sica-breadcrumb></sica-breadcrumb>
+
+<!-- COMPONENTE DE ALERTAS -->
+<ng-container>
+    <sica-formsNg *ngIf="editWithDatOrCreateForm"
+    [jsonDataForm]="jsonData" 
+    [action]="action" 
+    [editData]="editData"
+    [entityEndpoint]="routerService.getPossibleEndpoints()"
+    ></sica-formsNg>
+</ng-container>
+<ng-container *ngIf="isThereTable && isThereDataTable">
+    <sica-table #tableCpt
+        [dataFields]="viewTable.dataFields" [tableButtons]="viewTable.tableButtons" 
+        [rows]="viewTable.rows" [isModal]="viewTable.isModal"
+        [pageNumber]="viewTable.pageNumber" [pageSize]="viewTable.pageSize" [data]="viewTable?.data"
+        [originalData]="viewTable?.data" [columns]="columns" [_selectedColumns]="columns"
+        [codeConcession]="routerService.getCodeConcession()" [entity]="entity"
+        [endpoints]="routerService.getPossibleEndpoints()" [allowedActions]="routerService.getAllowedActions()"
+         (export)="outputExportData($event)"></sica-table>
+</ng-container>

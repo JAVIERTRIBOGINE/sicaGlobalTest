@@ -1,0 +1,37 @@
+{
+    "title": "GENERAL.ENTITIES.ZONES",
+    "section": "Secciónn productos",
+    "class": "p-grid",
+    "area": [
+        {
+            "title": "ejemplo",
+            "class": "p-grid p-form-grid p-p-5 p-col-12",
+            "subArea": [
+                {
+                    "id": "id",
+                    "class": "p-col-3",
+                    "label": "ZONES.FORMS.ID.LABEL",
+                    "tag": "input",
+                    "type": "text",
+                    "disabled": true
+                },
+                {
+                    "id": "nombre",
+                    "class": "p-col-3",
+                    "label": "ZONES.FORMS.NAME.LABEL",
+                    "tag": "input",
+                    "type": "text",
+                    "disabled": true
+                }
+            ]
+        }
+    ],
+    "buttons": {
+        "cancelButton": true,
+        "addButton": false,
+        "editButton": false,
+        "hisoricButton": false,
+        "deleteButton": false,
+        "submitButton": true
+    }
+}

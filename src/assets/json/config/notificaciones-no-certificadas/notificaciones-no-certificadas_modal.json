@@ -1,0 +1,117 @@
+{
+  "title": "Notificaciones no certificadas",
+  "section": "Secciónn productos",
+  "class": "p-grid",
+  "area": [
+    {
+      "title": "detalle notificaciones no certificadas",
+      "class": "",
+      "subArea": [
+        {
+          "id": "id",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "id",
+          "tag": "input",
+          "type": "text",
+          "disabled": true
+        },
+        {
+          "id": "codigoRemesa",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "NO-CERTIFICADAS.FORMS.CODIGO_REMESA.LABEL",
+          "placeholder": "NO-CERTIFICADAS.FORMS.CODIGO_REMESA.PLACEHOLDER",
+          "tag": "input",
+          "type": "text",
+          "disabled": true
+        },
+        {
+          "id": "tipoRemesaId",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "NO-CERTIFICADAS.FORMS.TIPO_REMESA.LABEL",
+          "placeholder": "NO-CERTIFICADAS.FORMS.TIPO_REMESA.PLACEHOLDER",
+          "tag": "input",
+          "type": "text",
+          "disabled": true
+        },
+        {
+          "id": "fechaEnvio",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "NO-CERTIFICADAS.FORMS.FECHA_ENVIO.LABEL",
+          "placeholder": "NO-CERTIFICADAS.FORMS.FECHA_ENVIO.PLACEHOLDER",
+          "tag": "calendar",
+          "disabled": true
+        },
+        {
+          "id": "estadoEnvio",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "NO-CERTIFICADAS.FORMS.ESTADO_ENVIO.LABEL",
+          "placeholder": "NO-CERTIFICADAS.FORMS.ESTADO_ENVIO.PLACEHOLDER",
+          "tag": "input",
+          "type": "text",
+          "disabled": true
+        },
+        {
+          "id": "tipoNotificacionId",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "NO-CERTIFICADAS.FORMS.TIPO_NOTIFICACION.LABEL",
+          "placeholder": "NO-CERTIFICADAS.FORMS.TIPO_NOTIFICACION.PLACEHOLDER",
+          "tag": "input",
+          "disabled": true
+        }
+      ]
+    }
+  ],
+  "table": {
+    "ownTableFilter": false,
+    "ownTableSort": true,
+    "pageSize": [
+      10,
+      25,
+      50
+    ],
+    "pageNumber": 1,
+    "dataFields": [
+      {
+        "DTO": "id",
+        "LABEL": "Id"
+      },
+      {
+        "DTO": "cuentaId",
+        "LABEL": "Código de cuenta"
+      },
+      {
+        "DTO": "suministroId",
+        "LABEL": "Suministro / Contrato"
+      },
+      {
+        "DTO": "asunto",
+        "LABEL": "asunto"
+      },
+      {
+        "DTO": "destinatario",
+        "LABEL": "destinatario"
+      },
+      {
+        "DTO": "documentoId",
+        "LABEL": "Documentos",
+        "render": "link"
+      }
+    ],
+    "rowButtons": {
+      "searchButton": true,
+      "cleanButton": false
+    },
+    "tableButtons": {
+      "deleteButton": true,
+      "createButton": true
+    },
+    "isModal": true
+  },
+  "buttons": {
+    "cancelButton": true,
+    "addButton": false,
+    "editButton": true,
+    "historicButton": true,
+    "deleteButton": true
+  }
+}

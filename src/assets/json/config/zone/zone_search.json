@@ -1,0 +1,94 @@
+{
+    "title": "GENERAL.ENTITIES.ZONES",
+    "area": [
+        {
+            "id": "nombre",
+            "class": "p-col-12 p-sm-12 p-md-6 p-lg-3 filter-tabs__accordion-item",
+            "label": "ZONES.FORMS.NAME.LABEL",
+            "tag": "input",
+            "type": "text"
+        },
+        {
+            "id": "asociada",
+            "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+            "label": "ZONES.FORMS.ASOCIADA.LABEL",
+            "tag": "select",
+            "data": [
+                {
+                    "valor": true,
+                    "nombre": "Asociado"
+                },
+                {
+                    "valor": false,
+                    "nombre": "Desasociado"
+                }
+            ],
+            "validations": {
+                "required": true
+            }
+        }
+    ],
+    "filterButtons": {
+        "submitButton": false,
+        "cleanButton": true
+    },
+    "table": {
+        "ownTableFilter": false,
+        "ownTableSort": true,
+        "pageSize": [
+            3,
+            5,
+            7
+        ],
+        "pageNumber": 1,
+        "dataFields": [
+            {
+                "DTO": "id",
+                "LABEL": "ZONES.TABLE.FIELDS.ID"
+            },
+            {
+                "DTO": "nombre",
+                "LABEL": "ZONES.TABLE.FIELDS.NAME"
+            },
+            {
+                "DTO": "fechaCreacion",
+                "LABEL": "ZONES.TABLE.FIELDS.FECHACREACION",
+                "render": "date"
+            },
+            {
+                "DTO": "fechaModificacion",
+                "LABEL": "ZONES.TABLE.FIELDS.FECHAMODIFICACION",
+                "render": "date"
+            },
+            {
+                "DTO": "usuarioCreador",
+                "LABEL": "ZONES.TABLE.FIELDS.USUARIOCREADOR"
+            },
+            {
+                "DTO": "usuarioModificador",
+                "LABEL": "ZONES.TABLE.FIELDS.USUARIOMODIFICADOR"
+            },
+            {
+                "DTO": "asociada",
+                "LABEL": "ZONES.TABLE.FIELDS.ASOCIADA",
+                "TAG": "checkbox",
+                "render": "checkbox"
+            },
+            {
+                "DTO": "activo",
+                "LABEL": "ZONES.TABLE.FIELDS.ACTIVO",
+                "TAG": "checkbox",
+                "render": "checkbox"
+            }
+        ],
+        "rowButtons": {
+            "searchButton": true,
+            "cleanButton": false
+        },
+        "tableButtons": {
+            "associateButton": true,
+            "desassociateButton": true
+        },
+        "isModal":true
+    }
+}

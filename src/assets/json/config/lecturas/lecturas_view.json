@@ -1,0 +1,132 @@
+{
+  "title": "GENERAL.ENTITIES.READINGS",
+  "section": "Secciónn productos",
+  "class": "p-grid",
+  "area": [
+    {
+      "title": "Datos de lectura",
+      "class": "",
+      "subArea": [
+        {
+          "id": "id",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "READINGS.FORMS.ID.LABEL",
+          "tag": "input",
+          "type": "text",
+          "disabled": true
+        },
+        {
+          "id": "titulo",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "READINGS.FORMS.TITLE.LABEL",
+          "tag": "input",
+          "type": "text",
+          "disabled": true
+        },
+        {
+          "id": "valor",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "READINGS.FORMS.VALUE.LABEL",
+          "tag": "input",
+          "type": "number",
+          "disabled": true
+        },
+        {
+          "id": "valor1",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "Valor1 test",
+          "tag": "input",
+          "type": "number",
+          "disabled": true
+        },
+        {
+          "id": "valor2",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "Valor2 test",
+          "tag": "input",
+          "type": "number",
+          "disabled": true
+        },
+        {
+          "id": "precio",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "Precio test",
+          "tag": "input",
+          "type": "number",
+          "disabled": true
+        },
+        {
+          "id": "estadoLecturaId",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "READINGS.FORMS.STATE.LABEL",
+          "placeholder": "READINGS.FORMS.STATE.PLACEHOLDER",
+          "tag": "select",
+          "disabled": true,
+          "catalog": "estadolecturas",
+          "data": [],
+          "validations": {
+            "required": true
+          }
+        },
+        {
+          "id": "tipoLecturaId",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "READINGS.FORMS.TYPE.LABEL",
+          "disabled": true,
+          "placeholder": "READINGS.FORMS.TYPE.PLACEHOLDER",
+          "tag": "select",
+          "catalog": "tipoLectura",
+          "data": [
+            {
+              "valor": 1,
+              "nombre": "Tipo Lecturas -1"
+            },
+            {
+              "valor": 2,
+              "nombre": "Tipo Lecturas -2"
+            }
+          ],
+          "validations": {
+            "required": true
+          }
+        },
+        {
+          "id": "nullboolean",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "Null boolean test",
+          "tag": "nullable-checkbox",
+          "disabled": true
+        },
+        {
+          "id": "boolean",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "Boolean test",
+          "tag": "checkbox",
+          "disabled": true
+        },
+        {
+          "id": "date",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "Fecha test",
+          "tag": "calendar",
+          "disabled": true
+        },
+        {
+          "id": "timeStamp",
+          "class": "view-entity__fields p-col-12 p-md-6 p-lg-3",
+          "label": "TimeStamp test",
+          "tag": "input",
+          "type": "number",
+          "disabled": true
+        }
+      ]
+    }
+  ],
+  "buttons": {
+    "cancelButton": true,
+    "addButton": false,
+    "editButton": true,
+    "historicButton": true,
+    "deleteButton": true
+  }
+}

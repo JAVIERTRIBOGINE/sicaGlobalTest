@@ -1,0 +1,40 @@
+<div class="p-grid multilanguage-grid">
+    <div class="p-col-12 p-sm-6">
+        <sica-search-formsNg *ngIf="catalogAndUploadLoaded" #traductCatalogForm [loadFromUrl]='false'
+            (notFilterData)="dataLoadExcel($event)" [jsonDataForm]="jsonDataCatalog"></sica-search-formsNg>
+    </div>
+
+    <div class="p-col-12 p-sm-6">
+        <sica-search-formsNg *ngIf="catalogAndUploadLoaded" #uploadForm [loadFromUrl]='false'
+            (submitUploadOption)="submitUpload($event)"
+            [jsonDataForm]="jsonDataUpload"></sica-search-formsNg>
+    </div>
+</div>
+
+<!-- PROCESS DATA -->
+
+<ng-container *ngIf="areResultsData">
+    <div class="p-col-12 p-grid">
+        <div class="p-col-6 p-offset-3 p-drop-collection-column">
+            <div class="p-d-flex p-flex-column p-card p-mb-2 p-mt-2 p-p-3 p-jc-around">
+                <div class="results p-mb-2 p-mt-2"><strong>{{'MULTILANGUAGE.RESULTS.TITLE' | translate}}</strong> </div>
+                <div class="created_rows p-mb-2 p-mt-2"><i class="pi pi-check-circle green-colored"></i>
+                    {{'MULTILANGUAGE.RESULTS.CREATED_RECORDS' | translate}} <span
+                        class="created green-colored">{{created}}</span></div>
+                <div class="updated_rows p-mb-2 p-mt-2"><i class="pi pi-check-circle blue-colored"></i>
+                    {{'MULTILANGUAGE.RESULTS.UPDATED_RECORDS' | translate }} <span
+                        class="updated blue-colored">{{updated}}</span></div>
+                <div class="failed_rows p-mb-2 p-mt-2"><i class="pi pi-exclamation-circle red-colored"></i>
+                    {{'MULTILANGUAGE.RESULTS.FAILED_RECORDS' | translate}} <span
+                        class="fail red-colored"><strong>{{failed}}</strong></span></div>
+                <div class="failed_rows p-mb-2 p-mt-2">
+                    {{'MULTILANGUAGE.RESULTS.ID_ERROR' | translate}} <span class="fail red-colored"><strong>{{idError
+                            }}</strong></span></div>
+                <button *ngIf="isFailed" type="button" class="p-button searchButton"
+                    (click)="downloadFailExcel()" pButton>Descargar plantilla de errores</button>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<ng-container>
+</ng-container>

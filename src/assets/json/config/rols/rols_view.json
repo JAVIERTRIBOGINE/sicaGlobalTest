@@ -1,0 +1,58 @@
+{
+    "title": "GENERAL.ENTITIES.ZONES",
+    "section": "Secciónn productos",
+    "class": "p-grid",
+    "area": [
+        {
+            "class": "p-grid p-form-grid p-p-5 p-col-12",
+            "editButton": true,
+            "subArea": [
+                {
+                    "id": "id",
+                    "class": "p-col-3",
+                    "label": "ZONES.FORMS.ID.LABEL",
+                    "tag": "input",
+                    "type": "text",
+                    "disabled": true
+                },
+                {
+                    "id": "nombre",
+                    "class": "p-col-3",
+                    "label": "ZONES.FORMS.NAME.LABEL",
+                    "tag": "input",
+                    "type": "text",
+                    "disabled": true,
+                    "validations": {
+                        "required": true
+                    }
+                }
+            ]
+        },
+        {
+            "class": "p-grid p-form-grid p-p-5 p-col-12",
+            "subArea": [
+                
+                {
+                    "id": "permisos",
+                    "class": "p-col-12",
+                    "label": "ZONES.FORMS.NAME.LABEL",
+                    "tag": "pickList",
+                    "storage": "globalPermissions",
+                    "listEndPoint": "GET_PERMISSIONS",
+                    "targetData": "permisos",
+                    "disabled": true,
+                    "validations": {
+                        "required": true
+                    }
+                }
+                        ]
+        }
+    ],
+    "buttons": {
+        "cancelButton": true,
+        "addButton": false,
+        "editButton": true,
+        "hisoricButton": true,
+        "deleteButton": true
+    }
+}
