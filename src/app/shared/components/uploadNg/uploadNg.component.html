@@ -1,0 +1,20 @@
+<!--elemento checkbox primeng englobado en el label-->
+<span class="p-float-label upload-span-container">
+  <p-fileUpload #standardFileUp *ngIf="isStandard" name="myfile[]" chooseLabel="{{'GENERAL.ALERTS.BUTTON_CHOOSE' | translate }}" cancelLabel="{{'GENERAL.ALERTS.BUTTON_CANCEL' | translate }}" uploadLabel="{{'GENERAL.ALERTS.BUTTON_UPLOAD' | translate }}"  customUpload="true" (uploadHandler)="myExcelModulesUploader($event, standardFileUp)"></p-fileUpload>
+
+  <p-fileUpload  *ngIf="!isStandard" #fileUp [headers]="'p-d-none'" name="myfile[]" url="./concessionFormsNg.component.ts"
+    multiple="multiple" customUpload="true" (uploadHandler)="myUploader($event)" (onRemove)="removeFile($event)"
+    accept="image/*,.xlsx,.pdf,.csv,.xls" [auto]="true" maxFileSize="1000000">
+    <ng-template pTemplate="toolbar">
+    </ng-template>
+    <ng-template let-file pTemplate="file">
+      <div>
+        <img style="max-width: 100%" [src]="fileDemo" />
+      </div>
+    </ng-template>
+    <ng-template pTemplate="content" let-files>
+      <span *ngIf="!fileDemo" class="logo-add-alert">Añade logo</span>
+       <button *ngIf="fileDemo" pButton (click)="fileUp.clear($event); fileDemo=null">clear</button>
+    </ng-template>
+  </p-fileUpload>
+</span>

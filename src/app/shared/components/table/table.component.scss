@@ -1,0 +1,79 @@
+.table-main {
+  width: 100%;
+}
+
+.table-search-card {
+  margin: 5px 0;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 0%), 0 1px 1px 0 rgb(0 0 0 / 3%), 0 1px 3px 0 rgb(0 0 0 / 10%);
+}
+
+.p-field-search-table-first {
+  margin: 10px;
+}
+
+.p-field-search-table-others {
+  margin: 10px;
+}
+
+.sicaSearch-title {
+  margin: 0 10px;
+  padding-top: 5px;
+}
+
+.input-span-container {
+  margin-top: 20px;
+}
+
+.p-formgroup-inline {
+  .searchInput {
+    margin-right: unset;
+  }
+  input {
+    width: 100%;
+  }
+}
+
+.checkbox-label {
+  margin-left: 7px;
+}
+
+::ng-deep app-search-global {
+  table {
+    tbody {
+      .actions-column {
+        overflow: inherit !important;
+      }
+      .buttons-column {
+        padding-left: 0 !important;
+        button {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  
+}
+
+::ng-deep p-table {
+  .pi-angle-right::before {  
+    content: "Siguiente";
+    color: #2196F3;
+    font-family: 'SegoeUI', Arial, sans-serif;
+  }
+  .pi-angle-left::before {  
+    content: "Anterior";
+    color: #2196F3;
+  }
+  .pi-angle-double-left {
+    display: none;
+  }
+  .pi-angle-double-right {
+    display: none;
+  }
+
+  .orderList-custom {
+      .p-orderlist-controls{
+         display: none;
+        }
+  }
+}

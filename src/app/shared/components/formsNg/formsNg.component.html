@@ -1,0 +1,85 @@
+<div class="view-entity">
+  <div class="p-col-12">
+    <h2 class="view-entity__title">{{jsonDataForm?.area[0].title}}</h2>
+  </div>
+  <form class="view-entity__form p-grid" [formGroup]="globalForm" (ngSubmit)="onSubmit()" autocomplete="off">
+      <fieldset class="view-entity__fieldset {{containerblock?.class}}" *ngFor="let containerblock of formAreas">
+        <div class="view-entity__wrap-edit p-col-12">
+          <legend *ngIf="containerblock?.title" class="view-entity__legend">{{containerblock?.title}}</legend>
+        </div>
+        <div class="{{!IdInCreateForm(block.id)? block.class:''}}" *ngFor="let block of containerblock.subArea">
+          <ng-container *ngIf="!IdInCreateForm(block.id)">
+            <sica-inputNg *ngIf="block?.tag === 'input'" [type]="block.type" [formControlName]="block.id"
+              [labelText]="block.label | translate:{'req': block.validations?.required?'*':''}"
+              [disabled]="block.disabled? block.disabled:disabled" [placeholder]="block.placeholder"
+              [validations]="block.validations?block.validations: null" [formSubmit]="formSubmit"></sica-inputNg>
+
+            <sica-uploadNg *ngIf="block?.tag === 'upload'" [labelText]="'label test upload'"
+              [formControlName]="block.id" [disabled]="block.disabled? block.disabled:disabled"
+              [formSubmit]="formSubmit">
+            </sica-uploadNg>
+
+            <sica-selectNg *ngIf="block?.tag === 'select' "
+              [labelText]="block.label | translate:{'req': block.validations?.required?'*':''}"
+              [changeLan]="block?.changeLan? block.changeLan: false" [data]="block?.data?.length !==0? block?.data:[]"
+              [customTraduction]="block.customTraduction? block.customTraduction:'false'"
+              [placeholder]="block?.placeholder ? block?.placeholder: 'GENERAL.ALERTS.DEFAULT_PLACEHOLDER'"
+              [formControlName]="block.id" [readOnly]="block?.readOnly" [disabled]="!!block?.disabled? block.disabled: disabled"></sica-selectNg>
+
+
+            <sica-checkboxNg *ngIf="block?.tag === 'checkbox'"
+              [labelText]="block.label | translate:{'req': block.validations?.required?'*':''}"
+              [formControlName]="block.id" [disabled]="!!block?.disabled? block.disabled: disabled"></sica-checkboxNg>
+
+            <sica-switchNg *ngIf="block?.tag === 'switch'"
+              [labelText]="block.label | translate:{'req': block.validations?.required?'*':''}"
+              [formControlName]="block.id" [disabled]="!!block?.disabled? block.disabled: disabled"></sica-switchNg>
+
+            <sica-triCheckboxNg *ngIf="block?.tag === 'nullable-checkbox'"
+              [labelText]="block.label | translate:{'req': block.validations?.required?'*':''}"
+              [formControlName]="block.id" [disabled]="!!block?.disabled? block.disabled: disabled"></sica-triCheckboxNg>
+
+            <sica-calendarNg *ngIf="block?.tag === 'calendar'"
+              [labelText]="block.label | translate:{'req': block.validations?.required?'*':''}"
+              [formControlName]="block.id" [disabled]="block?.disabled? block?.disabled:false"
+              [placeholder]="block.placeholder"></sica-calendarNg>
+
+            <!--  -->
+            <sica-pickListNg *ngIf="block?.tag === 'pickList'"
+              [sourceEndpoint]="entityEndpoint?entityEndpoint[block?.listEndPoint]:''"
+              [storage]="block?.storage? block.storage: null"
+              [target]="isEditData ? editData.data[block.targetData]: []"
+              [labelText]="block.label | translate:{'req': block.validations?.required?'*':''}"
+              [formControlName]="block.id" [disabled]="!!block?.disabled? block.disabled: disabled">
+            </sica-pickListNg>
+
+
+            <sica-custom-component *ngIf="block?.tag ==='custom-component'" 
+            [flag]="block?.flag" (onEmitAction)="emitAction($event, block?.flag)">
+          </sica-custom-component>
+
+          </ng-container>
+        </div>
+      </fieldset>
+  </form>
+  <div class="view-entity__buttons">
+    <button *ngIf="viewButton('submitButton')" [disabled]="!validForm" type="button"
+      class="btn btn-primary formButton p-my-2" (click)="onSubmit()" pButton>
+      {{ getSubmit() | translate }}</button>
+    <button *ngIf="viewButton('cancelButton')" type="button" class="btn btn-primary formButton p-my-2" (click)="back()"
+      pButton>{{
+      'GENERAL.ALERTS.BUTTON_BACK'| translate }}</button>
+    <button *ngIf="viewButton('historicButton')" type="button" class="btn btn-primary formButton p-my-2"
+      (click)="navigateToHistoric()" pButton>{{
+      'GENERAL.ALERTS.BUTTON_HISTORIC'| translate }}</button>
+    <button *ngIf="viewButton('deleteButton')" type="button" class="btn btn-primary formButton p-my-2"
+      (click)="navigateToDelete()" pButton>{{
+      'GENERAL.ALERTS.BUTTON_DELETE'| translate }}</button>
+    <button *ngIf="viewButton('editButton')" type="button" class="btn btn-primary formButton p-my-2"
+      (click)="navigateToEdit()" pButton>{{
+      'GENERAL.ALERTS.BUTTON_EDIT'| translate }}</button>
+    <button *ngIf="viewButton('asociarButton')" type="button" class="btn btn-primary formButton p-my-2"
+      (click)="asociateAction()" pButton>{{
+      getAsociar() | translate }}</button>
+  </div>
+</div>

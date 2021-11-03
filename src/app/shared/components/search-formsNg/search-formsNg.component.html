@@ -1,0 +1,56 @@
+<div class="global-cards flex">
+  <div class="p-card" *ngIf="loadedForm">
+
+    <!-- Formulario dinámica a partir de lectura de json -->
+    <form [formGroup]="searchGlobalForm" autocomplete="off">
+      <div class="p-formgroup-inline">
+        <div class="{{block.class}}" *ngFor="let block of formAreas">
+          <sica-inputNg *ngIf="block?.tag === 'input'" [type]="block.type" [formControlName]="block.id"
+            [labelText]="block.label | translate:{'req': ''}" [formSubmit]="formSubmit"
+            (filterChange)="filterOnChange(syncFilter)" [placeholder]="block.placeholder"></sica-inputNg>
+
+          <sica-selectNg *ngIf="block?.tag === 'select'" [data]="block?.data?.length !==0? block?.data:[]"
+            [formControlName]="block.id"  [labelText]="block?.label | translate:{'req': ''}"
+            [placeholder]="block? block.placeholder ? block.placeholder : 'GENERAL.ALERTS.DEFAULT_PLACEHOLDER':''"
+            (filterChange)="filterOnChange(syncFilter)"></sica-selectNg>
+
+          <sica-multi-selectNg *ngIf="block?.tag === 'multi-select'" [data]="block?.data?.length !==0? block?.data:[]"
+            [formControlName]="block?.id"  [labelText]="block?.label | translate:{'req': ''}"
+            [placeholder]="block? block.placeholder ? block.placeholder : 'GENERAL.ALERTS.DEFAULT_PLACEHOLDER':''"
+            (filterChange)="filterOnChange(syncFiler)"></sica-multi-selectNg>
+
+            <sica-sliderNg *ngIf="block?.tag === 'slider'" [labelText]="'block.label' | translate:{'req': ''}" 
+            [formControlName]="block?.id"
+            [max]="block?.max?block.max:'100'" [min]="block?.min?block.min:'0'"
+            [range]="block?.range?block.range:false"
+            >
+            </sica-sliderNg> 
+            
+            <sica-triCheckboxNg *ngIf="block?.tag === 'nullable-checkbox'"
+              [labelText]="block.label | translate:{'req': block.validations?.required?'*':''}"
+              [formControlName]="block.id" [disabled]="!!block?.disabled? block.disabled: disabled"></sica-triCheckboxNg>
+
+            <sica-calendarNg *ngIf="block?.tag === 'calendar'"
+              [labelText]="block.label | translate:{'req': block.validations?.required?'*':''}"
+              [formControlName]="block.id" [disabled]="block?.disabled? block?.disabled:false"
+              [placeholder]="block.placeholder"></sica-calendarNg>
+
+            <sica-uploadNg *ngIf="block?.tag === 'upload'" [standard]="block?.standard? block.standard: false" [labelText]="'label test upload'" [formControlName]="block.id"
+            [disabled]="block.disabled? block.disabled:disabled" [formSubmit]="formSubmit" (excelOption)="onExcelOption($event)"
+            >
+          </sica-uploadNg>
+
+          <sica-checkboxNg *ngIf="block?.tag === 'checkbox'" [labelText]="block.label | translate:{'req': ''}" 
+          [formControlName]="block.id" ></sica-checkboxNg>
+        </div>
+      </div>
+    </form>
+    <!--Botones-->
+    <button *ngIf="viewButton('cleanButton')" type="button" class="p-button searchButton p-ml-2" (click)="clean()" pButton>{{
+      'GENERAL.ALERTS.BUTTON_CLEAN'| translate }}</button>
+    <button *ngIf="viewButton('submitButton')" type="button" class="p-button searchButton  p-ml-2"
+      (click)="sessionAndFilter()" pButton>{{ 'GENERAL.ALERTS.BUTTON_FILTER'| translate }}</button>
+    <button *ngIf="viewButton('uploadButton')" type="button" class="p-button searchButton  p-ml-2"
+      (click)="upload()" pButton>{{ 'GENERAL.ALERTS.BUTTON_UPLOAD'| translate }}</button>
+  </div>
+</div>

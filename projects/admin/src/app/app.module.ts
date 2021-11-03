@@ -5,10 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AdminAppComponent } from './admin-app.component';
 import { SharedModuleModule } from 'src/app/modules/shared-module/shared-module.module';
 import { TestTwoService } from 'src/app/services/test-two.service';
+import { TestComponent } from './components/test/test.component';
+import { Test2Component } from './components/test2/test2.component';
 
 const providers = [TestServiceService, TestTwoService];
 
-@NgModule({})
+@NgModule({  
+  declarations: [Test2Component]
+})
 export class AdminSharedModule{
   static forRoot(): ModuleWithProviders<AppModule> {
     return {
@@ -19,7 +23,8 @@ export class AdminSharedModule{
 }
 @NgModule({
   declarations: [
-    AdminAppComponent
+    AdminAppComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,7 @@ export class AdminSharedModule{
     SharedModuleModule
   ],
   providers: providers,
-  exports: [AdminAppComponent],
+  exports: [AdminAppComponent, TestComponent],
 
   bootstrap: [AdminAppComponent]
 })

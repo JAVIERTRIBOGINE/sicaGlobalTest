@@ -1,0 +1,27 @@
+:host {
+    width: 100%;
+    ::ng-deep p-dropdown {
+        :disabled {
+            background-color: grey;
+        }
+        width: 100%;
+        .p-dropdown {
+            width: 100%;
+        }
+    
+    }
+    .select-span-container {
+        margin-top: 20px;
+        display: block;
+        text-align: left;
+    }
+}
+.error-alert {
+    color: red;
+    margin: 4px 0;
+    display: block;
+}
+// label {
+//     // top: -12.5px;
+//     font-size: 12px;
+// }

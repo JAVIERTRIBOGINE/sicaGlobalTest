@@ -1,0 +1,152 @@
+<p-toast position="top-center"></p-toast>
+<ng-container>
+    <section class="p-table-view table-view">
+        <!-- Si el componente se llama desde Search table... -->
+        <ng-container>
+            <p-table #dt [rows]="rows"
+                currentPageReportTemplate="{{selectedRow?.length !== 0?selectedRow?.length + ' ítems seleccionados':'Mostrando {first} a {last} de {totalRecords} registros'}}"
+                [rowsPerPageOptions]="pageSize" [paginator]="true" [columns]="getSelectedColumns()" [value]="data"
+                [showCurrentPageReport]="true" scrollable="true" resizableColumns="true" [lazy]="true"
+                [loading]="loading" (onLazyLoad)="loadData($event)" [totalRecords]="totalRecords" sortField="id"
+                [sortOrder]="-1" (onColReorder)="saveReorderedColumns($event)" pageLinks="1" selectionMode="multiple"
+                [(selection)]="selectedRow" [reorderableColumns]="true" (onRowSelect)="onSelect($event)" 
+                >
+                <!-- (onRowUnselect)="onSelect($event)" -->
+
+                <!-- EL HEADER DE LA TABLA -->
+                <ng-template pTemplate="caption">
+                    <header class="table-view__filter">
+                        <h4 class="table-view__title">Resultados</h4>
+                        <div class="table-view__buttons p-d-flex">
+                            <button type="button" pButton pRipple icon="pi pi-file-o" (click)="dt.exportCSV()"
+                                class="p-mr-2" pTooltip="CSV" tooltipPosition="bottom"
+                                title="Descargar archivo"><span></span></button>
+                            <button type="button" (click)="exportData('xlsx')" class="table-view__filter-button p-mr-2"
+                                pTooltip="XLS" tooltipPosition="bottom" title="Descargar excel"><span
+                                    class="table-view__excel-icon icon-EXPORT-CSV"></span></button>
+                            <button type="button" pButton pRipple icon="pi pi-file-pdf" (click)="exportData('pdf')"
+                                class="p-button-warning" pTooltip="PDF" tooltipPosition="bottom"
+                                title="Descargar pdf"></button>
+                            <button class="table-view__filter-button p-ml-5" type="text" (click)="opTwo.toggle($event)"
+                                title="Filtrar"><span class="table-view__filter-icon icon-FILTER"><span
+                                        class="path1"></span><span class="path2"></span></span></button>
+                        </div>
+                        <div class="table-view__filter-hide">
+                            <p-overlayPanel #opTwo [style]="{top: '10px', height: 'auto'}">
+                                <div class="p-d-flex p-flex-column">
+                                    <ng-container *ngIf="columnsConfig.length !==0">
+                                        <div *ngFor="let filteredColumn of filteredColumns; index as i"
+                                            [draggable]="true" (dragstart)="onDragStart(i)" (dragenter)="onDragEnter(i)"
+                                            (dragend)="onDragEnd()"
+                                            class="p-d-flex p-jc-between p-card p-card p-m-1 p-p-1">
+                                            <div><span class="icon-DRAGGABLE"></span></div>
+                                            <div>{{columnsConfig[i].column}}</div>
+                                            <div>
+                                                <p-inputSwitch [(ngModel)]="columnsConfig[i]['visibility']">
+                                                </p-inputSwitch>
+                                            </div>
+                                        </div>
+                                    </ng-container>
+                                </div>
+                            </p-overlayPanel>
+                        </div>
+                    </header>
+                </ng-template>
+
+                <!-- COLUMNAS DE LA TABLA -->
+                <ng-template pTemplate="header" let-columns>
+                    <tr class="table-view__wrap-th">
+                        <th class="table-view__th" style="width: 3em">
+                            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                        </th>
+                        <th class="table-view__th" *ngFor="let col of columns" [pSortableColumn]="col.field"
+                            pReorderableColumn>
+                            <div class="p-d-flex p-jc-start p-ai-center">
+                                {{col.header}}
+                                <p-sortIcon *ngIf="col.sortable === 'true'" [field]="col.field"
+                                    class="table-view__th-icon"></p-sortIcon>
+                                <p-columnFilter *ngIf="col.filter === 'true'" type="text" field="{{col.field}}"
+                                    display="menu"></p-columnFilter>
+                            </div>
+                        </th>
+                        <th class="table-view__th">{{'GENERAL.ALERTS.ACTIONS' | translate}}</th>
+
+                    </tr>
+                </ng-template>
+
+                <!-- REGISTROS DE LA TABLA -->
+                <ng-template pTemplate="body" let-rowData let-columns="columns" let-index="rowIndex">
+                    <tr [pSelectableRowIndex]="index" [pReorderableRow]="index" class="table-view__wrap-td">
+                        <td class="table-view__td" style="width: 3em">
+                            <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+                        </td>
+                        <td class="table-view__td" *ngFor="let col of columns">
+                            <p
+                                class="table-view__td-text data-field-value p-text-{{renderService.alignement(col.field, dataFields)}}">
+                                <ng-container
+                                    *ngIf="renderService.isCheck(col.field, rowData[col.field], dataFields)">
+                                    <span class="icon-{{rowData[col.field]?'SUCCESS':'ERROR'}}"></span>
+                                </ng-container>
+                                <ng-container *ngIf="renderService.isLink(col.field, rowData[col.field], dataFields)">
+                                    <button pButton class="p-button" (click)="linking(rowData[col.field])">link</button>
+                                </ng-container>
+                                <ng-container *ngIf="renderService.isStandard(col.field, rowData[col.field], dataFields)">
+                                 {{ renderService.renderData(col.field, rowData[col.field], dataFields) }}
+                                </ng-container>
+                            </p>
+                        </td>
+                        <td class="table-view__td" class="table-view__wrap-actions" *ngIf="view">
+                            <ng-container *ngIf="!isEntityToModal; else isModalEdit">
+                                <button pButton class="table-view__td-action" title="Ver"
+                                    (click)="viewRow(rowData)"><span
+                                        class="table-view__icon-view icon-VIEW"></span></button>
+                                <!-- <button pButton class="table-view__td-action" title="Ver"
+                                *ngIf="accountService.getGrantAction(allowedActions, 'read')"
+                                (click)="viewRow(rowData)"><span
+                                    class="table-view__icon-view icon-VIEW"></span></button> -->
+                            </ng-container>
+                            <ng-template #isModalEdit>
+                                <button pButton class="table-view__td-action" title="Ver"
+                                    (click)="editModalForm(rowData, entity)"><span
+                                        class="table-view__icon-view icon-NEW"></span></button>
+                                <!-- <button pButton class="table-view__td-action" title="Ver"
+                                *ngIf="accountService.getGrantAction(allowedActions, 'read')"
+                                (click)="editModalZone(rowData)"><span
+                                    class="table-view__icon-view icon-NEW"></span></button> -->
+                            </ng-template>
+                        </td>
+                    </tr>
+
+                </ng-template>
+
+                <ng-template pTemplate="paginatorright">
+                    <button *ngIf="viewTableButton('deleteButton')" type="button" class="p-button searchButton p-ml-2"
+                        (click)="multipleDelete($event)" pButton>{{
+                        'GENERAL.ALERTS.BUTTON_DELETE'|
+                        translate }}</button>
+                    <button *ngIf="viewTableButton('associateButton')" [disabled]="disabledAssociate" type="button"
+                        class="p-button searchButton p-ml-2" (click)="asociate($event, true)" pButton>{{
+                        'GENERAL.ALERTS.BUTTON_ASOCIATE'|
+                        translate }}</button>
+                    <button *ngIf="viewTableButton('desassociateButton')" [disabled]="disabledDisassociate"
+                        type="button" class="p-button searchButton p-ml-2" (click)="asociate($event, false)" pButton>{{
+                        'GENERAL.ALERTS.BUTTON_DISASOCIATE'|
+                        translate }}</button>
+                    <button *ngIf="viewTableButton('activateButton')" [disabled]="disabledActivate" type="button"
+                        class="p-button searchButton p-ml-2" (click)="activate($event, true)" pButton>{{
+                        'GENERAL.ALERTS.BUTTON_ACTIVATE'|
+                        translate }}</button>
+                    <button *ngIf="viewTableButton('desactivateButton')" [disabled]="disabledDisactivate"
+                        type="button" class="p-button searchButton p-ml-2" (click)="activate($event, false)" pButton>{{
+                        'GENERAL.ALERTS.BUTTON_DISACTIVATE'|
+                        translate }}</button>
+                </ng-template>
+                <ng-template let-item pTemplate="paginatordropdownitem">
+                    {{item.value}} {{'GENERAL.ALERTS.REGISTERS_PAGE' | translate}}
+                </ng-template>
+
+
+            </p-table>
+        </ng-container>
+    </section>
+</ng-container>

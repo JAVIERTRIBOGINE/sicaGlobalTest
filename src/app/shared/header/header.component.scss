@@ -1,0 +1,125 @@
+.cont-header {
+
+  ::ng-deep p-dropdown {
+
+    .p-dropdown {
+      width: 100%;
+      border: 1px solid var(--border-primary);
+      border-radius: 4px;
+    }
+
+    .p-dropdown-label {
+      font-size: 14px;
+      text-transform: capitalize;
+    }
+
+  }
+
+  ::ng-deep p-menubarsub{
+
+    .p-menuitem-link {
+      border-bottom: 3px solid transparent;
+      background-color: transparent !important;
+      padding: 0.4rem 1rem;
+
+      &:hover {
+        border-bottom: 3px solid var(--primary-blue);
+        border-radius: 0 !important;
+        background-color: transparent !important;
+      }
+    }
+
+    .p-menuitem-link-active {
+      border-bottom: 3px solid var(--primary-blue)!important;
+      border-radius: 0 !important;
+    }
+
+    .p-submenu-list {
+      padding: 0;
+      .pi {
+        font-size: 1rem;
+      }
+    }
+    .pi {
+      font-size: 1rem;
+    }
+
+    .p-menuitem-text {
+      font-size: 14px;
+      text-transform: capitalize;
+    }
+  }
+
+  ::ng-deep p-menubar{
+
+    .p-menubar {
+      background-color: var(--white);
+      padding: 0;
+      border: none;
+      justify-content: space-between;
+      display: flex;
+    }
+
+    a[role="menuitem"]{
+      &>span {
+        line-height: 2rem;
+      }
+    }
+
+    @media (max-width: 960px) {
+      width: 100%;
+    }
+
+  }
+
+  ::ng-deep p-overlayPanel {
+
+    .p-overlaypanel {
+      border: 1px solid var(--border-primary);
+      box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        position: absolute;
+        top: -0.43em;
+        right: 2.75em;
+        width: 0.75em;
+        height: 0.75em;
+        border: 1px solid var(--border-primary);
+        background-color: var(--white);
+        transform: rotate(45deg);
+        content: '';
+        clip-path: polygon(-10% -10%, 102% 0%, 0% 102%);
+      }
+    }
+
+    .p-overlaypanel-content {
+      min-width: 175px;
+    }
+  }
+  @media(max-width: 960px) {
+    &__logo {
+      margin-left: 2rem;
+    }
+    &__container-nav {
+      position: absolute;
+      left: 15px;
+      top: 26px;
+    }
+
+  }
+}
+
+::ng-deep p-menubar{
+  .__submenu-bar {
+  @media(max-width: 960px){
+      position: absolute;
+      background-color: #ffffff00 !important;
+      width: 95%;
+      margin-right: 3rem;
+    }
+  }
+}

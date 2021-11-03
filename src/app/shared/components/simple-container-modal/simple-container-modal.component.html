@@ -1,0 +1,12 @@
+<ng-container *ngIf="data" [ngSwitch]="data.flag">
+    <div *ngSwitchCase="'non-certificate-modal'">
+        <p>{{data.body}}</p>
+    </div>
+    <div *ngSwitchCase="'certificate-modal'">
+        <p>{{data.body}}</p>
+    </div>
+    <div *ngSwitchCase="">
+        option 3
+    </div>
+</ng-container> 
+

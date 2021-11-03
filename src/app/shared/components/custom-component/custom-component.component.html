@@ -1,0 +1,19 @@
+<ng-container [ngSwitch]="flagValue()">
+    <ng-container *ngSwitchCase="'routings-concession-toZone-toRol'">
+        <div class="p-d-flex p-flex-column p-ai-end">
+            <div class="button" >
+                <button pButton class="p-button p-mr-2 p-mb-2" 
+                    (click)="subirDato($event,zonas)">{{'GENERAL.ENTITIES.ZONES' | translate}}</button>
+            </div>
+            <div class="button">
+                <button pButton class="p-button" 
+                    (click)="subirDato($event,rols)">{{'GENERAL.ENTITIES.ROLES' | translate}}</button>
+            </div>
+
+        </div>
+
+    </ng-container>
+    <ng-container *ngSwitchCase="'customTest'">
+        <button pButton class="p-button" (click)="subirDatoTest($event)">click Test</button>
+    </ng-container>
+</ng-container>

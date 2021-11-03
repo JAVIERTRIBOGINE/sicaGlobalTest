@@ -1,0 +1,24 @@
+.table-main {
+  width: 100%;
+}
+
+:host {
+  ::ng-deep .sica-breadcrumb {
+    border: none;
+    background-color: transparent;
+
+    .p-menuitem-link-active {
+      font-size: 14px;
+
+      .p-menuitem-text {
+        font-family: 'SegoeUI', Arial, sans-serif;
+        font-size: 14px;
+        color: var(--primary-blue);
+
+      &:hover {
+        color: var(--primary-dark-blue);
+      }
+      }
+    }
+  }
+}

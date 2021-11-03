@@ -1,0 +1,13 @@
+<!--elemento switch primeng englobado en el label-->
+
+<span class="p-label checkbox-span-container">
+  <p-inputSwitch
+  id="{{labelText | translate}}" 
+  [(ngModel)]="value" 
+  binary="true" 
+  inputId="binary"
+  [disabled]="disabled"
+  (ngModelChange)="updateValue()"
+  ></p-inputSwitch>
+    <label for="{{labelText | translate }}" class="checkbox-label">{{labelText | translate}}</label>
+</span>

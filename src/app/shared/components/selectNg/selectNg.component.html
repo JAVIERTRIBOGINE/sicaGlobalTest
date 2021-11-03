@@ -1,0 +1,26 @@
+<!--elemento select primeng-->
+
+<span class="select-span-container">
+  <label for="{{labelText  }}">{{labelText }}</label>
+  <p-dropdown 
+  id="{{labelText}}"
+  [(ngModel)]="value"   
+  (ngModelChange)="updateValue()"
+  [options]="data" 
+  optionLabel="nombre"
+  optionValue="valor"
+  [showClear]="true"
+  [placeholder]="placeholder | translate"
+  [disabled]="disabled"
+  [readonly]="readOnly"
+  [dropdownIcon]="disabled?null: 'pi pi-chevron-down'"  
+  ></p-dropdown>
+</span>
+<!---------------------------------------------->
+
+<!-- NOTIFIACIONES DE ERROR DE VALIDACIÓN -->
+
+<div class="form-field-error" [ngClass]="{ show: isWrongField }">
+  <span class="error-alert" *ngIf="dirtyAndRequired"> {{'GENERAL.ERRORS.REQUIRED' | translate }}</span>
+ 
+</div>

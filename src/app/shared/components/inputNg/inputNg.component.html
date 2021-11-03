@@ -1,0 +1,25 @@
+<!--elemento input primeng englobado en el label animado-->
+<span class="input-span-container">
+  <label for="{{labelText}}">{{labelText }}</label>
+  <input id="{{labelText}}" [type]="type" [(ngModel)]="value" (ngModelChange)="updateValue()"
+    (keypress)="keyPress($event)" [disabled]="disabled" [readOnly]="readOnly" (focus)="changeFocus()"
+    (blur)="changeFocus()" [style.border]="borderColor" pInputText placeholder="{{placeholder | translate}}"/>
+  <i *ngIf="valueNotEmpty()" class="clear-button-{{type}} pi pi-times" (click)="clearfilter()"></i>
+
+</span>
+<!---------------------------------------------->
+
+<!-- NOTIFIACIONES DE ERROR DE VALIDACIÓN -->
+<div class="form-field-error" [ngClass]="{ show: isWrongField }">
+  <span class="error-alert" *ngIf="dirtyAndRequired"> {{'GENERAL.ERRORS.REQUIRED' | translate }}</span>
+  <span class="error-alert" *ngIf="control.errors?.maxlength"> {{'GENERAL.ERRORS.MAX_LENGTH' | translate:
+    {'maxNumber':validations?.maxLength} }}</span>
+  <span class="error-alert" *ngIf="control.errors?.minlength"> {{'GENERAL.ERRORS.MIN_LENGTH' | translate:
+    {'minNumber':validations?.minLength} }}</span>
+  <span class="error-alert" *ngIf="control.errors?.max"> {{'GENERAL.ERRORS.MAX' | translate:
+    {'maxNumber':validations?.max} }}</span>
+  <span class="error-alert" *ngIf="control.errors?.min"> {{'GENERAL.ERRORS.MIN' | translate:
+    {'minNumber':validations?.min} }}</span>
+</div>
+
+<!---------------------------------------------->

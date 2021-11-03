@@ -1,0 +1,19 @@
+<!--elemento checkbox primeng englobado en el label-->
+
+
+<!-- <span class="p-float-label input-span-container"> -->
+  <label for="{{labelText | translate }}" class="p-d-block label-calendar">{{labelText | translate}}</label>
+  <p-calendar  
+  id="{{labelText | translate}}" 
+  showButtonBar="true"
+  [(ngModel)]="value"
+  yearRange="2000:2030"
+  (onSelect)="updateValue($event)"
+  [showTime]="true"
+  [disabled]="disabled"
+  [placeholder]="placeholder | translate"
+  ></p-calendar>
+  <!-- </span> -->
+  
+  
+  <!-- [touchUI]="true"  -->

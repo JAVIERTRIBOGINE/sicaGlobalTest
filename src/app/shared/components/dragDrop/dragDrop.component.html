@@ -1,0 +1,144 @@
+<!-- -------------------- FILTROS -->
+<div class="p-grid conciliation-grid">
+     
+     <div class="p-col-12 p-sm-6">
+         <section class="filter-tabs conciliation-tabs">
+            <div class="filter-tabs__header p-col-12">
+                <h3 class="filter-tabs__text">Payments</h3>
+                <p-button [icon]="activeState[0] ? 'pi pi-chevron-up' : 'pi pi-chevron-down'" (click)="toggle(0)"
+                    styleClass="p-button-text filter-tabs__icon"></p-button>
+            </div>
+            <div class="filter-tabs__content">
+                <ng-container *ngIf="dataPaymentChip.length !== 0">
+                    <p-chips [styleClass]="'filter-tabs__chips'" [(ngModel)]="dataPaymentChip"
+                        (onRemove)="removeChipFilter($event, 'payment')"></p-chips>
+                </ng-container>
+            </div>
+        </section>
+        <p-accordion [styleClass]="'filter-tabs__accordion'">
+            <p-accordionTab [(selected)]="activeState[0]">
+                <sica-search-formsNg #searchPaymentModule [loadFromUrl]='false' [conciliation]="'payments'"
+                    [jsonDataForm]="jsonDataPayments"></sica-search-formsNg>
+            </p-accordionTab>
+        </p-accordion>
+    </div>
+    <div class="p-col-12 p-sm-6">
+        <section class="filter-tabs conciliation-tabs">
+            <div class="filter-tabs__header p-col-12">
+                <h3 class="filter-tabs__text">Collections</h3>
+                <p-button [icon]="activeState[0] ? 'pi pi-chevron-up' : 'pi pi-chevron-down'" (click)="toggle(0)"
+                    styleClass="p-button-text filter-tabs__icon"></p-button>
+            </div>
+            <div class="filter-tabs__content">
+                <ng-container *ngIf="dataCollectionChip.length !== 0">
+                    <p-chips [styleClass]="'filter-tabs__chips'" [(ngModel)]="dataCollectionChip"
+                        (onRemove)="removeChipFilter($event, 'collection')"></p-chips>
+                </ng-container>
+            </div>
+        </section>
+        <p-accordion [styleClass]="'filter-tabs__accordion'">
+            <p-accordionTab [(selected)]="activeState[0]">
+                <sica-search-formsNg #searchCollectionModule [loadFromUrl]='false' [conciliation]="'collections'"
+                    [jsonDataForm]="jsonDataCollections"></sica-search-formsNg>
+            </p-accordionTab>
+        </p-accordion>
+    </div>
+</div>
+<!-- --------------------  / FILTROS -->
+
+<div class="p-grid">
+    
+    <!-- DRAG COLLECTIONS -->
+    
+    <div class="p-col-12 p-md-4 drag-column p-mt-2">
+        <div *ngFor="let payment of payments">
+            <div class="p-d-flex p- p-card p-mb-2 p-mt-2 p-p-3 p-jc-between {{isPaid(payment.state)?'disabled':'enabled'}}" pDraggable="payments"
+            [pDraggableDisabled]="isPaid(payment.state)" (onDragStart)="dragStartPayment($event,payment)" (onDragEnd)="dragEnd()">
+                <!-- <p-card  > -->
+                <div><span class="icon-DRAGGABLE"></span></div>
+                <div>{{payment.id}}</div>
+                <div>{{payment.nif}}</div>
+                <div>{{payment.docNumber}}</div>
+                <div>{{payment.paymentCode}}</div>
+                <div>{{payment.amount}} €</div>
+                <div>{{payment.state}}</div>
+                <div><span><i class="pi pi-refresh dragDrop-payment-icon"></i></span></div>
+                <!-- </p-card> -->
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- /DRAG COLLECTIONS -->
+
+    <!-- DROP -->
+    
+    <div class="p-col-12 p-md-4 p-grid">
+        <!-- DROP COLLECTIONS -->
+        <div class="p-col-12 drop-payment-column {{draggedPayment?'onDrag':''}}" pDroppable="payments" (onDrop)="dropPayments($event)">
+            <div class="p-d-flex p- p-card p-mb-2 p-mt-2 p-p-3 p-jc-between" *ngFor="let selPay of selectedPayments">
+                <div><span class="icon-DRAGGABLE"></span> </div>
+                <div>{{selPay.id}}</div>
+                <div>{{selPay.nif}} </div>
+                <div>{{selPay.docNumber}} </div>
+                <div>{{selPay.paymentCode}} </div>
+                <div>{{selPay.amount}} €</div>
+                <div>{{selPay.state}}</div>
+                <div><span><i class="pi pi-refresh dragDrop-payment-icon"></i></span></div>
+            </div>
+        </div>
+        <!-- /DROP COLLECTIONS -->
+
+        <!-- DROP PAYMENTS -->
+        <div class="p-col-12 drop-collection-column {{draggedCollection?'onDrag':''}}" pDroppable="collections" (onDrop)="dropCollections($event)">
+            <div class="p-d-flex p- p-card p-mb-2 p-mt-2 p-p-3 p-jc-between" *ngFor="let selCol of selectedCollections">
+                <div><span class="icon-DRAGGABLE"></span></div>
+                <div>{{selCol.id}}</div>
+                <div>{{selCol.nif}}</div>
+                <div>{{selCol.concept}} </div>
+                <div>{{selCol.collectionCode}} </div>
+                <div>{{selCol.amount}}</div>
+                <div><span><i class="pi pi-replay dragDrop-collection-icon"></i></span></div>
+            </div>
+        </div>
+        <!-- / DROP PAYMENTS -->
+        <!-- PROCESS DATA -->
+        <div class="p-col-12 drop-collection-column">
+            <div class="p-d-flex p- p-card p-mb-2 p-mt-2 p-p-3 p-jc-around">
+                <div class="amountPayment-label"><i class="pi pi-mo"></i>Pago: </div>
+                <div class="amountPayment"><strong>{{paymentAmount}} €</strong></div>
+                <div class="amountCollection-label">Cobro: </div>
+                <div class="amountCollection"><strong>{{collectionAmount}} €</strong></div>
+                <div class="amountDifference-label">Diferencia:</div>
+                <div class="amountDifference {{isNegativeValue?'green-colored':'red-colored'}}"><strong>{{differenceAmount}} €</strong></div>
+            </div>
+        </div>
+
+        <!-- / PROCESS DATA -->
+    </div>
+
+    <!-- DROP -->
+    <!-- DRAG PAYMENTS -->
+
+    <div class="p-col-12 p-md-4 drag-column p-mt-2">
+        <div *ngFor="let collection of collections">
+            <div class="p-d-flex p- p-card p-mb-2 p-mt-2 p-p-3 p-jc-between" pDraggable="collections"
+                (onDragStart)="dragStartCollection($event,collection)" (onDragEnd)="dragEnd()">
+                <div><span class="icon-DRAGGABLE"></span> </div>
+                <div>{{collection.id}} </div>
+                <div>{{collection.nif}} </div>
+                <div>{{collection.concept}}</div>
+                <div>{{collection.collectionCode}} </div>
+                <div>{{collection.amount}} €</div>
+                <div><span><i class="pi pi-replay dragDrop-collection-icon"></i></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- / DRAG PAYMENTS -->
+   
+    <div class="p-col-12 p-d-flex p-jc-end">
+        <div><button class="p-m-2" pButton (click)="inicializeDraggedDroppedData()">RESTAURA VALORES</button></div>
+        <div><button class="p-m-2" pButton [disabled]="notDraggedAndDropped" (click)="validateConciliation()">Valida</button></div>
+    </div>
+</div>

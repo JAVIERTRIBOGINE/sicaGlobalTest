@@ -1,0 +1,27 @@
+<!--elemento pickList primeng englobado en el label-->
+    <span class="p-float-label upload-span-container">
+      <ngx-ui-loader [loaderId]="'pickListLoader'"></ngx-ui-loader>
+      <p-pickList *ngIf="targetSourceAndEnpoint"
+      [disabled]="disabled" 
+      [source]="source" 
+      [target]="value"
+      [dragdrop]="true"
+      sourceHeader="{{'GENERAL.TITLES.LISTPICKER.SELECTABLE' | translate }}"
+      targetHeader="{{'GENERAL.TITLES.LISTPICKER.SELECTED' | translate }}"
+      [sourceStyle]="{'height':'20rem'}" 
+      [targetStyle]="{'height':'20rem'}"
+      [responsive]="true"
+       [showSourceControls]="false"
+       [showTargetControls]="false"
+       (onMoveToTarget)="updateValue()"
+       (onMoveToSource)="updateValue()"
+      >
+      <ng-template let-permission pTemplate="item">
+        <div [ngClass]="{'redTest': permission.id===5}">
+            <span> {{permission.nombre}} </span>
+        </div>
+    </ng-template>
+    </p-pickList>
+    </span>
+
+ 

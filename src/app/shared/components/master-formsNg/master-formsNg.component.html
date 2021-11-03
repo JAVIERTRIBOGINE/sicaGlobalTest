@@ -1,0 +1,39 @@
+<div class="view-entity">
+  <div class="p-col-12">
+    <h2 class="view-entity__title">maestros</h2>
+  </div>
+  <form class="view-entity__form p-grid" [formGroup]="globalForm" (ngSubmit)="onSubmit()" autocomplete="off">
+    <ng-container *ngFor="let block of formAreas">
+      <div class="{{block?.class}}">
+        <ng-container *ngIf="block?.tag === 'input'">
+          <label for="{{block?.label | translate}}">{{block?.label | translate }}</label>
+          <input id="block?.label" pInputText placeholder="{{block?.placeholder | translate}}" type="{{block?.type}}"
+            [formControlName]="block.id=='descipcion'? 'descripcion': block.id" />
+        </ng-container>
+        <ng-container *ngIf="block?.tag === 'checkbox'">
+          <p-checkbox id="{{block?.label | translate}}"  binary="true" inputId="binary"
+            [formControlName]="block.id"></p-checkbox>
+          <label for="{{block?.label | translate}}" class="checkbox-label">{{block?.label | translate}}</label>
+
+        </ng-container>
+      </div>
+
+    </ng-container>
+    <div formArrayName="traductions" class="p-col-12">
+      <fieldset class="view-entity__fieldset {{containerblock?.class}}" *ngFor="let traduction of traductions.controls; let i=index" >
+        <div [formGroupName]="i" class="p-col-12 p-grid">
+          <div class="{{blockTraduction?.class}}" *ngFor="let blockTraduction of jsonTraductions" >  
+              <label for="{{blockTraduction?.label | translate}}">{{blockTraduction?.label | translate }}</label>
+              <input id="blockTraduction?.label" pInputText placeholder="{{blockTraduction?.placeholder | translate}}"
+                type="text" [formControlName]="blockTraduction.id === 'descipcion'? 'descripcion' : blockTraduction.id" />
+          </div>
+        </div> 
+      </fieldset>
+    </div>
+  </form>
+  <div class="view-entity__buttons">
+    <!-- <button *ngIf="viewButton('submitButton')" [disabled]="!validForm" type="button" -->
+    <button type="button" class="btn btn-primary formButton p-my-2" (click)="onSubmit()" pButton>
+      {{ getSubmit() | translate }}</button>
+  </div>
+</div>
