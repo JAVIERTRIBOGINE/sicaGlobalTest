@@ -1,0 +1,89 @@
+.filter-tabs {
+  padding: 16px 16px 0;
+  background-color: var(--white);
+  &.conciliation-tabs {
+    text-align: left;
+  }
+
+  @include mq('medium') {
+    padding: 12px 24px 0;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  &__text {
+    font-family: 'SegoeUI-SemiBold', Arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    color: var(--black);
+  }
+
+  &__icon {
+    .pi {
+      font-size: 2rem;
+    }
+  }
+
+  &__chips {
+
+    .p-chips-multiple-container {
+        border:none;
+
+        .p-chips-token {
+          font-family: 'SegoeUI', Arial, sans-serif;
+          font-size: 12px;
+          margin-bottom: 0.5rem;
+          color: var(--dark-grey);
+          background-color: var(--light-yellow);
+          border-radius: 11px;
+        }
+    }
+
+  }
+
+  &__accordion {
+
+    .p-accordion-content {
+      border: none;
+    }
+
+    .p-card {
+      box-shadow: none;
+      padding: 0 16px 16px !important;
+
+      @include mq('medium') {
+        padding: 0 24px 24px !important;
+      }
+    }
+
+    .searchButton {
+      // display: flex;
+      margin: 0.5rem 0 0.5rem auto;
+
+      @include mq('medium') {
+        margin: 0.5rem 0.5rem 0.5rem auto;
+      }
+    }
+
+    .p-inputtext {
+      width: 100%;
+    }
+
+  }
+
+  &__accordion-item {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    @include mq('medium') {
+      padding-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
+    }
+  }
+
+}

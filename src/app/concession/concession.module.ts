@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderModule } from '../shared/layout/header/header.module';
+import { HeaderModule } from '../shared/header/header.module';
 import { ConcessionComponent } from './concession.component';
 import { ConcessionHomeRoutingModule } from './concession-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';

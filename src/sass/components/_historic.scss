@@ -1,0 +1,78 @@
+.historic {
+  margin-bottom: 24px;
+  padding: 12px 24px !important;
+  background-color: var(--white);
+  border-radius: 4px;
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-family: "SegoeUI-SemiBold", Arial, sans-serif;
+    font-size: 20px;
+    margin: 0 24px 0 0;
+    color: var(--black);
+  }
+
+  &__dropdown {
+
+    .p-dropdown-items {
+      padding: 0 !important;
+    }
+
+    .p-dropdown-item.p-highlight {
+      background-color: var(--light-yellow) !important;
+    }
+  }
+
+  &__content {
+    padding: 16px 24px;
+    border: 1px solid var(--border-primary);
+    border-radius: 4px;
+  }
+
+  &__panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__panel-items {
+    width: 100%;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border-primary);
+
+    @include mq('medium') {
+      width: 48%;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 24px;
+  }
+
+  &__label,
+  &__data {
+    font-size: 14px;
+    margin: 0 0 6px;
+  }
+
+  &__label {
+    font-family: 'SegoeUI', Arial, sans-serif;
+    color: var(--secondary-black);
+  }
+
+  &__data {
+    font-family: "SegoeUI-SemiBold", Arial, sans-serif;
+    display: block;
+    color: var(--black);
+  }
+
+
+}

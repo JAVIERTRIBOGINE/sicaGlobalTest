@@ -7,7 +7,7 @@ import { Test2Component } from './components/test2/test2.component';
 const routes: Routes = [
   { path: 'admin/test-two', component: Test2Component },
   { path: 'admin/test', component: TestComponent },
-  { path: 'admin/home', component: AdminAppComponent },
+  { path: 'admin/sub-home', component: AdminAppComponent },
   // { path: 'admin', redirectTo: '', pathMatch: "full" },
 
   // { path: 'app2', redirectTo: '' },

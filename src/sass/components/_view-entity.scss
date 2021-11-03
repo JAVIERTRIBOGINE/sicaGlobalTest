@@ -1,0 +1,121 @@
+.view-entity {
+  // para cambiar color de background con disabled
+  .p-disabled:not(button), .p-component:not(button):disabled {
+    background-color: lightgrey;
+  }
+  //--
+
+  background-color: var(--white);
+  margin: 0 !important;
+  padding: 12px 24px !important;
+  border-radius: 4px;
+  box-shadow: none;
+
+  &__title {
+    font-size: 20px;
+  }
+
+  &__form {
+    padding: 12px 24px;
+    border: 1px solid var(--border-primary);
+    border-radius: 4px;
+  }
+
+  &__fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  &__wrap-edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__legend {
+    font-size: 14px;
+    color: var(--secondary-black);
+    margin-bottom: 6px;
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    display: flex;
+    margin-bottom: 5px;
+  }
+
+  &__input,
+  &__select {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    width: 100%;
+    font-size: 1rem;
+    color: var(--border-dark);
+    background-color: var(--white);
+    padding: 0.5rem 0.5rem;
+    border: 1px solid var(--border-primary);
+    transition: all 0.2s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 3px;
+
+    &[disabled] {
+      background-color: var(--bg-form);
+    }
+  }
+
+  &__select {
+    cursor: pointer;
+  }
+
+  &__button {
+    margin: 0;
+  }
+
+  &__button-icon {
+    margin-right: 10px;
+  }
+
+  &__image-upload {
+    max-width: 100%;
+  }
+
+  &__buttons {
+
+    .backButton {
+      width: 100%;
+      margin: 1rem 0 !important;
+    }
+
+    .p-button {
+      display: block;
+    }
+
+    @include mq('small') {
+      display: flex;
+      justify-content: flex-end;
+
+      .backButton {
+        width: auto;
+        margin: 1rem 0 1rem 1rem !important;
+      }
+
+      .p-button {
+        display: flex;
+      }
+    }
+
+  }
+
+
+}

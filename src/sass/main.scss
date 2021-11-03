@@ -1,0 +1,22 @@
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'components/historic';
+@import 'components/icons';
+@import 'components/filter-tabs';
+@import 'components/forms';
+@import 'components/table-view';
+@import 'components/view-entity';
+
+@import 'layout/footer';
+@import 'layout/global';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/sidebar';
+
+@import 'vendors/normalize';
+@import 'vendors/primeNG';

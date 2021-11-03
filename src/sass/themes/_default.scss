@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+//Cuando existen diversos temas, este archivo contiene lo relacionado al tema por defecto
+// -----------------------------------------------------------------------------
+
+
+$theme-colors: (
+  primary: var(--primary-blue),
+  secondary: var(--primary-dark-blue),
+  terciary: var(--secondary-light-blue),
+  text: var(--black),
+  background: var(--white),
+  success: var(--green),
+  info: var(--primary-light-blue),
+  warning: var(--yellow),
+  danger: var(--red),
+  light: var(--light-grey),
+  medium: var(--medium-grey),
+  dark: var(--dark-grey)
+) !default;
+
+
+$text-color: map-get($theme-colors, dark);

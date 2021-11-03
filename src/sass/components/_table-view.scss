@@ -1,0 +1,196 @@
+.table-view {
+  $root-node: &;
+
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border: 1px solid var(--border-primary);
+  border-radius: 4px;
+
+  .p-datatable-header {
+    padding: 12px 18px;
+    background: var(--white);
+    color: var(--black);
+    border: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  &__title {
+    font-family: 'SegoeUI-SemiBold', Arial, sans-serif;
+    font-size: 14px;
+    margin-right: auto;
+    margin-bottom: 12px;
+
+    @include mq('small') {
+      margin-bottom: 0;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__filter-hide {
+    .p-overlaypanel {
+      top: 5rem !important;
+      right: -11px !important;
+      
+      
+    }
+    .p-multiselect-items {
+      padding: 0 !important;
+    }
+
+    .p-multiselect-panel {
+      right: -16px;
+      left: unset;
+    }
+
+    .p-multiselect-item {
+      background-color: var(--light-yellow) !important;
+    }
+  }
+
+  &__filter-button {
+    border: none !important;
+    background-color: transparent !important;
+  }
+
+  &__filter-icon,
+  &__excel-icon {
+    font-size: 28px;
+  }
+
+  &__th {
+    font-family: 'SegoeUI-Bold', Arial, sans-serif;
+    font-size: 14px;
+    padding: 6px 16px !important;
+    background-color: var(--bg-main)!important;
+    color: var(--black)!important;
+    border: none !important;
+    border-top: 1px solid var(--border-primary) !important;
+    transition: background-color 0.3s ease!important;
+
+    &:hover {
+      background-color: #dddbda!important;
+    }
+  }
+
+  &__th-icon {
+    order: -1;
+
+    .p-sortable-column-icon {
+      margin: 0 5px 0 0 !important;
+    }
+  }
+
+  &__wrap-td {
+     background-color: var(--white) !important;
+
+    &:hover {
+      background-color: var(--white) !important;
+    }
+
+    &:last-of-type {
+      #{$root-node}__td {
+        border-bottom: 1px solid var(--border-primary) !important;
+      }
+      #{$root-node}__wrap-action {
+        border-bottom: 1px solid var(--border-primary) !important;
+      }
+    }
+
+    &--checked {
+      background-color: var(--light-yellow) !important;
+    }
+  }
+
+  &__td {
+    font-family: 'SegoeUI', Arial, sans-serif;
+    font-size: 12px;
+    padding: 6px 16px !important;
+    color: var(--black)!important;
+    border: none !important;
+    border-top: 1px solid var(--border-primary) !important;
+
+    #{$root-node}__td-text {
+      margin: 0 0 0 25px;
+    }
+    .icon-SUCCESS::before {
+      color: green;
+    }
+     .icon-ERROR::before {
+      color: red;
+    }
+  }
+
+  &__td-action {
+    padding: 6px 0;
+    background-color: transparent;
+    color: var(--primary-blue);
+    border: none;
+  }
+
+  &__wrap-actions {
+    padding: 6px 18px !important;
+    font-size: 13px;
+    border: none !important;
+    border-top: 1px solid var(--border-primary) !important;
+
+    &:last-of-type {
+      border-bottom: 1px solid var(--border-primary) !important;
+    }
+  }
+
+  &__td-action {
+    padding: 0 !important;
+
+    &:enabled:hover {
+        background: transparent;
+        color: var(--primary-dark-blue);
+        border-color: transparent;
+    }
+  }
+
+  &__icon-view {
+    font-size: 24px;
+  }
+
+  .p-sortable-column-icon {
+    color: var(--black)!important;
+  }
+
+  .p-datatable-scrollable-header-box {
+    padding: 0 !important;
+  }
+
+  .p-paginator-bottom {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  .p-paginator {
+    justify-content: flex-start;
+    background-color: var(--bg-paginator );
+  }
+
+  .p-dropdown {
+    border: 1px solid var(--black);
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
