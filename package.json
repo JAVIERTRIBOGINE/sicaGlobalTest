@@ -4,6 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
+    "start:lecturas": "ng serve --proxy-config proxy.conf.json --project=lecturas --port=4300",
+    "start:admin": "ng serve --proxy-config proxy.conf.json --project=admin --port=4400",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
