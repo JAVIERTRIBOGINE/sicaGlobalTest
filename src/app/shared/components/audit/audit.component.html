@@ -1,0 +1,77 @@
+<ng-container>
+    <section class="historic">
+        <header class="historic__header p-col-12">
+            <h2 class="historic__title">{{ 'READINGS.HISTORIC.TITLES.ACTUAL' | translate }}:&nbsp;</h2>
+            <div class="historic__dropdown">
+                <p-dropdown dropdownIcon="pi pi-sort" [options]="actualOptions"
+                    (onChange)="updateSelected($event?.value, 1)">>
+                    <ng-template let-selector pTemplate="selectedItem">
+                        <div class="historic__dropdown-selected">
+                            <div>{{selector | date:'M/d/yy, H:mm:ss'}}</div>
+                        </div>
+                    </ng-template>
+                    <ng-template let-selector pTemplate="item">
+                        <div class="historic__dropdown-item">
+                            <div>{{selector | date:'M/d/yy, H:mm:ss'}}</div>
+                        </div>
+                    </ng-template>
+                </p-dropdown>
+            </div>
+        </header>
+        <div class="historic__content">
+            <div class="historic__panel">
+                <ng-container *ngFor="let value of actual?.data">
+                    <div class="historic__panel-items">
+                        <p class="historic__label">{{value?.name}}: </p>
+                        <span class="historic__data"> {{value?.value}}</span>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </section>
+    <ng-container *ngIf="this.historicSelected">
+        <section class="historic">
+            <header class="historic__header p-col-12">
+                <h2 class="historic__title">{{ 'READINGS.HISTORIC.TITLES.HISTORIC' | translate }}:&nbsp;</h2>
+                <div class="historic__dropdown">
+                    <p-dropdown dropdownIcon="pi pi-sort" [options]="historicOptions" [(ngModel)]="historicSelector"
+                        (onChange)="updateSelected($event.value, 2)">
+                        <ng-template let-selector pTemplate="selectedItem">
+                            <div class="historic__dropdown-selected">
+                                <div>{{selector | date:'M/d/yy, H:mm:ss'}}</div>
+                            </div>
+                        </ng-template>
+                        <ng-template let-selector pTemplate="item">
+                            <div class="historic__dropdown-item">
+                                <div>{{selector | date:'M/d/yy, H:mm:ss'}}</div>
+                            </div>
+                        </ng-template>
+                    </p-dropdown>
+                </div>
+            </header>
+            <div class="historic__content">
+                <div class="historic__panel">
+                    <ng-container *ngFor="let value of historicSelected?.data">
+                        <div class="historic__panel-items">
+                            <p class="historic__label">{{value?.name}}: </p>
+                            <span class="historic__data" [ngClass]="{'new': action(value, 'New'), 'update': action(value, 'Update')}">
+                                {{value?.value}}
+                            </span>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </section>
+    </ng-container>
+    <div class="historic__buttons">
+        <button pButton type="button" class="p-historic__button p-button backButton" (click)="back()">{{
+            'GENERAL.ALERTS.BUTTON_BACK'| translate }}</button>
+    </div>
+
+</ng-container>
+
+<ng-template #removed>
+    <div class="center">
+        <i class="fa fa-trash" aria-hidden="true"></i>
+    </div>
+</ng-template>

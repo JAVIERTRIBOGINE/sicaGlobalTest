@@ -1,0 +1,48 @@
+<header class="cont-header">
+      <div class="cont-header__top">
+        <div class="cont-header__logo">
+          <a routerLink="/home" title="Ir a la página principal de Acciona | Sica" class="cont-header__logo-link">
+            <img src="assets/images/SicaLogo.svg" alt="Logo Acciona | Sica" title="Ir a la página principal de Acciona | Sica" aria-label="Acciona" class="cont-header__logo-img">
+          </a>
+        </div>
+        <div class="cont-header__concession">
+          <h2 class="cont-header__concession-name"> {{labelConcessionName}}</h2>
+        </div>
+        <div class="cont-header__container-user">
+          <p-overlayPanel #op>
+            <ng-template pTemplate>
+
+              <div class="cont-header__user">
+                <h4 class="cont-header__user-name"><a [routerLink]="[accountSettingsRoute]">{{username}}</a></h4>
+                <div class="cont-header__user-separator"></div>
+                <h5 class="cont-header__user-concession">
+                  <div class="cont-header__user-concession-title">{{'GENERAL.MENU.GENERAL_SELECTOR.CONCESSION'| translate}}</div>
+                  <p-dropdown (onChange)="changeConcession()" [showTransitionOptions]="'300ms'" [hideTransitionOptions]="'300ms'" [options]="allowedConcessions" [(ngModel)]="selectedConcession.value" optionLabel="name" optionValue="value" placeholder="{{'GENERAL.ALERTS.SELECT_CONCESSION' | translate}}"></p-dropdown>
+                </h5>
+                <div class="cont-header__user-separator"></div>
+                <h5 class="cont-header__user-lang">
+                  <div class="cont-header__user-lang-title">{{'GENERAL.MENU.GENERAL_SELECTOR.LANGUAGE'| translate}}</div>
+                  <p-dropdown [disabled]="true" (onChange)="changeLang()" [showTransitionOptions]="'300ms'" [hideTransitionOptions]="'300ms'" [options]="languages" [(ngModel)]="selectedLanguage.value" optionLabel="name" optionValue="value"></p-dropdown>
+                </h5>
+                <div class="cont-header__user-separator"></div>
+              </div>
+              <div class="logout-container cont-header__user-logout">
+                <button icon="pi pi-sign-out" type="text" class="p-button-outlined cont-header__user-button" pButton (click)="signOut()"><span class="cont-header__user-button-text">{{'GENERAL.ALERTS.LOGOUT' | translate}}</span></button>
+              </div>
+
+            </ng-template>
+          </p-overlayPanel>
+
+          <!-- icon user  -->
+          <button class="cont-header__icon" type="text" (click)="op.toggle($event)"><span class="cont-header__icon-user icon-USER"></span></button>
+        </div>
+        <div class="cont-header__container-nav">
+          <nav *ngIf="concessionSelected" class="cont-header__nav">
+            <p-menubar   [styleClass]="'__submenu-bar'" [model]="items"></p-menubar>
+          </nav>
+          <!-- <nav *ngIf="!concessionSelected && adminSelected" class="cont-header__nav">
+            <p-menubar   [styleClass]="'__submenu-bar'" [model]="items"></p-menubar>
+          </nav> -->
+        </div>
+      </div>
+</header>

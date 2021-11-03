@@ -1,0 +1,45 @@
+.table-main {
+  width: 100%;
+}
+
+:host {
+  ::ng-deep .sica-breadcrumb {
+    background-color: transparent;
+    border: none;
+  }
+  .add-buton-container {
+    margin-top: 20px;
+  }
+  
+  .custom-tag {
+    font-weight: bolder;
+    border-radius: 3px;
+    background-color: rgb(192, 196, 194);
+    padding: 3px 12px;
+    margin-right: 5px;
+  }
+  
+  .global-cards {
+    width: 100%;
+    text-align: right;
+    // display: flex;
+    // flex-direction: row;
+    // align-items: center;
+        .p-card {
+          width: 100%;
+            padding: 0.5rem;
+            button.btn.btn-primary.formButton {
+              margin-left: 0.5rem;
+          }
+      }
+  }
+  .input-span-container {
+    margin-top: 20px;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+

@@ -1,0 +1,29 @@
+:host {    
+    width: 100%;
+
+}
+.input-span-container {
+    margin-top: 20px;
+    display: block;
+    text-align: left;
+}
+
+input{
+    width: 100%;
+}
+.error-alert {
+    color: red;
+    margin: 4px 0;
+    display: block;
+}
+
+.clear-button-text {
+    width: 5%;
+    margin-left: -1.5rem;
+}
+
+.clear-button-number {
+    width: 5%;
+    margin-left: -3rem;
+}
+

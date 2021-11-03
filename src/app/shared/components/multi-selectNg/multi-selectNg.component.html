@@ -1,0 +1,24 @@
+<!--elemento select primeng-->
+
+<span class="p-float-label input-span-container">
+  
+
+  <p-multiSelect
+  [styleClass]="styleClass?styleClass:''"
+  [(ngModel)]="value"   
+  (ngModelChange)="updateValue()" 
+  [options]="data" 
+  optionLabel="nombre" 
+  optionValue="valor"
+  [showClear]="true"
+  placeholder="{{ placeholder | translate }}"
+  ></p-multiSelect>
+</span>
+<!---------------------------------------------->
+
+<!-- NOTIFIACIONES DE ERROR DE VALIDACIÓN -->
+
+<div class="form-field-error" [ngClass]="{ show: isWrongField }">
+  <span class="error-alert" *ngIf="dirtyAndRequired"> {{'GENERAL.ERRORS.REQUIRED' | translate }}</span>
+ 
+</div>

@@ -1,0 +1,16 @@
+.form-field-error {
+  color: $primary;
+  font-weight: 500;
+  margin-top: 5px;
+  font-size: 12px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  &.show {
+    height: 20px;
+  }
+}
+.validation-required {
+  color: #d90000;
+  margin-left: 0.2em;
+}

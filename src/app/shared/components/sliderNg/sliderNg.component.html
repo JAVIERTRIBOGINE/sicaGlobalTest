@@ -1,0 +1,15 @@
+<!--elemento checkbox primeng englobado en el label-->
+  <span class="p-label slider-span-container">
+    <label for="{{labelText}}">{{value?value[0]+ ' - ' + value[1] + '€':'Seleccione rango de 0 a 1000€'}}</label>
+    <p-slider  
+    id="{{labelText}}"
+    [(ngModel)]="value" 
+    (ngModelChange)="updateValue()"
+    [min]="0"
+    [max]="1000"
+    [range]="true"
+  
+    ></p-slider>
+  </span>
+
+<!-- (onChange)="logValues()" -->

@@ -1,0 +1,10 @@
+<sica-formsNg *ngIf="isAllLoaded && entity !== 'maestros'" [jsonDataForm]="jsonData" [editData]="editData"
+  [modalAction]="'edit'" (onCustomSubmit)="customSubmit($event)"></sica-formsNg>
+
+   <!-- se mentiene por si se precisa posteriormente -->
+   
+   <!-- <sica-master-formsNg *ngIf="isAllLoaded && entity === 'maestros'" [jsonDataForm]="jsonData" [action]="'edit'"
+    [editData]="editData" [entityEndpoint]="''" [modalAction]="'edit'" (onCustomSubmitMaster)="customSubmitMaster($event)"
+    [entity]="entity"></sica-master-formsNg> -->
+    
+    <!--  / se mentiene por si se precisa posteriormente -->

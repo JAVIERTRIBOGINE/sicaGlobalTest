@@ -1,0 +1,11 @@
+<!--elemento checkbox primeng englobado en el label-->
+
+<span class="p-label checkbox-span-container">
+  <p-triStateCheckbox 
+  id="{{labelText | translate}}" 
+  [(ngModel)]="value" 
+  (ngModelChange)="updateValue()"
+  [disabled]="disabled"
+  ></p-triStateCheckbox>
+    <label for="{{labelText | translate }}" class="checkbox-label">{{labelText | translate}}</label>
+</span>
