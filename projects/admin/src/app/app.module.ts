@@ -7,7 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthInterceptorService } from 'src/app/core/interceptors/auth-interceptor.service';
 import { SanitizeHtml } from 'src/app/core/pipes/sanitizeHtml';
-import { AdminAppComponent } from './admin-app.component';
+import { AdminAppComponent } from './core/components/admin-app.component';
+import { AppComponent } from './app.component';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -85,7 +86,7 @@ export function configureAuth(oidcConfigService: OidcConfigService) {
 }
 
 @NgModule({
-  declarations: [AdminAppComponent],
+  declarations: [AdminAppComponent, AppComponent],
   imports: [
     AuthModule.forRoot(),
     SharedModule,
@@ -125,7 +126,7 @@ export function configureAuth(oidcConfigService: OidcConfigService) {
       multi: true
     }
   ],
-  bootstrap: [AdminAppComponent],
+  bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {

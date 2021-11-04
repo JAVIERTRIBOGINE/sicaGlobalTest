@@ -10,7 +10,7 @@ import { AccountService } from 'src/app/core/services/account.service';
 import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-admin',
   templateUrl: './admin-app.component.html',
   styleUrls: ['./admin-app.component.scss']
 })
@@ -77,7 +77,7 @@ export class AdminAppComponent implements OnInit{
     this.items.push(
       {
         label: "multilanguage", 
-       routerLink: "/" + constants.contextSlug.ADMIN + "/" + constants.ROUTING_REFERENCES.MULTILENGUAGE + "/" + constants.Actions.EDIT 
+       routerLink: constants.ROUTING_REFERENCES.MULTILENGUAGE + "/" + constants.Actions.EDIT 
     })
   }
 

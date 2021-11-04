@@ -40,7 +40,8 @@ export class MultilanguageComponent implements OnInit, OnDestroy {
     public apiService: ApiService
   ) {
 
-    this.routerService.conformNewSearchModulesData(this.router);
+    // this.routerService.conformNewSearchModulesData(this.router);
+    
   }
 
   public ngOnInit(): void {
