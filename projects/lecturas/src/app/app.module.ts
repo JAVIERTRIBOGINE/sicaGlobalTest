@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { LecturasAppComponent } from './lecturas-app.component';
-import { SharedModuleModule } from 'src/app/modules/shared-module/shared-module.module'
 
 // const providers = [];
 
@@ -14,8 +13,7 @@ import { SharedModuleModule } from 'src/app/modules/shared-module/shared-module.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    SharedModuleModule
+    AppRoutingModule
   ],
   exports: [LecturasAppComponent],
   providers: [],

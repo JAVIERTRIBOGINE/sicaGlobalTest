@@ -1,9 +1,0 @@
-<ng-container *ngIf="devMode">
-    <h1>estamos en admin</h1>
-    <a [routerLink]="'/admin/test'">admin->test</a><span>--</span>
-    <a [routerLink]="'/admin/test-two'">admin->test 2</a>
-    <nav *ngIf="concessionSelected" class="cont-header__nav">
-        <p-menubar   [styleClass]="'__submenu-bar'" [model]="items"></p-menubar>
-      </nav>
-    <router-outlet></router-outlet>
-</ng-container>

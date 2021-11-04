@@ -1,0 +1,659 @@
+{
+    "GENERAL": {
+        "MENU": {
+            "BILLING": {
+                "BILLS": "FACTURES",
+                "PRODUCTS": "PRODUCTES",
+                "READINGS": "Gestor Lectures",
+                "ADMIN": "Administració"
+            },
+            "GENERAL_SELECTOR": {
+                "CONCESSION": "Concessió",
+                "LANGUAGE": "Idioma"
+            }
+        },
+        "BOOLEAN_SELECTOR": {
+            "ACTIVE": "Asociades",
+            "INACTIVE":"Desasociades",
+            "ALL":"Totes"
+        },
+        "LANGUAGE_SELECTOR": {
+            "SPANISH": "ESPANYOL",
+            "CATALAN": "CATALÀ"
+        },
+        "ERRORS": {
+            "REQUIRED": "Campo requerido",
+            "MIN_LENGTH": "Número mínim de caràcters és {{maxNumber}}",
+            "MAX_LENGTH": "Número màxim de caràcteres és {{minNumber}}",
+            "MIN": "Valor mínim: {{maxNumber}}",
+            "MAX": "Valor màxim: {{minNumber}}",
+            "REQUEST": "ERRADA EN LA CRIDA"
+        },
+        "MESSAGES": {
+            "TITLE": {
+                "EDIT_SUCCESS": "Editat amb èxit",
+                "EDIT_FAIL": "Errada en la edició",
+                "INSERT_SUCCESS": "Creat amb Éxito",
+                "INSERT_FAIL": "Errada en la creació",
+                "DELETE_SUCCESS": "Eliminat amb èxit",
+                "DELETE_FAIL": "Errada en l'eliminació",
+                "GENERAL": "Errada en la crida"
+            },
+            "BODY": {
+                "EDIT_SUCCESS": "El registre s'ha editat amb èxit.",
+                "EDIT_FAIL": "Errada en l'edició de registre: ",
+                "INSERT_SUCCESS": "El registre s'ha creat amb èxit.",
+                "INSERT_FAIL": "Errada en la creació de registre: ",
+                "DELETE_SUCCESS": "El registre s'ha eliminat amb èxit.",
+                "DELETE_FAIL": "S'ha produït una errada en l'eliminació del registre",
+                "GENERAL": "S'ha produït una errada en la crida: :message"
+            }
+        },
+        "ALERTS": {
+            "NO_DATA": "No hi ha dades",
+            "DEFAULT_PLACEHOLDER": "Seleccioni valor",
+            "SELECT_LANGUAGE": "Seleccioni Llenguatge",
+            "SELECT_CONCESSION": "Seleccioni Concessió",
+            "BUTTON_HISTORIC": "Anar a històrics",
+            "BUTTON_EDIT": "Anar a edició",
+            "LOGOUT": "Sortir de la sessió",
+            "ACTIONS": "Accions",
+            "BUTTON_CREATE": "Nou registre",
+            "BUTTON_ADD": "Afegeix",
+            "BUTTON_SAVE": "Desar",
+            "BUTTON_SAVE_POST": "Crear",
+            "BUTTON_SAVE_EDIT": "Editar",
+            "BUTTON_VALIDATE": "Validar",
+            "BUTTON_BACK": "Tornar",
+            "BUTTON_VIEW": "Anar a detall",
+            "BUTTON_DELETE": "Borrar",
+            "BUTTON_ASOCIATE": "Associar",
+            "BUTTON_DISASOCIATE": "Desassociar",
+            "BUTTON_ACTIVATE": "Activar",
+            "BUTTON_DISACTIVATE": "Desactivar",
+            "CHECK_DELETE": "Desitja esborrar aquest registre?",
+            "BUTTON_FILTER": "Filtrar",
+            "BUTTON_CLEAN": "Netejar formulari",
+            "BUTTON_UPLOAD": "Carga arxiu",
+            "BUTTON_CHOOSE": "Selecciona arxiu",
+            "BUTTON_CANCEL": "Cancel·lar",
+            "USER_SETTINGS": "Ajustos",
+            "CONFIGURATION": "Configuració",
+            "REGISTERS_PAGE": "registres per pàgina"
+        },
+        "TITLES": {
+            "RESULTS": "Resultats",
+            "LISTPICKER": {
+                "SELECTABLE": "Seleccionable",
+                "SELECTED": "Seleccionat"
+            },
+            "FILTER": "Filtrat de registres",
+            "CREATE": "Creació de registre",
+            "EDIT": "Edició de registre",
+            "DELETE": "Eliminació de registre",
+            "USER": {
+                "PERSONAL_DATA": "Dades personals",
+                "FORMAT_SETTINGS": "Ajustaments de format",
+                "PERMISSIONS_DATA": "Permisos",
+                "NAME": "Nom",
+                "EMAIL": "Correu Electrònic"
+            }
+        },
+        "ENTITIES": {
+            "BILLING": "Facturació",
+            "BILLS": "Factures",
+            "PRODUCTS": "Productes",
+            "READINGS": "Lectures",
+            "ZONES": "Zones",
+            "ROLES": "Roles",
+            "USERS": "Usuaris",
+            "CONCESSIONS": "Concesiones",
+            "MASTERS": {
+                "GENERAL": "Mestres",   
+                "ESTADO_LECTURAS": "Estat de Lectures",
+                "DIVISAS": "Divises"
+            }
+        },
+        "BREADCRUMB": {
+            "dashboard": "dashboard",
+            "products": "Productes",
+            "bills": "Factures"
+        },
+        "TABLES": {
+            "DETAIL": "DETALL",
+            "EDIT": "EDITAR",
+            "HISTORIC": "HISTÒRIC",
+            "VIEW": "VISUALITZAR"
+        }
+    },
+    "PRODUCTS": {
+        "ENTITY": "Productes",
+        "TABLE": {
+            "TITLE": "LISTADO DE PRODUCTOS",
+            "FILTER": {},
+            "FIELDS": {
+                "ID": "Id",
+                "NAME": "Nom",
+                "CURRENCY": "Moneda",
+                "VALUE": "ValorCat",
+                "DETAIL": "Detall"
+            },
+            "BUTTONS": {
+                "VIEW_EDIT": "Ver/Editar Producto",
+                "INSERT": "Nou producte"
+            }
+        },
+        "FORMS": {
+            "NAME": {
+                "LABEL": "NOM"
+            },
+            "CURRENCY": {
+                "LABEL": "MONEDA"
+            },
+            "VALUE": {
+                "LABEL": "VALOR"
+            },
+            "DETAIL": {
+                "LABEL": "DETALL"
+            }
+        }
+    },
+    "BILLS": {
+        "ENTITY": "Factures",
+        "TABLE": {
+            "TITLE": "LLISTAT DE FACTURES",
+            "FILTER": {},
+            "FIELDS": {
+                "ID": "Id",
+                "VALUE": "ValorCat",
+                "DETAILS": {
+                    "LABEL": "Detalls",
+                    "NAME": {
+                        "LABEL": "Nom"
+                    },
+                    "QUANTITY": {
+                        "LABEL": "Quantitat"
+                    }
+                }
+            },
+            "BUTTONS": {
+                "VIEW_EDIT": "Veure/Editar Factura",
+                "INSERT": "Insertar Factura"
+            }
+        },
+        "FORMS": {
+            "QUANTITY": {
+                "LABEL": "Qunatitat"
+            },
+            "NAME": {
+                "LABEL": "Nom del producte"
+            }
+        }
+    },
+    "READINGS": {
+        "ENTITY": "Lectures",
+        "TABLE": {
+            "TITLE": "Llistat de lectures",
+            "FILTER": {},
+            "FIELDS": {
+                "ID": "Id",
+                "TITLE": "Títol",
+                "VALUE": "Valor",
+                "STATE": "Estat",
+                "DESCRIPTION": "Descripción",
+                "VALOR_ONE": "Valor_1",
+                "VALOR_TWO": "Valor_2",
+                "PRICE": "Preu",
+                "TYPE": "Tipus",
+                "NULLBOOLEAN": "Booleà null",
+                "BOOLEAN": "Booleà",
+                "DATE": "Data",
+                "TIMESTAMP": "Timestamp",
+                "INSERT_DATA": "Data creació"
+            },
+            "BUTTONS": {
+                "VIEW_EDIT": "Veure/Editar Lectura",
+                "INSERT": "Insertar Lectura"
+            }
+        },
+        "FORMS": {
+            "ID": {
+                "LABEL": "{{req}} Id",
+                "PLACEHOLDER": "Afegeix Id"
+            },
+            "TITLE": {
+                "LABEL": "{{req}} Títol",
+                "PLACEHOLDER": "Afegeix Títol"
+            },
+            "VALUE": {
+                "LABEL": "{{req}} Valor",
+                "PLACEHOLDER": "Afegeix Valor"
+            },
+            "VALUE_ONE": {
+                "LABEL": "{{req}} Valor",
+                "PLACEHOLDER": "Afegeix Valor1"
+            },
+            "VALUE_TWO": {
+                "LABEL": "{{req}} Valor",
+                "PLACEHOLDER": "Afegeix Valor2"
+            },
+            "DESCRIPTION": {
+                "LABEL": "{{req}} Descripció",
+                "PLACEHOLDER": "Afegeix Descripció"
+            },
+            "STATE": {
+                "LABEL": "{{req}} Estat",
+                "PLACEHOLDER": "Seleccioni estat"
+            },
+            "TYPE": {
+                "LABEL": "{{req}} Tipus",
+                "PLACEHOLDER": "Seleccioni tipus"
+            },
+            "DATE": {
+                "LABEL": "{{req}} Data test",
+                "PLACEHOLDER": "Afegeix data"
+            },
+            "TIMESTAMP": {
+                "LABEL": "{{req}} Timestamp",
+                "PLACEHOLDER": "Afegeix Timestamp"
+            }
+        },
+        "HISTORIC": {
+            "TITLES": {
+                "ACTUAL": "Actual",
+                "HISTORIC": "Historic"
+            },
+            "FIELDS" : {
+                "TITLE": "Títol",
+                "DESCRIPTION": "Descripció",
+                "VALUE": "Valor",
+                "UPDATE_DATA": "Data Modificació",
+                "CREATE_DATA": "Data Creació",
+                "REMOVE_DATA": "Data Baixa",
+                "UPDATE_USER": "Usuari Modificació",
+                "CREATE_USER": "Usuari Creació"
+            }
+        }
+    },
+    "ZONES": {
+        "ENTITY": "Zones",
+        "TABLE": {
+            "TITLE": "LLISTAT DE ZONES",
+            "FILTER": {},
+            "FIELDS": {
+                "ID": "Id",
+                "NAME": "Nom",
+                "FECHACREACION": "Data creació",
+                "USUARIOCREADOR": "Usuari creador",
+                "FECHAMODIFICACION":"Data modificació",
+                "USUARIOMODIFICADOR": "Usuari modificador",
+                "ASOCIADA": "Associada",
+                "ACTIVO":"Actiu"
+            },
+            "BUTTONS": {
+                "VIEW_EDIT": "Veure/Editar Zona",
+                "INSERT": "Insertar Zona"
+            }
+        },
+        "FORMS": {
+            "ID": {
+                "LABEL": "{{req}} Id"
+            },
+            "NAME": {
+                "LABEL": "{{req}} Nom"
+            },
+            "ASOCIADA": {
+                "LABEL": "{{req}} Associada"
+            }
+        }
+    },
+    "ROLS": {
+        "ENTITY": "Rols",
+        "TABLE": {
+            "TITLE": "LLISTAT DE ROLS",
+            "FILTER": {},
+            "FIELDS": {
+                "ID": "Id",
+                "NAME": "Nom"
+            },
+            "BUTTONS": {
+                "VIEW_EDIT": "Ver/Editar Rol",
+                "INSERT": "Insertar Rol"
+            }
+        },
+        "FORMS": {
+            "ID": {
+                "LABEL": "{{req}} Id"
+            },
+            "NAME": {
+                "LABEL": "{{req}} Nom"
+            }
+        }
+    },
+    "HISTORIC": {
+        "TITLE": "Título",
+        "DESCRIPTION": "Descripción",
+        "FECHA": {
+            "MODIFICAION": "Fecha de modificación",
+            "ALTA": "Fecha de alta",
+            "BAJA": "Fecha de baja"
+        },
+        "VALUE": "Valor",
+        "USER": {
+            "MODIFICADOR": "Usuario modificador",
+            "CREADOR": "Usuario creador"
+        },
+        "ACTION": "Acción"
+    },
+    "USERS": {
+        "ENTITY": "Usuaris",
+        "TABLE": {
+            "TITLE": "LLISTAT D'USUARIS",
+            "FILTER": {},
+            "FIELDS": {
+                "ID": "Id",
+                "NAME": "Nom",
+                "FIRSTSURNAME": "Primer cognom",
+                "SECONDSURNAME": "Segon cognom",
+                "PHONE": "Telèfon",
+                "EMAIL": "mail"
+            },
+            "BUTTONS": {
+                "VIEW_EDIT": "Ver/Editar Rol",
+                "INSERT": "Insertar Rol"
+            }
+        },
+        "FORMS": {
+            "LANGUAGE": {
+                "LABEL": "{{req}} Idioma",
+                "PLACEHOLDER": "Seleccioni Idioma"
+            },
+            "NUMBER_FORMAT": {
+                "LABEL": "{{req}} Format de Número",
+                "PLACEHOLDER": "Seleccioni formato número",
+                "OPTION_SPAIN": "Espanyol Espanya",
+                "OPTION_MEXICO": "Espanyol Mèxic",
+                "OPTION_CATALAN": "Català",
+                "OPTION_AMERICAN": "Americà"
+            },
+            "ID": {
+                "LABEL": "{{req}} Id",
+                "PLACEHOLDER": "Seleccioni id"
+            
+            },
+            "NAME": {
+                "LABEL": "{{req}} Nom",
+                "PLACEHOLDER": "Afegeixi nom"
+            },
+            "FIRSTSURNAME": {
+                "LABEL": "{{req}} Primer cognom",
+                "PLACEHOLDER": "Afgegeixi primer cognom"
+            },
+            "SECONDSURNAME": {
+                "LABEL": "{{req}} Segon cognom",
+                "PLACEHOLDER": "Seleccione segon cognom"
+            },
+            "PHONE": {
+                "LABEL": "{{req}} Telèfon",
+                "PLACEHOLDER": "Afegeixi telèfon"
+            },
+            "EMAIL": {
+                "LABEL": "{{req}} Mail",
+                "PLACEHOLDER": "Afegeixi mail"
+            },
+            "DATE_FORMAT": {
+                "LABEL": "{{req}} Format de Data",
+                "PLACEHOLDER": "Seleccioni format de data"
+            }
+        }
+    },
+    "CONCESSIONS": {
+        "ENTITY": "Concessions",
+        "FORMS": {
+            "ID": {
+                "LABEL": "ID"
+            },
+            "NAME": {
+                "LABEL": "{{req}} Nom",
+                "PLACEHOLDER": "Introdueixi nom"
+            },
+            "CODE": {
+                "LABEL": "{{req}} Código",  
+                "PLACEHOLDER": "Introdueixi Codi"
+            },
+            "COIN": {
+                "LABEL": "{{req}} Divisa",
+                "PLACEHOLDER": "Seleccione Divisa"
+            },
+            "LANGUAGE": {
+                "LABEL": "{{req}} Idioma",
+                "PLACEHOLDER": "Seleccioni Idioma"
+            },
+            "TAX_TYPE": {
+                "LABEL": "{{req}} Tipus de taxa",
+                "PLACEHOLDER": "Seleccioni Tipus de Taxa",
+                "OPTION_IVA": "IVA",
+                "OPTION_OTHER": "Altre"
+            },
+            "COUNTRY": {
+                "LABEL": "{{req}} Païs",
+                "PLACEHOLDER": "Seleccioni païs",
+                "OPTION_SPAIN": "Espanya",
+                "OPTION_FRANCE": "França",
+                "OPTION_EEUU": "Estats Units",
+                "OPTION_MEXICO": "Mèxic"
+            },
+            "TAX_PERCENTAGE": {
+                "LABEL": "{{req}} Valor Imposat",
+                "PLACEHOLDER": "Seleccioni Valor Imposat"
+            },
+            "DAYS_BEFORE_END_PAYMENT": {
+                "LABEL": "{{req}} Nº dias avanç venciment",
+                "PLACEHOLDER": "Introdueixi valor"
+            },
+            "RETURNS_QUANTITY": {
+                "LABEL": "{{req}} Nº de devolucions permeses",
+                "PLACEHOLDER": "Introdueixi valor"
+            },
+            "LOGO": {
+                "LABEL": "{{req}} logo",
+                "PLACEHOLDER": "Afegeixi logo"
+            },
+            "ALLOWED_DOWNLOAD": {
+                "LABEL": "{{req}} Descàrregues permeses"
+            },
+            "GIS_USING": {
+                "LABEL": "{{req}} Usa Gis"
+            },
+            "GOTA_USING": {
+                "LABEL": "{{req}} Usa Gota"
+            },
+            "FRACTION_PAYMENT_QUANTITY": {
+                "LABEL": "{{req}} Nº fraccionaments de pagament",
+                "PLACEHOLDER": "Introdueixi valor"
+            },
+            "ALLOW_FRACTION_PAYMENTS": {
+                "LABEL": "{{req}} Permet fraccionar"
+            },
+            "DOWNLOAD_TAX_APPLY": {
+                "LABEL": "{{req}} Aplica impuest descàrrega"
+            },
+            "ALLOW_DOWNLOAD_FRACTION": {
+                "LABEL": "{{req}} Permet dividir descargables"
+            },
+            "END_REPORT_CREATION_DAY": {
+                "LABEL": "{{req}} Día creació informe suspensió",
+                "PLACEHOLDER": "Seleccione Idioma"
+            },
+            "END_REPORT_CREATION_PERIOD": {
+                "LABEL": "{{req}} Periode de creació Informe",
+                "PLACEHOLDER": "Introdueixi valor"
+            },
+            "DURESS_REPORT_CREATION_DAY": {
+                "LABEL": "{{req}} Día generació informe apremi",
+                "PLACEHOLDER": "Introdueixi valor"
+            },
+            "DURESS_REPORT_CREATION_PERIOD": {
+                "LABEL": "{{req}} Periode Creació Informe Apremi",
+                "PLACEHOLDER": "Introdueixi valor"
+            }
+        }
+    },
+    "MULTILANGUAGE": {
+        "ENTITY": "Multi Idioma",
+        "FORMS": {
+            "MODULES": {
+                "LABEL": "{{req}} Mòduls",
+                "PLACEHOLDER": "Seleccioni mòdul"
+            },
+            "LANGUAGE": {
+                "LABEL": "{{req}} Idioma",
+                "PLACEHOLDER": "Seleccioni idioma"
+            },
+            "UPLOAD": {
+                "LABEL": "Arxiu",
+                "PLACEHOLDER": "Seleccioni / arrossegui arxiu"
+            }
+        },
+        "RESULTS": {
+            "TITLE": "Informe de resultats",
+            "CREATED_RECORDS": "Registres donats d'alta correctament:",
+            "UPDATED_RECORDS": "Registres modificats correctament:",
+            "FAILED_RECORDS": "Registres amb errors:",
+            "ID_ERROR": "Id de registre d'error:"
+
+        }
+    },
+    "MASTERS":{
+        "ESTADO_LECTURAS": {
+            "ENTITY": "Estat de lectures",
+            "TABLE": {
+                "TITLE": "ESTAT DE LECTURES",
+                "FILTER": {},
+                "FIELDS": {
+                    "ID": "Id",
+                    "ETIQUETA": "Etiqueta",
+                    "ACTIVO": "Actiu"
+                },
+                "BUTTONS": {
+                    "VIEW_EDIT": "Veure/Editar",
+                    "INSERT": "Insertar"
+                }
+            },
+            "FORMS": {
+                "ID": {
+                    "LABEL": "id Maestro"
+                },
+                "MAESTRO_ID": {
+                    "LABEL": "Mestre id",
+                    "PLACEHOLDER": "Seleccioni id mestre"
+                },
+                "ETIQUETA": {
+                    "LABEL": "Etiqueta",
+                    "PLACEHOLDER": "Seleccioni etiqueta"
+                },
+                "ACTIVO": {
+                    "LABEL": "Actiu",
+                    "PLACEHOLDER": "Seleccioni actiu"
+                },
+                "ORDEN": {
+                    "LABEL": "Orden",
+                    "PLACEHOLDER": "Seleccioni ordre"
+                }             
+            }
+        }
+    },
+    "PROCESSES":{
+        "EXECUTION":{
+            "TABLE": {
+                "TITLE": "Processos | Execució",
+                "FILTER": {},
+                "FIELDS": {
+                    "ID": "Id",
+                    "NAME": "Nom",
+                    "INIT_DATE": "Data Inici",
+                    "END_DATE": "Data Fi",
+                    "RESULT": "Resultat",
+                    "COMMENTS": "Comentaris"
+                },
+                "BUTTONS": {
+                    "VIEW_EDIT": "Veure/Editar Producte",
+                    "INSERT": "Nou producte"
+                }
+            },
+            "FORMS": {
+                "ID": {
+                    "LABEL": "Id"
+                },
+                "NAME": {
+                    "LABEL": "Nom"
+                },
+                "INIT_DATE": {
+                    "LABEL": "Data Inici"
+                },
+                "END_DATE": {
+                    "LABEL": "Data Fi"
+                },
+                "RESULT": {
+                    "LABEL": "Resultat"
+                },
+                "COMMENTS": {
+                    "LABEL": "Observacions"
+                }
+            }
+        }
+    },
+    "NO-CERTIFICADAS": {
+        "ENTITY": "No certificades",
+        "FORMS": {
+            "CODIGO_REMESA": {
+                "LABEL": "{{req}} Codi Remesa",
+                "PLACEHOLDER": "Seleccioni Codi Remesa"
+            },
+            "TIPO_REMESA": {
+                "LABEL": "{{req}} Tipus Remesa",
+                "PLACEHOLDER": "Seleccioni Tipus Remesa"
+            },
+            "TIPO_NOTIFICACION": {
+                "LABEL": "{{req}} Tipus Notificació",
+                "PLACEHOLDER": "Seleccioni Tipus Notificació"
+            },
+            "ESTADO_ENVIO": {
+                "LABEL": "{{req}} Estat d'enviament",
+                "PLACEHOLDER": "Afegeixi estat d'enviament"
+            },
+            "FECHA_DESDE": {
+                "LABEL": "{{req}} Data Desde",
+                "PLACEHOLDER": "Seleccioni Data"
+            },
+            "FECHA_HASTA": {
+                "LABEL": "{{req}} Data fins",
+                "PLACEHOLDER": "Seleccioni Data"
+            },
+            "FECHA_ENVIO": {
+                "LABEL": "{{req}} Data Enviament",
+                "PLACEHOLDER": "Seleccioni Data"
+            }
+        },
+        "TABLE": {
+            "TITLE": "LLISTAT DE NOTIFICACIÓNS",
+            "FILTER": {},
+            "FIELDS": {
+                "ID": "Id",
+                "REMESA": "Códi Remesa",
+                "TIPO_REMESA": "Tipus Remesa",
+                "TIPO_NOTIFICACION": "Tipus Notificació",
+                "FECHA_ENVIO": "Data Enviament",
+                "FECHA_ESTADO": "Data Estado",
+                "ESTADO": "Estado",
+                "NUMERO_ENVIOS": "Número envíos",
+                "NUMERO_TRAMITADOS": "Número tramitados",
+                "NUMERO_PENDIENTES": "Número pendientes"
+            },
+            "BUTTONS": {
+              
+            }
+        }
+        
+    }
+}

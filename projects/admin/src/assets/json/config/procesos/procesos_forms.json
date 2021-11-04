@@ -1,0 +1,28 @@
+{
+  "title": "Procesos Detalles",
+  "section": "Secciónn productos detalles",
+  "class": "p-grid",
+  "area": [
+    {
+      "title": null,
+      "class": " p-col-12",
+      "subArea": [
+        {
+          "id": "observaciones",
+          "class": "view-entity__fields p-col-12",
+          "label": "PROCESSES.EXECUTION.TABLE.FIELDS.COMMENTS",
+          "tag": "input",
+          "type": "text",
+          "disabled": true
+        }     
+      ]
+    }
+  ],
+  "buttons": {
+    "cancelButton": true,
+    "addButton": false,
+    "editButton": false,
+    "historicButton": false,
+    "deleteButton": false
+  }
+}

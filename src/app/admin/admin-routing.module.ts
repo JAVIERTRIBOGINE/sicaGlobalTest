@@ -9,22 +9,7 @@ import { CanActivateLoggedGuard } from '../core/guards/can-activated.guard';
 const routes: Routes = [
   { path: '', component: AdminComponent,
     children: [     
-      {
-        path: constants.ROUTING_REFERENCES.CONCILIATIONS,
-        loadChildren: () =>
-          import('src/app/admin/payments-collections/payments-collections.module').then(
-            (m) => m.PaymentsCollectionsModule,
-          ),
-        canActivate: [CanActivateLoggedGuard]
-      },
-      {
-        path: constants.ROUTING_REFERENCES.MULTILENGUAGE + "/edit" ,
-        loadChildren: () =>
-          import('src/app/admin/multi-language/multi-language.module').then(
-            (m) => m.MultiLanguageModule,
-          ),
-        canActivate: [CanActivateLoggedGuard]
-      },
+  
       {
         path: constants.ROUTING_PARAMETERS_REFERENCES.ADMIN_ENTITY + "/" + constants.ROUTING_PARAMETERS_REFERENCES.ADMIN_SUBENTITY,
         loadChildren: () =>

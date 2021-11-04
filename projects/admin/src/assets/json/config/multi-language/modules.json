@@ -1,0 +1,49 @@
+    {
+    "title": "GENERAL.ENTITIES.READINGS",
+    "area": [
+        {
+            "id": "Modulo",
+            "class": "view-entity__fields p-col-12 p-md-6 p-lg-6",
+            "label": "MULTILANGUAGE.FORMS.MODULES.LABEL",
+            "placeholder": "MULTILANGUAGE.FORMS.MODULES.PLACEHOLDER",
+            "tag": "select",
+            "data": [
+                {
+                    "valor": "Lecturas",
+                    "nombre": "Lecturas"
+                },
+                {
+                    "valor": "Global",
+                    "nombre": "Global"
+                }
+            ],
+            "validations": {
+                "required": true
+            }
+        },
+        {
+            "id": "IdiomaId",
+            "class": "view-entity__fields p-col-12 p-md-6 p-lg-6",
+            "label": "MULTILANGUAGE.FORMS.LANGUAGE.LABEL",
+            "placeholder": "MULTILANGUAGE.FORMS.LANGUAGE.PLACEHOLDER",
+            "tag": "select",
+            "data": [
+                {
+                    "valor": 1,
+                    "nombre": "ESPAÑOL"
+                },
+                {
+                    "valor": 2,
+                    "nombre": "CATALÁN"
+                }
+            ],
+            "validations": {
+                "required": true
+            }
+        }
+    ],
+    "filterButtons": {
+        "cleanButton": true,
+        "uploadButton": true
+    }
+}

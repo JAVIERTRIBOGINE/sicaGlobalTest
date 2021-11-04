@@ -1,0 +1,14 @@
+{
+    "title": "GENERAL.ENTITIES.READINGS",
+    "area": [
+     
+                {
+                    "id": "traduccion",
+                    "class": "p-col-12",
+                    "label": "Subir archivo",
+                    "tag": "upload",
+                    "hidden": "true",
+                    "standard": true
+                }
+        ]
+    }

@@ -178,14 +178,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.items = [];
 
     constants.HEADER_LINKS.forEach(element => {
-      if (this.complexLogicalIncluding(element.authEntitie)) this.items.push(
-        { label: this.translate.instant(element.traduction), routerLink: element.route.replace(":idConcession", this.selectedConcession.value) }
+      if (this.allowedEntites.includes(element.authEntitie)) this.items.push(
+        {
+           label: this.translate.instant(element.traduction), 
+          routerLink: element.route.replace(":idConcession", this.selectedConcession.value) 
+        }
       )
     });
-
-    
-      
-    
 
     const adminMenu = this.getAdminMenu(this.selectedConcession.value);
 
@@ -197,8 +196,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.items.push(testMenu);
 
   }
-
-  
 
 
   /**
