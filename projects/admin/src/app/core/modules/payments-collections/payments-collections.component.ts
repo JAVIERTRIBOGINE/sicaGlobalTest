@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api/menuitem';
 import { forkJoin, Subscription } from 'rxjs';
-import { AccountService } from '../../core/services/account.service';
-import { AuthService } from '../../core/services/auth.service';
-import { JsonService } from '../../core/services/json.service';
+import { JsonService } from 'src/app/core/services/json.service';
+import { DictionaryService } from 'src/app/core/services/dictionary.service';
 import * as INTERFACES from 'src/app/core/models/other-interfaces';
-import { DictionaryService } from '../../core/services/dictionary.service';
 import * as constants from 'src/app/core/config/const';
 
 

@@ -3,10 +3,10 @@ import { Router } from '@angular/router';
 import * as INTERFACES from 'src/app/core/models/other-interfaces';
 import * as constants from 'src/app/core/config/const';
 import { forkJoin, Subscription } from 'rxjs';
-import { JsonService } from '../../core/services/json.service';
-import { DictionaryService } from '../../core/services/dictionary.service';
-import { RouterService } from '../../core/services/router.servcice';
-import { ApiService } from '../../core/services/api.service';
+import { JsonService } from 'src/app/core/services/json.service';
+import { DictionaryService } from 'src/app/core/services/dictionary.service';
+import { RouterService } from 'src/app/core/services/router.servcice';
+import { ApiService } from 'src/app/core/services/api.service';
 import * as FileSaver from "file-saver";
 
 

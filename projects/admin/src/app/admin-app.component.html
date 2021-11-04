@@ -1,7 +1,7 @@
 <ng-container *ngIf="devMode">
-    <h1>estamos en admin</h1>
-    <nav *ngIf="concessionSelected" class="cont-header__nav">
-        <p-menubar [styleClass]="'__submenu-bar'" [model]="items"></p-menubar>
+    <h1>Admin</h1>
+    <nav *ngIf="items.length !== 0" class="cont-header__nav">
+        <p-menubar [model]="items"></p-menubar>
       </nav>
     <router-outlet></router-outlet>
 </ng-container>

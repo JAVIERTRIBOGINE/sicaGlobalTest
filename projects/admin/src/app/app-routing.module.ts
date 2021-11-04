@@ -12,7 +12,7 @@ const routes: Routes = [
       import('projects/lecturas/src/app/app.module').then((m) => m.LecturasSharedModule)
   },
   {
-    path: constants.contextSlug + "/" + constants.ROUTING_REFERENCES.CONCILIATIONS,
+    path: constants.contextSlug.ADMIN + "/" + constants.ROUTING_REFERENCES.CONCILIATIONS,
     loadChildren: () =>
       import('projects/admin/src/app/core/modules/payments-collections/payments-collections.module').then(
         (m) => m.PaymentsCollectionsModule,
@@ -20,7 +20,7 @@ const routes: Routes = [
     // canActivate: [CanActivateLoggedGuard]
   },
   {
-    path: constants.contextSlug + "/" + constants.ROUTING_REFERENCES.MULTILENGUAGE + "/" + constants.Actions.EDIT ,
+    path: constants.contextSlug.ADMIN + "/" + constants.ROUTING_REFERENCES.MULTILENGUAGE + "/" + constants.Actions.EDIT ,
     loadChildren: () =>
       import('projects/admin/src/app/core/modules/multi-language/multi-language.module').then(
         (m) => m.MultiLanguageModule,

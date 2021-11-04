@@ -14,6 +14,8 @@ export const environment = {
   authUrl: "https://ddd-identity.azurewebsites.net",
   urlBase: "https://sica-api-gateway.azurewebsites.net/api/v1",
   urlRedirect: 'https://csb1003200103476e00.z6.web.core.windows.net',
+  urlAdminRedirect: 'https://csb1003200103476e00.z6.web.core.windows.net',
+  urlReadingRedirect: 'https://csb1003200103476e00.z6.web.core.windows.net',
   endpoints: {
     //lecturas
     readings: api.lecturas + "concesion/:idConcession/lecturas",

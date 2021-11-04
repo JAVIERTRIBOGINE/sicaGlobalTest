@@ -3,7 +3,7 @@ import { PrimeNGConfig } from 'primeng/api';
 import { TranslateService } from '@ngx-translate/core';
 import { LANGUAGES } from 'src/app/core/config/const';
 import * as constants from 'src/app/core/config/const';
-import { OidcConfigService, OidcSecurityService } from 'angular-auth-oidc-client';
+import { OidcSecurityService } from 'angular-auth-oidc-client';
 import { ActivatedRoute, NavigationCancel, NavigationEnd, NavigationStart, Router, RoutesRecognized } from '@angular/router';
 import { AccountService } from './core/services/account.service';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
@@ -40,8 +40,8 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
       if (e instanceof NavigationStart) 
         if (!sessionStorage.getItem('realUrl')) sessionStorage.setItem('realUrl', e.url);
     });
-    this.translate.addLangs([LANGUAGES.SPANISH, LANGUAGES.CATALAN]);
-    this.translate.setDefaultLang(LANGUAGES.SPANISH);
+    this.translate.addLangs([constants.LANGUAGES.SPANISH, constants.LANGUAGES.CATALAN]);
+    this.translate.setDefaultLang(constants.LANGUAGES.SPANISH);
   }
   ngOnInit() {
     // se aplica este control por las recargas de página (no pasaran por el )
@@ -76,6 +76,8 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     this.primengConfig.ripple = true;
 
   }
+
+  
   login() {
     this.oidcSecurityService.authorize();
   }
