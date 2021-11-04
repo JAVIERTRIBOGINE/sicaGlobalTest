@@ -179,7 +179,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     constants.HEADER_LINKS.forEach(element => {
       if (this.allowedEntites.includes(element.authEntitie)) this.items.push(
-        { label: this.translate.instant(element.traduction), routerLink: element.route.replace(":idConcession", this.selectedConcession.value) }
+        {
+           label: this.translate.instant(element.traduction), 
+          routerLink: element.route.replace(":idConcession", this.selectedConcession.value) 
+        }
       )
     });
 
@@ -224,43 +227,45 @@ export class HeaderComponent implements OnInit, OnDestroy {
       const permisisons = this.accountService.getPermissions().find(p => p.concessionCode === idConcesion);
       let menuItems: MenuItem = {
         label: this.translate.instant('GENERAL.MENU.BILLING.ADMIN'),
-        items: []
+        routerLink: "/admin/sub-home",
+        // items: []
       };
 
-      const concesion = this.getConcesionAdmin(idConcesion, permisisons);
-      if (concesion)
-        menuItems.items.push(concesion);
+      // const concesion = this.getConcesionAdmin(idConcesion, permisisons);
+      // if (concesion)
+      //   menuItems.items.push(concesion);
 
-      const zones = this.getZonesAdmin(idConcesion, permisisons);
-      if (zones)
-        menuItems.items.push(zones);
+      // const zones = this.getZonesAdmin(idConcesion, permisisons);
+      // if (zones)
+      //   menuItems.items.push(zones);
 
-      const users = this.getUsuariosAdmin(idConcesion, permisisons);
-      if (users)
-        menuItems.items.push(users);
+      // const users = this.getUsuariosAdmin(idConcesion, permisisons);
+      // if (users)
+      //   menuItems.items.push(users);
 
-      const roles = this.getRolesAdmin(idConcesion, permisisons);
-      if (roles)
-        menuItems.items.push(roles);
+      // const roles = this.getRolesAdmin(idConcesion, permisisons);
+      // if (roles)
+      //   menuItems.items.push(roles);
 
-      const multilang = this.getMultilangAdmin(permisisons);
-      if (multilang)
-        menuItems.items.push(multilang);
+      // const multilang = this.getMultilangAdmin(permisisons);
+      // if (multilang)
+      //   menuItems.items.push(multilang);
 
-      const masters = this.getMasters(permisisons);
-      if (masters)
-        menuItems.items.push(masters);
+      // const masters = this.getMasters(permisisons);
+      // if (masters)
+      //   menuItems.items.push(masters);
         
-        const processes = this.getProcesses(idConcesion, permisisons);
-        if (processes)
-        menuItems.items.push(processes);
+      //   const processes = this.getProcesses(idConcesion, permisisons);
+      //   if (processes)
+      //   menuItems.items.push(processes);
 
       
-      const notificaciones = this.getNotificationAdmin(idConcesion, permisisons);
-      if(notificaciones)
-      menuItems.items.push(notificaciones);
+      // const notificaciones = this.getNotificationAdmin(idConcesion, permisisons);
+      // if(notificaciones)
+      // menuItems.items.push(notificaciones);
 
-      return menuItems.items?.length ? menuItems : null;
+      // return menuItems.items?.length ? menuItems : null;
+      return menuItems;
     }
   }
 

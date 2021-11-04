@@ -1,29 +1,24 @@
-import { AfterViewChecked, AfterViewInit, Component, Inject, OnDestroy, OnInit } from '@angular/core';
-import { PrimeNGConfig } from 'primeng/api';
+import { Component, OnInit } from '@angular/core';
+import * as adminConstants from 'projects/admin/src/app/core/config/admin-const'
+import * as constants from 'projects/admin/src/app/core/config/const'
+import { MenuItem, PrimeNGConfig } from 'primeng/api';
+import { Router, ActivatedRoute, NavigationStart } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { LANGUAGES } from 'src/app/core/config/const';
-import * as constants from 'src/app/core/config/const';
 import { OidcSecurityService } from 'angular-auth-oidc-client';
-import { ActivatedRoute, NavigationCancel, NavigationEnd, NavigationStart, Router, RoutesRecognized } from '@angular/router';
-import { AccountService } from './core/services/account.service';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
-import { AuthService } from './core/services/auth.service';
-import { Navigation } from 'selenium-webdriver';
-import { warn } from 'console';
-import { Subscription } from 'rxjs';
-
+import { AccountService } from 'src/app/core/services/account.service';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
-  selector: 'sica-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-admin',
+  templateUrl: './admin-app.component.html',
+  styleUrls: ['./admin-app.component.scss']
 })
-export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
-  title = 'acciona-sicue-frontend';
-  routing: boolean = false;
-  defUrl: string = "";
-  routerSubscription: Subscription;
-  routerSubscriptionTest: Subscription;
+export class AdminAppComponent implements OnInit{
+  title = 'admin';
+  items: MenuItem[] = []
+  routerSubscription: any;
+
   constructor(
     public oidcSecurityService: OidcSecurityService,
     private accountService: AccountService,
@@ -46,9 +41,10 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   ngOnInit() {
     // se aplica este control por las recargas de página (no pasaran por el )
     // ids4
-    this.ngxLoader.start();
+    this.fillItems();
     this.oidcSecurityService.isAuthenticated$.subscribe(auth => {
       if (!auth) {
+        this.ngxLoader.start();
         this.oidcSecurityService.checkAuth().subscribe(ok => {
           if (ok) {
             
@@ -77,20 +73,20 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
 
   }
 
+  fillItems(){
+    this.items.push(
+      {
+        label: "multilanguage", 
+       routerLink: constants.ROUTING_REFERENCES.MULTILENGUAGE + "/" + constants.Actions.EDIT 
+    })
+  }
+
+  get devMode() {
+    return adminConstants.devMode;
+  }
+
+  get concessionSelected() {
+    return true;
+  }
   
-  login() {
-    this.oidcSecurityService.authorize();
-  }
-
-  logout() {
-    this.oidcSecurityService.logoff();
-  }
-
-  ngAfterViewInit() {
-  }
-
-
-  ngOnDestroy() {
-    this.routerSubscription.unsubscribe();
-  }
 }

@@ -14,6 +14,8 @@ export const environment = {
   authUrl: "https://ddd-identity.azurewebsites.net",
   urlBase: '/api/v1',
   urlRedirect: 'http://localhost:4200',
+  urlAdminRedirect: 'http://localhost:4400',
+  urlReadingRedirect: 'http://localhost:4300',
   endpoints: {
     //lecturas
     readings: api.lecturas + "concesion/:idConcession/lecturas",
